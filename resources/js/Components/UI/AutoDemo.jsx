@@ -27,6 +27,12 @@ export default function AutoDemo({
     const timerRef = useRef(null);
     const pausedRef = useRef(false);
 
+    const routesRef = useRef(routes);
+    const replanRef = useRef(replanningActive);
+
+    useEffect(() => { routesRef.current = routes; }, [routes]);
+    useEffect(() => { replanRef.current = replanningActive; }, [replanningActive]);
+
     const wait = (ms) => new Promise(resolve => {
         timerRef.current = setTimeout(resolve, ms);
     });
@@ -58,7 +64,7 @@ export default function AutoDemo({
             await wait(1000);
             runVRP();
             // Wait until routes appear (VRP finishes)
-            await waitWhile(() => routes.length === 0, 45000, 600);
+            await waitWhile(() => routesRef.current.length === 0, 45000, 600);
             await wait(1500);
             addToast('✅ Optimisation terminée!', 'ok');
 
@@ -69,7 +75,7 @@ export default function AutoDemo({
 
             // ── Step 3: Animate truck ─────────────────────────
             setStep(3);
-            if (routes.length > 0) {
+            if (routesRef.current.length > 0) {
                 playRoute(0);
                 await wait(1200);
                 addLog('🚛 Animation route 1 démarrée pour démo', 'ok');
@@ -79,14 +85,14 @@ export default function AutoDemo({
 
             // ── Step 4: Panne ─────────────────────────────────
             setStep(4);
-            if (playbackRouteIndex !== null) {
+            if (playbackRouteIndex !== null || routesRef.current.length > 0) {
                 triggerBreakdown();
                 await wait(600);
             }
 
             // ── Step 5: Replan ────────────────────────────────
             setStep(5);
-            await waitWhile(() => replanningActive, 30000, 500);
+            await waitWhile(() => replanRef.current, 30000, 500);
             await wait(1500);
 
             // ── Step 6: IoT / Analytics ───────────────────────
@@ -104,7 +110,7 @@ export default function AutoDemo({
         } finally {
             setRunning(false);
         }
-    }, [routes, playbackRouteIndex, replanningActive]);
+    }, [runVRP, playRoute, triggerBreakdown, setActiveTab, addLog, addToast, playbackRouteIndex]);
 
     const togglePause = () => {
         pausedRef.current = !pausedRef.current;
