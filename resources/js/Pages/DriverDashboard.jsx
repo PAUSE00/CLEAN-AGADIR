@@ -20,45 +20,54 @@ export default function DriverDashboard({ auth }) {
 
     // Load data
     useEffect(() => {
-        const init = async () => {
+        const loadData = async () => {
             try {
-                const [tokenRes, ptsRes] = await Promise.all([
+                const [tokenRes, ptsRes, vrpRes] = await Promise.all([
                     fetch('/api/mapbox/token').then(r => r.json()),
                     fetch('/api/points').then(r => r.json()),
+                    fetch('/api/vrp/routes').then(r => r.json()).catch(() => ({ routes: [] }))
                 ]);
                 setPts(ptsRes.data || []);
                 mapboxgl.accessToken = tokenRes.token || '';
-
-                if (!mapContainerRef.current) return;
-                const map = new mapboxgl.Map({
-                    container: mapContainerRef.current,
-                    style: 'mapbox://styles/mapbox/dark-v11',
-                    center: [-9.5981, 30.4278],
-                    zoom: 13,
-                });
-
-                // Add driver location
-                map.addControl(new mapboxgl.GeolocateControl({
-                    positionOptions: { enableHighAccuracy: true },
-                    trackUserLocation: true,
-                    showUserHeading: true,
-                    showAccuracyCircle: false
-                }));
-
-                mapRef.current = map;
-                map.on('style.load', () => setMapReady(true));
-
-                // Load existing routes
-                const vrpRes = await fetch('/api/vrp/routes').then(r => r.json()).catch(() => ({ routes: [] }));
                 if (vrpRes.routes?.length) setRoutes(vrpRes.routes);
             } catch (e) {
                 console.error('Driver init error', e);
             }
             setLoading(false);
         };
-        init();
-        return () => { if (mapRef.current) mapRef.current.remove(); };
+        loadData();
     }, []);
+
+    // Init Map when a route is selected
+    useEffect(() => {
+        if (loading || !selectedRoute || !mapContainerRef.current || mapRef.current) return;
+
+        const map = new mapboxgl.Map({
+            container: mapContainerRef.current,
+            style: 'mapbox://styles/mapbox/dark-v11',
+            center: [-9.5981, 30.4278],
+            zoom: 13,
+        });
+
+        // Add driver location
+        map.addControl(new mapboxgl.GeolocateControl({
+            positionOptions: { enableHighAccuracy: true },
+            trackUserLocation: true,
+            showUserHeading: true,
+            showAccuracyCircle: false
+        }));
+
+        mapRef.current = map;
+        map.on('style.load', () => setMapReady(true));
+
+        return () => {
+            if (mapRef.current) {
+                mapRef.current.remove();
+                mapRef.current = null;
+                setMapReady(false);
+            }
+        };
+    }, [selectedRoute, loading]);
 
     // Show route on map
     useEffect(() => {
