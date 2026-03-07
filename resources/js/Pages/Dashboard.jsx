@@ -516,25 +516,22 @@ function DashboardInner({ auth }) {
                 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
             </Head>
 
-            {/* DEMO OVERLAY */}
+            {/* AUTO DEMO — PFE guided tour */}
             {showDemo && (
-                <div className="vp-demo-overlay">
-                    <div style={{ fontSize: 28, fontWeight: 700, color: '#00e5b8', textAlign: 'center' }}>♻️ VillePropre — VRP Dynamique</div>
-                    <div style={{ fontSize: 13, color: '#7a92aa', textAlign: 'center', maxWidth: 540, lineHeight: 1.7 }}>
-                        Optimisation des tournées de collecte des déchets · Agadir, Maroc<br />
-                        <span style={{ color: '#00e5b8' }}>Algorithmes : Glouton · 2-opt · Tabou · K-Means · NSGA-II</span><br />
-                        Volumes probabilistes · Sous-problème dynamique · Replanification
-                    </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 12 }}>
-                        {[{ v: pts.length || 833, l: 'Points réels OSM' }, { v: 5, l: 'Algorithmes VRP' }, { v: vrpResult?.total_km || '—', l: 'km optimisé' }, { v: routes.length, l: 'Routes actives' }].map((d, i) => (
-                            <div key={i} style={{ background: '#0d1b2a', border: '1px solid #1a2e42', borderRadius: 10, padding: 14, textAlign: 'center' }}>
-                                <div style={{ fontSize: 22, fontWeight: 700, color: '#00e5b8', fontFamily: "'JetBrains Mono',monospace" }}>{d.v}</div>
-                                <div style={{ fontSize: 10, color: '#7a92aa', marginTop: 3 }}>{d.l}</div>
-                            </div>
-                        ))}
-                    </div>
-                    <button onClick={() => setShowDemo(false)} style={{ padding: '8px 20px', background: 'transparent', border: '1px solid #1a2e42', color: '#dde6f4', borderRadius: 7, cursor: 'pointer', fontSize: 12, fontWeight: 600 }}>✕ Fermer</button>
-                </div>
+                <AutoDemo
+                    pts={pts}
+                    routes={routes}
+                    runVRP={runVRP}
+                    playRoute={playRoute}
+                    triggerBreakdown={triggerBreakdown}
+                    playbackRouteIndex={playbackRouteIndex}
+                    replanningActive={replanningActive}
+                    onClose={() => setShowDemo(false)}
+                    setActiveTab={setActiveTab}
+                    addLog={addLog}
+                    addToast={addToast}
+                    vrpResult={vrpResult}
+                />
             )}
 
             <div id="vp-app" className="vp-app">
@@ -702,24 +699,6 @@ function DashboardInner({ auth }) {
                     />
                 </div>
             </div>
-
-            {/* ── Auto Demo Panel ── */}
-            {showDemo && (
-                <AutoDemo
-                    pts={pts}
-                    routes={routes}
-                    runVRP={runVRP}
-                    playRoute={playRoute}
-                    triggerBreakdown={triggerBreakdown}
-                    playbackRouteIndex={playbackRouteIndex}
-                    replanningActive={replanningActive}
-                    onClose={() => setShowDemo(false)}
-                    setActiveTab={setActiveTab}
-                    addLog={addLog}
-                    addToast={addToast}
-                    vrpResult={vrpResult}
-                />
-            )}
         </>
     );
 }
