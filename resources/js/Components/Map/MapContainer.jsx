@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import * as turf from '@turf/turf';
 import ToastContainer from '../UI/Toast';
 
 const WC = { medical: '#f43f5e', organic: '#22c55e', recyclable: '#38bdf8', paper: '#fbbf24', general: '#a78bfa' };
@@ -9,7 +10,7 @@ const RC = ['#00e5b8', '#fb923c', '#a78bfa', '#38bdf8', '#f43f5e', '#22c55e', '#
 
 export default function MapContainer({
     mapContainerRef, mapRef, markersRef, routesLayerIds,
-    pts, wasteFilters, collectedPoints, lyPts, lyDep, lyRt, lyHeat,
+    pts, wasteFilters, collectedPoints, lyPts, lyDep, lyRt, lyHeat, lyZones,
     routes, highlightRoute, playbackRouteIndex,
     mapStyleLoaded, setMapStyleLoaded,
     toasts, vrpResult,
@@ -141,6 +142,113 @@ export default function MapContainer({
         if (map.isStyleLoaded()) renderRoutes();
         else map.once('styledata', renderRoutes);
     }, [routes, highlightRoute, playbackRouteIndex, lyRt]);
+
+    // Zones rendering
+    const zoneIdsRef = useRef([]);
+    useEffect(() => {
+        const map = mapRef.current;
+        if (!map || !map.isStyleLoaded() || !pts.length) return;
+
+        const cleanupZones = () => {
+            zoneIdsRef.current.forEach(id => {
+                if (map.getLayer(`zone-fill-${id}`)) map.removeLayer(`zone-fill-${id}`);
+                if (map.getLayer(`zone-line-${id}`)) map.removeLayer(`zone-line-${id}`);
+                if (map.getLayer(`zone-label-${id}`)) map.removeLayer(`zone-label-${id}`);
+                if (map.getSource(`zone-source-${id}`)) map.removeSource(`zone-source-${id}`);
+            });
+            zoneIdsRef.current = [];
+        };
+
+        if (!lyZones) {
+            cleanupZones();
+            return;
+        }
+
+        cleanupZones();
+
+        // Group points by zone
+        const zones = {};
+        pts.forEach(p => {
+            if (p.is_depot || !p.zone) return;
+            if (!zones[p.zone]) zones[p.zone] = [];
+            zones[p.zone].push([Number(p.lng), Number(p.lat)]);
+        });
+
+        Object.keys(zones).forEach((zoneName, index) => {
+            if (zones[zoneName].length < 3) return; // need at least a triangle
+            try {
+                const color = RC[index % RC.length];
+                const pointsCol = turf.featureCollection(zones[zoneName].map(c => turf.point(c)));
+                const hull = turf.convex(pointsCol);
+
+                if (hull) {
+                    const id = zoneName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                    const sourceId = `zone-source-${id}`;
+                    zoneIdsRef.current.push(id);
+
+                    // Add label coordinate right in the center of the polygon
+                    const center = turf.centerOfMass(hull);
+                    const collection = turf.featureCollection([
+                        hull,
+                        turf.point(center.geometry.coordinates, { title: zoneName })
+                    ]);
+
+                    map.addSource(sourceId, { type: 'geojson', data: collection });
+
+                    // Fill layer
+                    map.addLayer({
+                        id: `zone-fill-${id}`,
+                        type: 'fill',
+                        source: sourceId,
+                        filter: ['==', '$type', 'Polygon'],
+                        paint: {
+                            'fill-color': color,
+                            'fill-opacity': 0.1
+                        }
+                    }, 'waterway-label'); // place beneath labels if possible
+
+                    // Outline layer
+                    map.addLayer({
+                        id: `zone-line-${id}`,
+                        type: 'line',
+                        source: sourceId,
+                        filter: ['==', '$type', 'Polygon'],
+                        paint: {
+                            'line-color': color,
+                            'line-width': 2,
+                            'line-dasharray': [2, 2],
+                            'line-opacity': 0.8
+                        }
+                    });
+
+                    // Label layer
+                    map.addLayer({
+                        id: `zone-label-${id}`,
+                        type: 'symbol',
+                        source: sourceId,
+                        filter: ['==', '$type', 'Point'],
+                        layout: {
+                            'text-field': ['get', 'title'],
+                            'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+                            'text-size': 20,
+                            'text-transform': 'uppercase',
+                            'text-letter-spacing': 0.1,
+                            'text-justify': 'center',
+                            'text-anchor': 'center'
+                        },
+                        paint: {
+                            'text-color': '#ffffff',
+                            'text-halo-color': color,
+                            'text-halo-width': 2,
+                            'text-opacity': 0.9
+                        }
+                    });
+                }
+            } catch (e) { console.error('Error drawing zone', zoneName, e); }
+        });
+
+        return () => cleanupZones();
+    }, [pts, lyZones]);
 
     return (
         <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
