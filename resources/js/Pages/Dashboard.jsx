@@ -54,6 +54,7 @@ function DashboardInner({ auth }) {
     const [pts, setPts] = useState([]);
     const [trucks, setTrucks] = useState([]);
     const [loading, setLoading] = useState(true);
+    const initialLoadDoneRef = useRef(false);
 
     // Routes & VRP
     const [routes, setRoutes] = useState([]);
@@ -84,6 +85,10 @@ function DashboardInner({ auth }) {
     const [collectedPoints, setCollectedPoints] = useState(new Set());
     const animationRef = useRef(null);
     const truckAnimRef = useRef(null);
+    const truckPositionRef = useRef(null); // live GPS of animating truck
+
+    // Dynamic Replanning
+    const [replanningActive, setReplanningActive] = useState(false);
 
     // Logs & Toasts
     const [logs, setLogs] = useState([{ id: 0, msg: 'Système prêt.', type: 'ok', time: new Date().toLocaleTimeString() }]);
@@ -141,19 +146,23 @@ function DashboardInner({ auth }) {
 
     // ── Data Loading ─────────────────────────────────────────────────
     const loadData = async () => {
+        // Only show skeleton on very first load, not on IoT-triggered refreshes
+        const isFirst = !initialLoadDoneRef.current;
+        if (isFirst) setLoading(true);
         try {
-            setLoading(true);
             const [pRes, tRes] = await Promise.all([
                 fetch('/api/points').then(r => r.json()),
                 fetch('/api/trucks').then(r => r.json()),
             ]);
-            const pData = pRes.data || [];
-            const tData = tRes.data || tRes || [];
+            // API returns plain array or { data: [...] } — handle both
+            const pData = Array.isArray(pRes) ? pRes : (pRes.data || []);
+            const tData = Array.isArray(tRes) ? tRes : (tRes.data || []);
             setPts(pData);
             setTrucks(Array.isArray(tData) ? tData : []);
-            addLog(`✓ ${pData.length} points + ${tData.length} camions chargés`, 'ok');
+            if (isFirst) addLog(`✓ ${pData.length} points + ${tData.length} camions chargés`, 'ok');
+            initialLoadDoneRef.current = true;
         } catch (e) { addLog('Erreur chargement données', 'err'); }
-        finally { setLoading(false); }
+        finally { if (isFirst) setLoading(false); }
     };
 
     // Sync depot ref
@@ -310,6 +319,7 @@ function DashboardInner({ auth }) {
                 const ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
                 const lng = from[0] + (to[0] - from[0]) * ease;
                 const lat = from[1] + (to[1] - from[1]) * ease;
+                truckPositionRef.current = [lng, lat]; // track live position
                 if (truckMarkerRef.current) truckMarkerRef.current.setLngLat([lng, lat]);
                 if (mapRef.current) mapRef.current.easeTo({ center: [lng, lat], duration: 150 });
                 if (t < 1) requestAnimationFrame(tick); else resolve();
@@ -387,6 +397,78 @@ function DashboardInner({ auth }) {
                 }, 1500);
             }
         })();
+    };
+
+    // ── Dynamic Replanning (Panne Simulation) ────────────────────────
+    const triggerBreakdown = async () => {
+        if (playbackRouteIndex === null || replanningActive) return;
+        const currentRoute = routes[playbackRouteIndex];
+        if (!currentRoute) return;
+
+        // 1) Stop current animation
+        if (animationRef.current) animationRef.current.cancelled = true;
+        setPlaybackRouteIndex(null);
+
+        // 2) Identify remaining (uncollected) stops
+        const remaining = currentRoute.points.filter(p => !collectedPoints.has(p.id));
+        if (remaining.length === 0) {
+            addToast('Tous les arrêts déjà collectés!', 'info');
+            return;
+        }
+
+        // 3) Use truck's current GPS as a temporary extra depot
+        const truckPos = truckPositionRef.current;
+        const truckPosPoint = truckPos
+            ? { id: 'truck_pos', name: '🚛 Position Actuelle', lat: truckPos[1], lng: truckPos[0], is_depot: false, fill_level: 0, waste_category: 'general' }
+            : null;
+
+        addLog(`💥 PANNE SIMULÉE — ${remaining.length} arrêts à redistribuer`, 'err');
+        addToast(`💥 Panne! Replanification de ${remaining.length} arrêts...`, 'err');
+        setReplanningActive(true);
+        setActiveTab('carte');
+
+        try {
+            // 4) Re-optimize with only remaining points
+            const res = await fetch('/api/vrp/optimize', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content },
+                body: JSON.stringify({
+                    num_trucks: Math.max(1, Math.ceil(remaining.length / Math.max(1, capacity))),
+                    capacity,
+                    algorithm,
+                    iterations: 40, // faster replan
+                    points_override: remaining,
+                }),
+            });
+            const data = await res.json();
+            if (data.error) throw new Error(data.error);
+
+            // 5) Fetch OSRM geometry for replanned routes
+            const depot = pts.find(p => p.is_depot);
+            const enriched = await Promise.all(data.routes.map(async r => {
+                const geo = depot ? await fetchOsrmGeometry(r.points, depot) : null;
+                return { ...r, osrm_geometry: geo, replanned: true };
+            }));
+
+            setRoutes(enriched);
+            setVrpResult(prev => ({ ...prev, routes: enriched, replanned: true, total_km: data.total_km }));
+            setCollectedPoints(new Set());
+
+            addLog(`🔄 Replanification: ${enriched.length} nouvelles routes · ${data.total_km}km · ${data.computation_ms}ms`, 'ok');
+            addToast(`✅ ${enriched.length} routes replanifiées!`, 'ok');
+
+            // Fly to truck position
+            if (truckPos && mapRef.current) {
+                mapRef.current.flyTo({ center: truckPos, zoom: 13, duration: 1500 });
+            }
+        } catch (e) {
+            addLog(`✗ Replanification échouée: ${e.message}`, 'err');
+            addToast('Erreur de replanification', 'err');
+        } finally {
+            // Remove stuck truck marker
+            if (truckMarkerRef.current) { truckMarkerRef.current.remove(); truckMarkerRef.current = null; }
+            setReplanningActive(false);
+        }
     };
 
     // ── Memos ────────────────────────────────────────────────────────
@@ -468,6 +550,9 @@ function DashboardInner({ auth }) {
                                 🚛 Vue Chauffeur
                             </a>
                         )}
+                        <a href="/analytics" style={{ padding: '4px 10px', background: 'rgba(56,189,248,.1)', border: '1px solid rgba(56,189,248,.3)', color: '#38bdf8', borderRadius: 12, fontSize: 11, fontWeight: 600, textDecoration: 'none' }}>
+                            📊 Analytics
+                        </a>
                         <button onClick={() => setShowDemo(true)} style={{ padding: '4px 10px', background: 'rgba(0,229,184,.1)', border: '1px solid rgba(0,229,184,.3)', color: '#00e5b8', borderRadius: 12, fontSize: 11, fontWeight: 600, cursor: 'pointer' }}>
                             🎓 Démo
                         </button>
@@ -531,6 +616,8 @@ function DashboardInner({ auth }) {
                                         vrpResult={vrpResult}
                                         playbackProgress={playbackProgress}
                                         collectedPoints={collectedPoints}
+                                        triggerBreakdown={isAdmin ? triggerBreakdown : null}
+                                        replanningActive={replanningActive}
                                     />
                                 </div>
                             )}
