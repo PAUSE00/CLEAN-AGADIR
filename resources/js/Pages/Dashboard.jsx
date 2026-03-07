@@ -270,14 +270,16 @@ function DashboardInner({ auth }) {
     };
 
     // ── Animation ────────────────────────────────────────────────────
-    const playRoute = (index) => {
-        if (index === null || playbackRouteIndex === index) {
+    // routesData: optional — pass fresh routes when state hasn't updated yet (e.g. after replan)
+    const playRoute = (index, routesData) => {
+        const routesList = routesData || routes;
+        if (index === null || (playbackRouteIndex === index && !routesData)) {
             if (animationRef.current?.cancelled !== undefined) animationRef.current.cancelled = true;
             if (truckMarkerRef.current) { truckMarkerRef.current.remove(); truckMarkerRef.current = null; }
             setPlaybackRouteIndex(null);
             return;
         }
-        const route = routes[index];
+        const route = routesList[index];
         if (!route?.points?.length) return;
         const depot = pts.find(p => p.is_depot);
         if (!depot) { addLog('✗ Dépôt non trouvé', 'err'); return; }
@@ -287,23 +289,29 @@ function DashboardInner({ auth }) {
         setPlaybackProgress(0);
         setCollectedPoints(new Set());
         setHighlightRoute(index);
-        addLog(`🚛 Départ Route ${index + 1} — ${route.points.length} bennes`, 'info');
+        const isReplan = !!routesData;
+        addLog(`${isReplan ? '🔄 Replanifié' : '🚛 Départ'} Route ${index + 1} — ${route.points.length} bennes`, 'info');
 
         const routeColor = RC[index % RC.length];
         const osrmCoords = route.osrm_geometry?.coordinates;
+
+        // Start from truck's last position if replanning, otherwise from depot
+        const startPos = (isReplan && truckPositionRef.current)
+            ? truckPositionRef.current
+            : [Number(depot.lng), Number(depot.lat)];
 
         if (truckMarkerRef.current) { truckMarkerRef.current.remove(); truckMarkerRef.current = null; }
         const truckContainer = document.createElement('div');
         truckContainer.style.cssText = 'width:44px;height:44px;display:flex;align-items:center;justify-content:center;pointer-events:none;';
         const truckEl = document.createElement('div');
-        truckEl.innerHTML = '🚛';
+        truckEl.innerHTML = routesData ? '🚒' : '🚛'; // fire truck emoji for replanned routes
         truckEl.style.cssText = `font-size:30px;line-height:1;filter:drop-shadow(0 0 10px ${routeColor}) drop-shadow(0 0 20px ${routeColor});animation:truck-bounce .4s ease-in-out infinite alternate;`;
         truckContainer.appendChild(truckEl);
 
-        const dLng = Number(depot.lng), dLat = Number(depot.lat);
+        const dLng = startPos[0], dLat = startPos[1];
         truckMarkerRef.current = new mapboxgl.Marker({ element: truckContainer, anchor: 'center' })
             .setLngLat([dLng, dLat]).addTo(mapRef.current);
-        mapRef.current.flyTo({ center: [dLng, dLat], zoom: 14, duration: 1200 });
+        mapRef.current.flyTo({ center: [dLng, dLat], zoom: 14, duration: 800 });
 
         const cancelRef = { cancelled: false };
         animationRef.current = cancelRef;
@@ -455,12 +463,16 @@ function DashboardInner({ auth }) {
             setCollectedPoints(new Set());
 
             addLog(`🔄 Replanification: ${enriched.length} nouvelles routes · ${data.total_km}km · ${data.computation_ms}ms`, 'ok');
-            addToast(`✅ ${enriched.length} routes replanifiées!`, 'ok');
+            addToast(`✅ ${enriched.length} routes replanifiées — animation →`, 'ok');
 
-            // Fly to truck position
+            // Fly to truck position first, then start animation on first replanned route
             if (truckPos && mapRef.current) {
-                mapRef.current.flyTo({ center: truckPos, zoom: 13, duration: 1500 });
+                mapRef.current.flyTo({ center: truckPos, zoom: 14, duration: 800 });
             }
+
+            // ⭐ Immediately animate first replanned route using fresh enriched data
+            // We pass enriched directly so we don't wait for setRoutes() to settle
+            setTimeout(() => playRoute(0, enriched), 900);
         } catch (e) {
             addLog(`✗ Replanification échouée: ${e.message}`, 'err');
             addToast('Erreur de replanification', 'err');
