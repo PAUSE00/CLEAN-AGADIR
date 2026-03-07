@@ -34,6 +34,22 @@ class DatabaseSeeder extends Seeder
         // Seed collection points from real OSM data
         $this->call(CollectionPointSeeder::class);
 
+        // Add the Dépôt Central point
+        CollectionPoint::firstOrCreate(
+            ['name' => 'Dépôt Central'],
+            [
+                'type' => 'depot',
+                'waste_category' => 'general',
+                'lat' => 30.4278,
+                'lng' => -9.5981,
+                'fill_level' => 0,
+                'priority' => 'low',
+                'is_active' => true,
+                'is_depot' => true,
+                'zone' => 'Centre Ville'
+            ]
+        );
+
         // Seed default fleet
         $trucks = [
             ['name' => 'AGD-001', 'size' => 'large',  'waste_type' => 'all',        'capacity' => 120, 'status' => 'idle'],

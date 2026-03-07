@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->enum('priority', ['low', 'medium', 'high', 'critical'])->default('low');
             $table->timestamp('last_collected_at')->nullable();
             $table->boolean('is_active')->default(true);
+            $table->boolean('is_depot')->default(false);
             $table->timestamps();
         });
 
