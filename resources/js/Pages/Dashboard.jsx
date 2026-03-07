@@ -532,7 +532,6 @@ function DashboardInner({ auth }) {
                     addLog={addLog}
                     addToast={addToast}
                     vrpResult={vrpResult}
-                    fleetRef={fleetRef}
                 />
             )}
 
@@ -583,125 +582,125 @@ function DashboardInner({ auth }) {
                     </div>
                 </div>
 
-            {/* ── BODY ── */}
-            <div className="vp-body">
-                {/* SIDEBAR */}
-                <div className={`vp-sidebar ${sidebarCollapsed ? 'collapsed' : ''}`}>
-                    {loading ? <LoadingSkeleton rows={6} /> : (<>
-                        {/* CARTE tab content */}
-                        {activeTab === 'carte' && (
-                            <div className="fade-in">
-                                <Sec title="Métriques Temps Réel">
-                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 8 }}>
-                                        <div className="kpi"><div className="kv" style={{ color: '#00e5b8' }}><AnimatedCounter value={pts.length} /></div><div className="kl">Points</div></div>
-                                        <div className="kpi"><div className="kv" style={{ color: '#00e5b8' }}>{routes.length}</div><div className="kl">Routes</div></div>
-                                        <div className="kpi"><div className="kv" style={{ color: '#38bdf8' }}>{vrpResult?.total_km || '—'}km</div><div className="kl">Distance</div></div>
-                                        <div className="kpi"><div className="kv" style={{ color: '#10b981' }}>{avgFill}%</div><div className="kl">Remplissage Moy</div></div>
-                                    </div>
-                                    {criticalCount > 0 && (
-                                        <div style={{ background: 'rgba(244,63,94,.08)', border: '1px solid rgba(244,63,94,.2)', borderRadius: 8, padding: '6px 10px', fontSize: 11, color: '#f43f5e', display: 'flex', alignItems: 'center', gap: 6 }}>
-                                            🚨 <b>{criticalCount}</b> bennes critiques (&gt;85%)
+                {/* ── BODY ── */}
+                <div className="vp-body">
+                    {/* SIDEBAR */}
+                    <div className={`vp-sidebar ${sidebarCollapsed ? 'collapsed' : ''}`}>
+                        {loading ? <LoadingSkeleton rows={6} /> : (<>
+                            {/* CARTE tab content */}
+                            {activeTab === 'carte' && (
+                                <div className="fade-in">
+                                    <Sec title="Métriques Temps Réel">
+                                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 8 }}>
+                                            <div className="kpi"><div className="kv" style={{ color: '#00e5b8' }}><AnimatedCounter value={pts.length} /></div><div className="kl">Points</div></div>
+                                            <div className="kpi"><div className="kv" style={{ color: '#00e5b8' }}>{routes.length}</div><div className="kl">Routes</div></div>
+                                            <div className="kpi"><div className="kv" style={{ color: '#38bdf8' }}>{vrpResult?.total_km || '—'}km</div><div className="kl">Distance</div></div>
+                                            <div className="kpi"><div className="kv" style={{ color: '#10b981' }}>{avgFill}%</div><div className="kl">Remplissage Moy</div></div>
                                         </div>
-                                    )}
-                                </Sec>
-                                <Sec title="Filtres Déchets">
-                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 4 }}>
-                                        {Object.entries({ medical: 'Medical', organic: 'Organic', recyclable: 'Recyclable', paper: 'Paper', general: 'General' }).map(([k, label]) => (
-                                            <div key={k} onClick={() => toggleWaste(k)} className={`chip ${wasteFilters[k] ? 'on' : 'off'}`}
-                                                style={{ border: wasteFilters[k] ? `1px solid ${WC[k]}` : '1px solid #1a2e42', color: wasteFilters[k] ? WC[k] : '#7a92aa' }}>
-                                                {label}
+                                        {criticalCount > 0 && (
+                                            <div style={{ background: 'rgba(244,63,94,.08)', border: '1px solid rgba(244,63,94,.2)', borderRadius: 8, padding: '6px 10px', fontSize: 11, color: '#f43f5e', display: 'flex', alignItems: 'center', gap: 6 }}>
+                                                🚨 <b>{criticalCount}</b> bennes critiques (&gt;85%)
                                             </div>
-                                        ))}
-                                    </div>
-                                </Sec>
-                                <Sec title="Couches & Options">
-                                    <label className="ly-row"><input type="checkbox" checked={lyPts} onChange={e => setLyPts(e.target.checked)} /> Points collecte</label>
-                                    <label className="ly-row"><input type="checkbox" checked={lyRt} onChange={e => setLyRt(e.target.checked)} /> Tracés routes</label>
-                                    <label className="ly-row"><input type="checkbox" checked={lyHeat} onChange={e => setLyHeat(e.target.checked)} /> Heatmap densité</label>
-                                    <label className="ly-row"><input type="checkbox" checked={lyZones} onChange={e => setLyZones(e.target.checked)} /> Zones (Contours)</label>
-                                </Sec>
-                                <RouteList
-                                    routes={routes}
-                                    highlightRoute={highlightRoute}
-                                    setHighlightRoute={setHighlightRoute}
-                                    playbackRouteIndex={playbackRouteIndex}
-                                    playRoute={playRoute}
-                                    vrpResult={vrpResult}
-                                    playbackProgress={playbackProgress}
-                                    collectedPoints={collectedPoints}
-                                    triggerBreakdown={isAdmin ? triggerBreakdown : null}
-                                    replanningActive={replanningActive}
+                                        )}
+                                    </Sec>
+                                    <Sec title="Filtres Déchets">
+                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 4 }}>
+                                            {Object.entries({ medical: 'Medical', organic: 'Organic', recyclable: 'Recyclable', paper: 'Paper', general: 'General' }).map(([k, label]) => (
+                                                <div key={k} onClick={() => toggleWaste(k)} className={`chip ${wasteFilters[k] ? 'on' : 'off'}`}
+                                                    style={{ border: wasteFilters[k] ? `1px solid ${WC[k]}` : '1px solid #1a2e42', color: wasteFilters[k] ? WC[k] : '#7a92aa' }}>
+                                                    {label}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </Sec>
+                                    <Sec title="Couches & Options">
+                                        <label className="ly-row"><input type="checkbox" checked={lyPts} onChange={e => setLyPts(e.target.checked)} /> Points collecte</label>
+                                        <label className="ly-row"><input type="checkbox" checked={lyRt} onChange={e => setLyRt(e.target.checked)} /> Tracés routes</label>
+                                        <label className="ly-row"><input type="checkbox" checked={lyHeat} onChange={e => setLyHeat(e.target.checked)} /> Heatmap densité</label>
+                                        <label className="ly-row"><input type="checkbox" checked={lyZones} onChange={e => setLyZones(e.target.checked)} /> Zones (Contours)</label>
+                                    </Sec>
+                                    <RouteList
+                                        routes={routes}
+                                        highlightRoute={highlightRoute}
+                                        setHighlightRoute={setHighlightRoute}
+                                        playbackRouteIndex={playbackRouteIndex}
+                                        playRoute={playRoute}
+                                        vrpResult={vrpResult}
+                                        playbackProgress={playbackProgress}
+                                        collectedPoints={collectedPoints}
+                                        triggerBreakdown={isAdmin ? triggerBreakdown : null}
+                                        replanningActive={replanningActive}
+                                    />
+                                </div>
+                            )}
+
+                            {/* VRP tab */}
+                            {activeTab === 'vrp' && (
+                                <VrpControls
+                                    isAdmin={isAdmin}
+                                    algorithm={algorithm} setAlgorithm={setAlgorithm}
+                                    iterations={iterations} setIterations={setIterations}
+                                    numTrucks={numTrucks} setNumTrucks={setNumTrucks}
+                                    capacity={capacity} setCapacity={setCapacity}
+                                    wasteFilter={wasteFilter} setWasteFilter={setWasteFilter}
+                                    vrpRunning={vrpRunning} runVRP={runVRP}
+                                    routes={routes} setRoutes={setRoutes} setVrpResult={setVrpResult}
+                                    vrpResult={vrpResult} logs={logs}
+                                    exportPdf={exportPdf} exportCSV={exportCSV}
                                 />
+                            )}
+
+                            {/* IoT / Fleet / Stats / Bench handled by StatsPanel */}
+                            {['iot', 'fleet', 'stats', 'bench'].includes(activeTab) && (
+                                <StatsPanel
+                                    activeTab={activeTab}
+                                    pts={pts} routes={routes}
+                                    statsChart={statsChart} avgFill={avgFill} criticalCount={criticalCount}
+                                    iotSimRunning={iotSimRunning} setIotSimRunning={setIotSimRunning}
+                                    iotTimerRef={iotTimerRef} iotAlerts={iotAlerts} setIotAlerts={setIotAlerts}
+                                    emergencyReplanningNeeded={emergencyReplanningNeeded}
+                                    setEmergencyReplanningNeeded={setEmergencyReplanningNeeded}
+                                    trucks={trucks} addTruck={addTruck} removeTruck={removeTruck}
+                                    capacity={capacity} numTrucks={numTrucks}
+                                    benchRunning={benchRunning} benchResult={benchResult}
+                                    setBenchResult={setBenchResult} setBenchRunning={setBenchRunning}
+                                    addLog={addLog} addToast={addToast}
+                                    runVRP={runVRP} setActiveTab={setActiveTab} loadData={loadData}
+                                />
+                            )}
+
+                            {/* Terminal always visible at bottom */}
+                            <div style={{ marginTop: 'auto', borderTop: '1px solid #1a2e42', background: '#07111e' }}>
+                                <div style={{ padding: '6px 13px', fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.5, color: '#374e64' }}>Core IA Terminal</div>
+                                <div className="log" style={{ height: 130 }}>{logs.map(l => <div key={l.id} className={`ll ${l.type}`}>[{l.time}] {l.msg}</div>)}</div>
                             </div>
-                        )}
+                        </>)}
+                    </div>
 
-                        {/* VRP tab */}
-                        {activeTab === 'vrp' && (
-                            <VrpControls
-                                isAdmin={isAdmin}
-                                algorithm={algorithm} setAlgorithm={setAlgorithm}
-                                iterations={iterations} setIterations={setIterations}
-                                numTrucks={numTrucks} setNumTrucks={setNumTrucks}
-                                capacity={capacity} setCapacity={setCapacity}
-                                wasteFilter={wasteFilter} setWasteFilter={setWasteFilter}
-                                vrpRunning={vrpRunning} runVRP={runVRP}
-                                routes={routes} setRoutes={setRoutes} setVrpResult={setVrpResult}
-                                vrpResult={vrpResult} logs={logs}
-                                exportPdf={exportPdf} exportCSV={exportCSV}
-                            />
-                        )}
-
-                        {/* IoT / Fleet / Stats / Bench handled by StatsPanel */}
-                        {['iot', 'fleet', 'stats', 'bench'].includes(activeTab) && (
-                            <StatsPanel
-                                activeTab={activeTab}
-                                pts={pts} routes={routes}
-                                statsChart={statsChart} avgFill={avgFill} criticalCount={criticalCount}
-                                iotSimRunning={iotSimRunning} setIotSimRunning={setIotSimRunning}
-                                iotTimerRef={iotTimerRef} iotAlerts={iotAlerts} setIotAlerts={setIotAlerts}
-                                emergencyReplanningNeeded={emergencyReplanningNeeded}
-                                setEmergencyReplanningNeeded={setEmergencyReplanningNeeded}
-                                trucks={trucks} addTruck={addTruck} removeTruck={removeTruck}
-                                capacity={capacity} numTrucks={numTrucks}
-                                benchRunning={benchRunning} benchResult={benchResult}
-                                setBenchResult={setBenchResult} setBenchRunning={setBenchRunning}
-                                addLog={addLog} addToast={addToast}
-                                runVRP={runVRP} setActiveTab={setActiveTab} loadData={loadData}
-                            />
-                        )}
-
-                        {/* Terminal always visible at bottom */}
-                        <div style={{ marginTop: 'auto', borderTop: '1px solid #1a2e42', background: '#07111e' }}>
-                            <div style={{ padding: '6px 13px', fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.5, color: '#374e64' }}>Core IA Terminal</div>
-                            <div className="log" style={{ height: 130 }}>{logs.map(l => <div key={l.id} className={`ll ${l.type}`}>[{l.time}] {l.msg}</div>)}</div>
-                        </div>
-                    </>)}
+                    {/* MAP */}
+                    <MapContainer
+                        mapContainerRef={mapContainerRef}
+                        mapRef={mapRef}
+                        markersRef={markersRef}
+                        routesLayerIds={routesLayerIds}
+                        pts={pts}
+                        wasteFilters={wasteFilters}
+                        collectedPoints={collectedPoints}
+                        lyPts={lyPts} lyDep={lyDep} lyRt={lyRt} lyHeat={lyHeat} lyZones={lyZones}
+                        routes={routes}
+                        highlightRoute={highlightRoute}
+                        playbackRouteIndex={playbackRouteIndex}
+                        mapStyleLoaded={mapStyleLoaded}
+                        setMapStyleLoaded={setMapStyleLoaded}
+                        toasts={toasts}
+                        vrpResult={vrpResult}
+                        truckMarkerRef={truckMarkerRef}
+                        playbackProgress={playbackProgress}
+                        sidebarCollapsed={sidebarCollapsed}
+                        setSidebarCollapsed={setSidebarCollapsed}
+                    />
                 </div>
-
-                {/* MAP */}
-                <MapContainer
-                    mapContainerRef={mapContainerRef}
-                    mapRef={mapRef}
-                    markersRef={markersRef}
-                    routesLayerIds={routesLayerIds}
-                    pts={pts}
-                    wasteFilters={wasteFilters}
-                    collectedPoints={collectedPoints}
-                    lyPts={lyPts} lyDep={lyDep} lyRt={lyRt} lyHeat={lyHeat} lyZones={lyZones}
-                    routes={routes}
-                    highlightRoute={highlightRoute}
-                    playbackRouteIndex={playbackRouteIndex}
-                    mapStyleLoaded={mapStyleLoaded}
-                    setMapStyleLoaded={setMapStyleLoaded}
-                    toasts={toasts}
-                    vrpResult={vrpResult}
-                    truckMarkerRef={truckMarkerRef}
-                    playbackProgress={playbackProgress}
-                    sidebarCollapsed={sidebarCollapsed}
-                    setSidebarCollapsed={setSidebarCollapsed}
-                />
-            </div>
-        </div >
+            </div >
         </>
     );
 }
