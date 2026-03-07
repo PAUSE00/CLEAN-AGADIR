@@ -165,7 +165,7 @@ export default function DriverDashboard({ auth }) {
 
     return (
         <>
-            <Head><title>VillePropre — Terminal Driver</title>
+            <Head><title>CLEAN AGADIR — Terminal Driver</title>
                 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
             </Head>
 
@@ -184,7 +184,7 @@ export default function DriverDashboard({ auth }) {
                         boxShadow: '0 4px 16px rgba(0,229,184,0.3), inset 0 2px 0 rgba(255,255,255,0.2)'
                     }}>🚛</div>
                     <div style={{ flex: 1 }}>
-                        <div style={{ fontWeight: 700, fontSize: 16, color: '#fff', letterSpacing: 0.5 }}>VillePropre Driver</div>
+                        <div style={{ fontWeight: 700, fontSize: 16, color: '#fff', letterSpacing: 0.5 }}>CLEAN AGADIR Driver</div>
                         <div style={{ fontSize: 12, color: '#00e5b8', fontFamily: "'JetBrains Mono', monospace" }}>{auth.user?.name || 'CHAUFFEUR #204'}</div>
                     </div>
                     <Link href={route('dashboard')} style={{

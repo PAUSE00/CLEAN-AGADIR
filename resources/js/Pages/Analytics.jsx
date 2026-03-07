@@ -104,7 +104,7 @@ export default function Analytics({ auth }) {
     return (
         <>
             <Head>
-                <title>VillePropre — Analytics</title>
+                <title>CLEAN AGADIR — Analytics</title>
                 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
             </Head>
 
@@ -113,7 +113,7 @@ export default function Analytics({ auth }) {
                 <div style={{ background: 'rgba(7,17,30,.97)', borderBottom: '1px solid #1a2e42', padding: '0 24px', height: 52, display: 'flex', alignItems: 'center', gap: 16, position: 'sticky', top: 0, zIndex: 100 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 700, fontSize: 15, color: '#00e5b8' }}>
                         <div style={{ width: 28, height: 28, background: 'linear-gradient(135deg,#00e5b8,#00a88a)', borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14 }}>♻️</div>
-                        VillePropre
+                        CLEAN AGADIR
                         <span style={{ fontSize: 9, background: 'rgba(0,229,184,.12)', color: '#00e5b8', border: '1px solid rgba(0,229,184,.2)', padding: '1px 6px', borderRadius: 3, fontFamily: "'JetBrains Mono',monospace" }}>Analytics</span>
                     </div>
                     <div style={{ display: 'flex', gap: 8, marginLeft: 10 }}>
@@ -339,7 +339,7 @@ export default function Analytics({ auth }) {
                             <span>·</span>
                             <span>🌡️ Température moy. 24h: {stats?.avg_temp_24h ?? '—'}°C</span>
                             <span>·</span>
-                            <span>Données: VillePropre · Agadir · {new Date().getFullYear()}</span>
+                            <span>Données: CLEAN AGADIR · Agadir · {new Date().getFullYear()}</span>
                         </div>
                     </div>
                 )}

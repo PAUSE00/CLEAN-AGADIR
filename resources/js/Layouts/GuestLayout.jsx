@@ -17,7 +17,7 @@ export default function GuestLayout({ children }) {
                 <Link href="/" className="flex flex-col items-center gap-2 group">
                     <div className="text-4xl filter drop-shadow-[0_0_10px_rgba(0,229,184,0.5)] group-hover:scale-110 transition-transform">♻️</div>
                     <div className="text-2xl font-bold bg-gradient-to-r from-[#00e5b8] to-[#00a383] bg-clip-text text-transparent font-['Space_Grotesk'] tracking-widest uppercase">
-                        VillePropre
+                        CLEAN AGADIR
                     </div>
                 </Link>
             </div>

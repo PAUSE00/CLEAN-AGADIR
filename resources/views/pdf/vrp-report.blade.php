@@ -164,7 +164,7 @@
     @endforeach
 
     <div class="footer">
-        VillePropre VRP System — Généré automatiquement — Page 1
+        CLEAN AGADIR VRP System — Généré automatiquement — Page 1
     </div>
 </body>
 

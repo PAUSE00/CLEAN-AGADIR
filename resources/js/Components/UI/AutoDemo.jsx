@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 /**
- * AutoDemo — guided PFE jury demonstration
+ * AutoDemo — guided BETA jury demonstration
  * Runs automatically: loads data → VRP → animate → panne → replan
  */
 const STEPS = [
@@ -54,7 +54,7 @@ export default function AutoDemo({
             // ── Step 0: Show map ──────────────────────────────
             setStep(0);
             setActiveTab('carte');
-            addLog('🎬 Démo jury PFE démarrée', 'ok');
+            addLog('🎬 Démo jury BETA démarrée', 'ok');
             addToast('🎬 Démo automatique lancée!', 'ok');
             await wait(2500);
 
@@ -103,7 +103,7 @@ export default function AutoDemo({
             await wait(2000);
 
             setDone(true);
-            addLog('🎉 Démo PFE terminée avec succès!', 'ok');
+            addLog('🎉 Démo BETA terminée avec succès!', 'ok');
             addToast('🎉 Démo complète!', 'ok');
         } catch (e) {
             addLog(`✗ Démo interrompue: ${e.message}`, 'err');
@@ -147,7 +147,7 @@ export default function AutoDemo({
                         padding: '3px 10px', borderRadius: 20,
                         border: '1px solid rgba(0,229,184,.2)',
                         fontFamily: "'JetBrains Mono',monospace",
-                    }}>🎓 Démo PFE — Mode Auto</div>
+                    }}>🎓 Démo BETA — Mode Auto</div>
                     <div style={{ flex: 1 }} />
                     {!running && !done && (
                         <button onClick={advance} style={{
@@ -195,7 +195,7 @@ export default function AutoDemo({
                         </div>
                         <div style={{ fontSize: 11.5, color: '#7a92aa', lineHeight: 1.6 }}>
                             {done
-                                ? 'Le système VillePropre a démontré: collecte IoT, optimisation VRP multi-algorithme, routage réel OSRM, animation temps réel et replanification dynamique sur panne.'
+                                ? 'Le système CLEAN AGADIR a démontré: collecte IoT, optimisation VRP multi-algorithme, routage réel OSRM, animation temps réel et replanification dynamique sur panne.'
                                 : STEPS[step]?.desc}
                         </div>
                         {paused && (

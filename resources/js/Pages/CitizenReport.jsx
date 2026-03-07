@@ -120,7 +120,7 @@ export default function CitizenReport() {
 
     return (
         <div className="vp-app-container citizen-theme min-h-screen relative flex items-center justify-center p-4">
-            <Head title="VillePropre - Signalement Citoyen" />
+            <Head title="CLEAN AGADIR - Signalement Citoyen" />
 
             {/* Background Blob Effects */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
@@ -140,7 +140,7 @@ export default function CitizenReport() {
                         )}
                         <div>
                             <h1 className="text-xl font-bold bg-gradient-to-r from-[#00e5b8] to-[#00a383] bg-clip-text text-transparent">
-                                VillePropre
+                                CLEAN AGADIR
                             </h1>
                             <p className="text-xs text-slate-400 mt-0.5 tracking-wide uppercase font-semibold">Portail Citoyen</p>
                         </div>
@@ -266,7 +266,7 @@ export default function CitizenReport() {
 
                                 <h2 className="text-2xl font-bold text-white">Merci !</h2>
                                 <p className="text-slate-400 text-base leading-relaxed">
-                                    Votre signalement a été transmis au centre de contrôle de <strong className="text-white">VillePropre</strong>.<br /><br />
+                                    Votre signalement a été transmis au centre de contrôle de <strong className="text-white">CLEAN AGADIR</strong>.<br /><br />
                                     Une équipe de collecte sera automatiquement redirigée vers ce point lors de la prochaine optimisation de tournée.
                                 </p>
 
@@ -282,7 +282,7 @@ export default function CitizenReport() {
 
                 {/* Footer / Info */}
                 <div className="text-center mt-6 text-slate-500 text-xs flex items-center justify-center gap-2">
-                    <Trash2 size={12} /> VillePropre Agadir · Initiative Smart City
+                    <Trash2 size={12} /> CLEAN AGADIR Agadir · Initiative Smart City
                 </div>
             </main>
         </div>

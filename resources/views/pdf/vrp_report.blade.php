@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Rapport VRP - VillePropre</title>
+    <title>Rapport VRP - CLEAN AGADIR</title>
     <style>
         body {
             font-family: 'Helvetica', 'Arial', sans-serif;
@@ -117,11 +117,11 @@
 
 <body>
     <div class="footer">
-        VillePropre - Rapport généré le {{ now()->format('d/m/Y à H:i') }} - Page <span class="page-number"></span>
+        CLEAN AGADIR - Rapport généré le {{ now()->format('d/m/Y à H:i') }} - Page <span class="page-number"></span>
     </div>
 
     <div class="header">
-        <h1>♻️ VillePropre — Agadir</h1>
+        <h1>♻️ CLEAN AGADIR — Agadir</h1>
         <h2>Rapport d'Optimisation des Routes (VRP)</h2>
     </div>
 
