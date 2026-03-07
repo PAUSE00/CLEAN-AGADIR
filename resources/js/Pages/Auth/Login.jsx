@@ -26,7 +26,7 @@ export default function Login({ status, canResetPassword }) {
             <Head title="Log in" />
 
             {status && (
-                <div className="mb-4 text-sm font-medium text-green-600">
+                <div className="mb-4 text-sm font-medium text-[#00e5b8]">
                     {status}
                 </div>
             )}
@@ -46,11 +46,11 @@ export default function Login({ status, canResetPassword }) {
                         onChange={(e) => setData('email', e.target.value)}
                     />
 
-                    <InputError message={errors.email} className="mt-2" />
+                    <InputError message={errors.email} />
                 </div>
 
-                <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                <div className="mt-5">
+                    <InputLabel htmlFor="password" value="Mot de passe" />
 
                     <TextInput
                         id="password"
@@ -62,11 +62,11 @@ export default function Login({ status, canResetPassword }) {
                         onChange={(e) => setData('password', e.target.value)}
                     />
 
-                    <InputError message={errors.password} className="mt-2" />
+                    <InputError message={errors.password} />
                 </div>
 
-                <div className="mt-4 block">
-                    <label className="flex items-center">
+                <div className="mt-5 block">
+                    <label className="flex items-center cursor-pointer group">
                         <Checkbox
                             name="remember"
                             checked={data.remember}
@@ -74,25 +74,34 @@ export default function Login({ status, canResetPassword }) {
                                 setData('remember', e.target.checked)
                             }
                         />
-                        <span className="ms-2 text-sm text-gray-600 dark:text-gray-400">
-                            Remember me
+                        <span className="ms-2 text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                            Se souvenir de moi
                         </span>
                     </label>
                 </div>
 
-                <div className="mt-4 flex items-center justify-end">
-                    {canResetPassword && (
-                        <Link
-                            href={route('password.request')}
-                            className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:text-gray-400 dark:hover:text-gray-100 dark:focus:ring-offset-gray-800"
-                        >
-                            Forgot your password?
-                        </Link>
-                    )}
-
-                    <PrimaryButton className="ms-4" disabled={processing}>
-                        Log in
+                <div className="mt-8 flex flex-col gap-4">
+                    <PrimaryButton disabled={processing}>
+                        Connexion
                     </PrimaryButton>
+
+                    <div className="flex items-center justify-between mt-2">
+                        {canResetPassword && (
+                            <Link
+                                href={route('password.request')}
+                                className="text-sm text-slate-400 hover:text-[#00e5b8] transition-colors focus:outline-none"
+                            >
+                                Mot de passe oublié ?
+                            </Link>
+                        )}
+
+                        <Link
+                            href={route('register')}
+                            className="text-sm text-slate-400 hover:text-[#00e5b8] transition-colors focus:outline-none"
+                        >
+                            Créer un compte
+                        </Link>
+                    </div>
                 </div>
             </form>
         </GuestLayout>

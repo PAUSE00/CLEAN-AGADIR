@@ -27,7 +27,7 @@ export default function Register() {
 
             <form onSubmit={submit}>
                 <div>
-                    <InputLabel htmlFor="name" value="Name" />
+                    <InputLabel htmlFor="name" value="Nom Complet" />
 
                     <TextInput
                         id="name"
@@ -40,10 +40,10 @@ export default function Register() {
                         required
                     />
 
-                    <InputError message={errors.name} className="mt-2" />
+                    <InputError message={errors.name} />
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-5">
                     <InputLabel htmlFor="email" value="Email" />
 
                     <TextInput
@@ -57,11 +57,11 @@ export default function Register() {
                         required
                     />
 
-                    <InputError message={errors.email} className="mt-2" />
+                    <InputError message={errors.email} />
                 </div>
 
-                <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                <div className="mt-5">
+                    <InputLabel htmlFor="password" value="Mot de passe" />
 
                     <TextInput
                         id="password"
@@ -74,13 +74,13 @@ export default function Register() {
                         required
                     />
 
-                    <InputError message={errors.password} className="mt-2" />
+                    <InputError message={errors.password} />
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-5">
                     <InputLabel
                         htmlFor="password_confirmation"
-                        value="Confirm Password"
+                        value="Confirmer le mot de passe"
                     />
 
                     <TextInput
@@ -98,21 +98,22 @@ export default function Register() {
 
                     <InputError
                         message={errors.password_confirmation}
-                        className="mt-2"
                     />
                 </div>
 
-                <div className="mt-4 flex items-center justify-end">
-                    <Link
-                        href={route('login')}
-                        className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:text-gray-400 dark:hover:text-gray-100 dark:focus:ring-offset-gray-800"
-                    >
-                        Already registered?
-                    </Link>
-
-                    <PrimaryButton className="ms-4" disabled={processing}>
-                        Register
+                <div className="mt-8 flex flex-col gap-4">
+                    <PrimaryButton disabled={processing}>
+                        Créer le compte
                     </PrimaryButton>
+
+                    <div className="flex items-center justify-center mt-2">
+                        <Link
+                            href={route('login')}
+                            className="text-sm text-slate-400 hover:text-[#00e5b8] transition-colors focus:outline-none"
+                        >
+                            Déjà inscrit ? Connectez-vous
+                        </Link>
+                    </div>
                 </div>
             </form>
         </GuestLayout>
