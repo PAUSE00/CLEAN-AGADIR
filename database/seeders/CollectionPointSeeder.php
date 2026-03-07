@@ -54,10 +54,24 @@ class CollectionPointSeeder extends Seeder
 
         $index = 0;
         foreach ($chunks as $chunk) {
-            $records = array_map(function ($d) use (&$index, $zones) {
-                // Pseudo-random but consistent zone assignment
-                $zone = $zones[$index % count($zones)];
-                $index++;
+            $records = array_map(function ($d) use ($zones) {
+                $lat = $d['lat'];
+                $lng = $d['lng'];
+
+                // Assign zones based on geographic boundaries
+                if ($lat > 30.42 && $lng < -9.59) {
+                    $zone = $zones[3]; // Zone Touristique (North West)
+                } elseif ($lat > 30.42 && $lng >= -9.59) {
+                    $zone = $zones[2]; // Hay Mohammadi (North East)
+                } elseif ($lat <= 30.42 && $lat > 30.39) {
+                    if ($lng < -9.57) {
+                        $zone = $zones[0]; // Centre Ville (Central West)
+                    } else {
+                        $zone = $zones[1]; // Talborjt (Central East)
+                    }
+                } else {
+                    $zone = $zones[4]; // Quartier Industriel (South)
+                }
 
                 return [
                     'name'           => $d['name'],
