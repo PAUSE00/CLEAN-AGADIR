@@ -215,7 +215,7 @@ function DashboardInner({ auth }) {
         try {
             const res = await fetch('/api/vrp/optimize', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content },
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content },
                 body: JSON.stringify({ num_trucks: numTrucks, capacity, algorithm, iterations, waste_filter: wasteFilter }),
             });
             const data = await res.json();
