@@ -1,0 +1,5000 @@
+[
+  {
+    "name": "InBarbecue",
+    "type": "fast_food",
+    "latitude": 30.4173858,
+    "longitude": -9.6001347
+  },
+  {
+    "name": "Yacout",
+    "type": "restaurant",
+    "latitude": 30.4209001,
+    "longitude": -9.5947798
+  },
+  {
+    "name": "Attijariwafa",
+    "type": "bank",
+    "latitude": 30.4216591,
+    "longitude": -9.5934988
+  },
+  {
+    "name": "Ait Wadrim",
+    "type": "restaurant",
+    "latitude": 30.4103843,
+    "longitude": -9.5565181
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4125515,
+    "longitude": -9.5877921
+  },
+  {
+    "name": "Fish restaurant area",
+    "type": "restaurant",
+    "latitude": 30.4261363,
+    "longitude": -9.6195901
+  },
+  {
+    "name": "McDonald's ماكدونالدز",
+    "type": "fast_food",
+    "latitude": 30.410738,
+    "longitude": -9.5949739
+  },
+  {
+    "name": "Pizza Hut",
+    "type": "restaurant",
+    "latitude": 30.4150904,
+    "longitude": -9.5974504
+  },
+  {
+    "name": "Le Nil",
+    "type": "restaurant",
+    "latitude": 30.4179942,
+    "longitude": -9.6059667
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "supermarket",
+    "latitude": 30.4328818,
+    "longitude": -9.5909197
+  },
+  {
+    "name": "Carrefour market Label'vie",
+    "type": "supermarket",
+    "latitude": 30.4259826,
+    "longitude": -9.5925047
+  },
+  {
+    "name": "Crédit du Maroc",
+    "type": "bank",
+    "latitude": 30.4244518,
+    "longitude": -9.5902977
+  },
+  {
+    "name": "LE DOME",
+    "type": "restaurant",
+    "latitude": 30.4212519,
+    "longitude": -9.6001751
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "bakery",
+    "latitude": 30.4217596,
+    "longitude": -9.6003016
+  },
+  {
+    "name": "Credit Du Maroc",
+    "type": "bank",
+    "latitude": 30.4226035,
+    "longitude": -9.6003175
+  },
+  {
+    "name": "Baccara Roulette",
+    "type": "restaurant",
+    "latitude": 30.4197798,
+    "longitude": -9.6040068
+  },
+  {
+    "name": "Etoile Du Sud",
+    "type": "restaurant",
+    "latitude": 30.4224271,
+    "longitude": -9.6077873
+  },
+  {
+    "name": "Pharmacie Anezi صيدلية أنزي",
+    "type": "pharmacy",
+    "latitude": 30.417109,
+    "longitude": -9.6003148
+  },
+  {
+    "name": "Pharmacie La Province صيدلية العمالة",
+    "type": "pharmacy",
+    "latitude": 30.3624128,
+    "longitude": -9.534122
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "pharmacy",
+    "latitude": 30.4147845,
+    "longitude": -9.5988659
+  },
+  {
+    "name": "La Côte d'Or",
+    "type": "restaurant",
+    "latitude": 30.4185697,
+    "longitude": -9.6066136
+  },
+  {
+    "name": "Banque Al-Maghrib",
+    "type": "bank",
+    "latitude": 30.4202676,
+    "longitude": -9.6034531
+  },
+  {
+    "name": "Le Scala",
+    "type": "restaurant",
+    "latitude": 30.4086343,
+    "longitude": -9.5987442
+  },
+  {
+    "name": "Agadir Al Fiddia",
+    "type": "post_office",
+    "latitude": 30.4079,
+    "longitude": -9.5554
+  },
+  {
+    "name": "Agadir Cite Balneaire",
+    "type": "post_office",
+    "latitude": 30.412,
+    "longitude": -9.602
+  },
+  {
+    "name": "Agadir El Khiam",
+    "type": "post_office",
+    "latitude": 30.422,
+    "longitude": -9.5724
+  },
+  {
+    "name": "Post Agadir Hay Essalam",
+    "type": "post_office",
+    "latitude": 30.4032989,
+    "longitude": -9.5499045
+  },
+  {
+    "name": "Agadir Quartier Industriel",
+    "type": "post_office",
+    "latitude": 30.4139106,
+    "longitude": -9.5891098
+  },
+  {
+    "name": "Agadir Souk El Had",
+    "type": "post_office",
+    "latitude": 30.4129,
+    "longitude": -9.5794
+  },
+  {
+    "name": "Agadir Talborjt",
+    "type": "post_office",
+    "latitude": 30.423,
+    "longitude": -9.591
+  },
+  {
+    "name": "Bensergao",
+    "type": "post_office",
+    "latitude": 30.393,
+    "longitude": -9.5686
+  },
+  {
+    "name": "Dcheira Hay Ilham",
+    "type": "post_office",
+    "latitude": 30.3637,
+    "longitude": -9.5269
+  },
+  {
+    "name": "Tikiouine",
+    "type": "post_office",
+    "latitude": 30.3771086,
+    "longitude": -9.5032472
+  },
+  {
+    "name": "Agadir Cite Sidi Mohamed",
+    "type": "post_office",
+    "latitude": 30.425,
+    "longitude": -9.5835
+  },
+  {
+    "name": "Agadir Hay Dakhla",
+    "type": "post_office",
+    "latitude": 30.4111874,
+    "longitude": -9.5567663
+  },
+  {
+    "name": "Poste Maroc بريد المغرب",
+    "type": "post_office",
+    "latitude": 30.3518199,
+    "longitude": -9.5376646
+  },
+  {
+    "name": "Alimentation Generale",
+    "type": "convenience",
+    "latitude": 30.4178081,
+    "longitude": -9.5951837
+  },
+  {
+    "name": "Alimentation Generale",
+    "type": "convenience",
+    "latitude": 30.4204796,
+    "longitude": -9.5951032
+  },
+  {
+    "name": "Tafarnout",
+    "type": "cafe",
+    "latitude": 30.4173415,
+    "longitude": -9.5962774
+  },
+  {
+    "name": "Bab Agadir",
+    "type": "restaurant",
+    "latitude": 30.4159937,
+    "longitude": -9.5965997
+  },
+  {
+    "name": "Pharmacie Du Founty صيدلية فونتي",
+    "type": "pharmacy",
+    "latitude": 30.4175603,
+    "longitude": -9.596466
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.3809899,
+    "longitude": -9.5044225
+  },
+  {
+    "name": "CIH Bank القرض العقاري والسياحي",
+    "type": "bank",
+    "latitude": 30.4150389,
+    "longitude": -9.5989946
+  },
+  {
+    "name": "Galaxy Coffee",
+    "type": "cafe",
+    "latitude": 30.3935748,
+    "longitude": -9.508378
+  },
+  {
+    "name": "Mesk Elil",
+    "type": "butcher",
+    "latitude": 30.3935033,
+    "longitude": -9.5084778
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.3861819,
+    "longitude": -9.5047706
+  },
+  {
+    "name": "Attijariwafa Bank التجاري وفا بنك",
+    "type": "bank",
+    "latitude": 30.4246835,
+    "longitude": -9.6119836
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.4228022,
+    "longitude": -9.6085356
+  },
+  {
+    "name": "Crédit du Maroc",
+    "type": "bank",
+    "latitude": 30.4246425,
+    "longitude": -9.6118787
+  },
+  {
+    "name": "Crèmerie Ibn Zohr",
+    "type": "restaurant",
+    "latitude": 30.4078989,
+    "longitude": -9.5809784
+  },
+  {
+    "name": "Pharmacie Mekka صيدلية مكة",
+    "type": "pharmacy",
+    "latitude": 30.4076965,
+    "longitude": -9.5808502
+  },
+  {
+    "name": "Saham Bank سهام بنك",
+    "type": "bank",
+    "latitude": 30.3864806,
+    "longitude": -9.5726738
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.396286,
+    "longitude": -9.5988371
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.3969893,
+    "longitude": -9.5976033
+  },
+  {
+    "name": "Chez Ahmed",
+    "type": "fast_food",
+    "latitude": 30.4074999,
+    "longitude": -9.5807426
+  },
+  {
+    "name": "Bibliotheque municipale",
+    "type": "library",
+    "latitude": 30.4250569,
+    "longitude": -9.5967946
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "library",
+    "latitude": 30.42854,
+    "longitude": -9.5817339
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "library",
+    "latitude": 30.4230933,
+    "longitude": -9.5685375
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "library",
+    "latitude": 30.4126477,
+    "longitude": -9.5686072
+  },
+  {
+    "name": "Complexe culturel Mohamed Jamal Addorra",
+    "type": "library",
+    "latitude": 30.4070009,
+    "longitude": -9.5511096
+  },
+  {
+    "name": "Strandrestaurant",
+    "type": "restaurant",
+    "latitude": 30.3891604,
+    "longitude": -9.5993186
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.3704157,
+    "longitude": -9.5400017
+  },
+  {
+    "name": "Attijariwafa Bank التجاري وفا بنك",
+    "type": "bank",
+    "latitude": 30.370512,
+    "longitude": -9.5397754
+  },
+  {
+    "name": "Saham Bank سهام بنك",
+    "type": "bank",
+    "latitude": 30.3708639,
+    "longitude": -9.5405424
+  },
+  {
+    "name": "Pharmacie Dcheira صيدلية الدشيرة",
+    "type": "pharmacy",
+    "latitude": 30.371139,
+    "longitude": -9.5412949
+  },
+  {
+    "name": "CIH Bank القرض العقاري والسياحي",
+    "type": "bank",
+    "latitude": 30.3717916,
+    "longitude": -9.5451593
+  },
+  {
+    "name": "BMCI البنك المغربي للتجارة والصناعة",
+    "type": "bank",
+    "latitude": 30.3705753,
+    "longitude": -9.5362329
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "clinic",
+    "latitude": 30.3584433,
+    "longitude": -9.5337713
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "library",
+    "latitude": 30.3531509,
+    "longitude": -9.5346713
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "butcher",
+    "latitude": 30.3561168,
+    "longitude": -9.5322434
+  },
+  {
+    "name": "Pharmacie Pasteur",
+    "type": "pharmacy",
+    "latitude": 30.3675201,
+    "longitude": -9.5409826
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.3699524,
+    "longitude": -9.5396119
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.3715887,
+    "longitude": -9.5327683
+  },
+  {
+    "name": "Cafe Andalus",
+    "type": "cafe",
+    "latitude": 30.3711576,
+    "longitude": -9.5323854
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.3718861,
+    "longitude": -9.5312854
+  },
+  {
+    "name": "Rugantino",
+    "type": "restaurant",
+    "latitude": 30.4222562,
+    "longitude": -9.610335
+  },
+  {
+    "name": "Auto Ecole Joughou",
+    "type": "driving_school",
+    "latitude": 30.3706985,
+    "longitude": -9.5405603
+  },
+  {
+    "name": "Attijariwafa Bank التجاري وفا بنك",
+    "type": "bank",
+    "latitude": 30.3712553,
+    "longitude": -9.5502466
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.3719207,
+    "longitude": -9.54807
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.3714127,
+    "longitude": -9.5501527
+  },
+  {
+    "name": "Crédit Agricole",
+    "type": "bank",
+    "latitude": 30.3720838,
+    "longitude": -9.551011
+  },
+  {
+    "name": "Café France",
+    "type": "cafe",
+    "latitude": 30.3720339,
+    "longitude": -9.5500074
+  },
+  {
+    "name": "Café Afoulki",
+    "type": "cafe",
+    "latitude": 30.3717687,
+    "longitude": -9.5447397
+  },
+  {
+    "name": "Clinique Agadir des spécialités",
+    "type": "clinic",
+    "latitude": 30.4148236,
+    "longitude": -9.5942244
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.3706616,
+    "longitude": -9.5358567
+  },
+  {
+    "name": "Argana",
+    "type": "cafe",
+    "latitude": 30.3690429,
+    "longitude": -9.5401461
+  },
+  {
+    "name": "Pharmacie Ibn Sina صيدلية ابن سينا",
+    "type": "pharmacy",
+    "latitude": 30.3690089,
+    "longitude": -9.537553
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.3706201,
+    "longitude": -9.53704
+  },
+  {
+    "name": "Pharmacie Centrale الصيدلية المركزية",
+    "type": "pharmacy",
+    "latitude": 30.3699837,
+    "longitude": -9.5401531
+  },
+  {
+    "name": "Pharmacie Tafoukt صيدلية تفوكت",
+    "type": "pharmacy",
+    "latitude": 30.3717453,
+    "longitude": -9.5327699
+  },
+  {
+    "name": "Crédit Agricole du Maroc",
+    "type": "bank",
+    "latitude": 30.4229507,
+    "longitude": -9.6040423
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.4222245,
+    "longitude": -9.6048966
+  },
+  {
+    "name": "فنيزيا ايس",
+    "type": "cafe",
+    "latitude": 30.4235007,
+    "longitude": -9.6178587
+  },
+  {
+    "name": "Pharmacie Assays صيدلية أسايس",
+    "type": "pharmacy",
+    "latitude": 30.3729981,
+    "longitude": -9.5032665
+  },
+  {
+    "name": "مقهى الحي المحمدي",
+    "type": "cafe",
+    "latitude": 30.4285419,
+    "longitude": -9.556511
+  },
+  {
+    "name": "La Fontaine",
+    "type": "cafe",
+    "latitude": 30.4161827,
+    "longitude": -9.5956103
+  },
+  {
+    "name": "L'Anice",
+    "type": "cafe",
+    "latitude": 30.4177785,
+    "longitude": -9.5958122
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "bank",
+    "latitude": 30.4457656,
+    "longitude": -9.6574276
+  },
+  {
+    "name": "Clinique taghzout مصحة تاغزوت",
+    "type": "clinic",
+    "latitude": 30.3606176,
+    "longitude": -9.5349066
+  },
+  {
+    "name": "KFC",
+    "type": "fast_food",
+    "latitude": 30.418305,
+    "longitude": -9.606358
+  },
+  {
+    "name": "Etoile d'Agadir",
+    "type": "restaurant",
+    "latitude": 30.424403,
+    "longitude": -9.5932811
+  },
+  {
+    "name": "Cremerie du sud",
+    "type": "cafe",
+    "latitude": 30.424319,
+    "longitude": -9.5933665
+  },
+  {
+    "name": "Cafe Restaurant Ibtissam",
+    "type": "restaurant",
+    "latitude": 30.4244756,
+    "longitude": -9.5931949
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4225338,
+    "longitude": -9.5999817
+  },
+  {
+    "name": "شواية النهضة",
+    "type": "restaurant",
+    "latitude": 30.427299,
+    "longitude": -9.5878894
+  },
+  {
+    "name": "Café Bouham مقهى بوهام",
+    "type": "cafe",
+    "latitude": 30.3939965,
+    "longitude": -9.5731285
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "bakery",
+    "latitude": 30.4234483,
+    "longitude": -9.6045404
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4233928,
+    "longitude": -9.6043473
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4235177,
+    "longitude": -9.6047175
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.4236541,
+    "longitude": -9.6060398
+  },
+  {
+    "name": "Kiosk",
+    "type": "convenience",
+    "latitude": 30.422241,
+    "longitude": -9.6065601
+  },
+  {
+    "name": "Bamboo Thaï",
+    "type": "restaurant",
+    "latitude": 30.4234668,
+    "longitude": -9.6052029
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4209946,
+    "longitude": -9.6087279
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4197586,
+    "longitude": -9.6075352
+  },
+  {
+    "name": "Kiosk",
+    "type": "convenience",
+    "latitude": 30.423926,
+    "longitude": -9.6101546
+  },
+  {
+    "name": "Kiosk",
+    "type": "convenience",
+    "latitude": 30.4264011,
+    "longitude": -9.6188574
+  },
+  {
+    "name": "Kiosk",
+    "type": "convenience",
+    "latitude": 30.4168938,
+    "longitude": -9.5662113
+  },
+  {
+    "name": "Kiosk",
+    "type": "convenience",
+    "latitude": 30.429471,
+    "longitude": -9.6233617
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.3780477,
+    "longitude": -9.5723694
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "bank",
+    "latitude": 30.4231886,
+    "longitude": -9.6035728
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "fast_food",
+    "latitude": 30.4181241,
+    "longitude": -9.5954298
+  },
+  {
+    "name": "laiterie محلبة",
+    "type": "fast_food",
+    "latitude": 30.3701446,
+    "longitude": -9.538622
+  },
+  {
+    "name": "Snack Afriquia",
+    "type": "fast_food",
+    "latitude": 30.3699971,
+    "longitude": -9.5389599
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "fast_food",
+    "latitude": 30.370188,
+    "longitude": -9.5383665
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "internet_cafe",
+    "latitude": 30.3702117,
+    "longitude": -9.5380625
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "hairdresser",
+    "latitude": 30.3702637,
+    "longitude": -9.5377876
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.370251,
+    "longitude": -9.5378788
+  },
+  {
+    "name": "Aga 999",
+    "type": "bank",
+    "latitude": 30.403926,
+    "longitude": -9.5401104
+  },
+  {
+    "name": "مينيبان",
+    "type": "bakery",
+    "latitude": 30.394812,
+    "longitude": -9.5383413
+  },
+  {
+    "name": "Tadamoun التضامن",
+    "type": "convenience",
+    "latitude": 30.3904804,
+    "longitude": -9.5456043
+  },
+  {
+    "name": "Cafe El Hay",
+    "type": "cafe",
+    "latitude": 30.4170415,
+    "longitude": -9.5869163
+  },
+  {
+    "name": "Pizzatino",
+    "type": "restaurant",
+    "latitude": 30.4143628,
+    "longitude": -9.58451
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.4144903,
+    "longitude": -9.5858831
+  },
+  {
+    "name": "Pharmacie De La Mosquée صيدلية المسجد",
+    "type": "pharmacy",
+    "latitude": 30.412184,
+    "longitude": -9.5843848
+  },
+  {
+    "name": "Meduza Lounge",
+    "type": "restaurant",
+    "latitude": 30.4083661,
+    "longitude": -9.5963887
+  },
+  {
+    "name": "Supérette TILILA",
+    "type": "convenience",
+    "latitude": 30.4049708,
+    "longitude": -9.5186935
+  },
+  {
+    "name": "Cafe essaada مقهى السعادة",
+    "type": "cafe",
+    "latitude": 30.3590799,
+    "longitude": -9.539802
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4221569,
+    "longitude": -9.6186574
+  },
+  {
+    "name": "El Toro",
+    "type": "restaurant",
+    "latitude": 30.4115433,
+    "longitude": -9.6027661
+  },
+  {
+    "name": "Côté Court",
+    "type": "restaurant",
+    "latitude": 30.4175488,
+    "longitude": -9.5977624
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4231897,
+    "longitude": -9.616047
+  },
+  {
+    "name": "PLAYA",
+    "type": "restaurant",
+    "latitude": 30.411443,
+    "longitude": -9.6030852
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4116378,
+    "longitude": -9.6024722
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4240304,
+    "longitude": -9.6159675
+  },
+  {
+    "name": "Café del Mar",
+    "type": "restaurant",
+    "latitude": 30.4160206,
+    "longitude": -9.6049939
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "post_office",
+    "latitude": 30.4455214,
+    "longitude": -9.6551504
+  },
+  {
+    "name": "Marcher anza",
+    "type": "supermarket",
+    "latitude": 30.4457032,
+    "longitude": -9.6577542
+  },
+  {
+    "name": "جزار التضامن",
+    "type": "butcher",
+    "latitude": 30.390873,
+    "longitude": -9.545751
+  },
+  {
+    "name": "Diamant",
+    "type": "cafe",
+    "latitude": 30.3908082,
+    "longitude": -9.5451166
+  },
+  {
+    "name": "Aglif",
+    "type": "fast_food",
+    "latitude": 30.4117119,
+    "longitude": -9.5510795
+  },
+  {
+    "name": "Crystal Cookies",
+    "type": "bakery",
+    "latitude": 30.392996,
+    "longitude": -9.536454
+  },
+  {
+    "name": "Pharmacie Du Soleil صيدلية الشمس",
+    "type": "pharmacy",
+    "latitude": 30.4213649,
+    "longitude": -9.5927628
+  },
+  {
+    "name": "Laboratoire d'analyses médicales HARGUIL",
+    "type": "doctors",
+    "latitude": 30.4214264,
+    "longitude": -9.592889
+  },
+  {
+    "name": "McDonald's",
+    "type": "fast_food",
+    "latitude": 30.3967305,
+    "longitude": -9.5813904
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.3985836,
+    "longitude": -9.555961
+  },
+  {
+    "name": "L’ARDOISE GOURMANDE",
+    "type": "restaurant",
+    "latitude": 30.4229017,
+    "longitude": -9.6027282
+  },
+  {
+    "name": "Canal M تحويل الأموال كنال إم",
+    "type": "bank",
+    "latitude": 30.3988027,
+    "longitude": -9.5564051
+  },
+  {
+    "name": "Caverna Pizzeria Ristorante GrillAvenue m",
+    "type": "restaurant",
+    "latitude": 30.4189752,
+    "longitude": -9.597885
+  },
+  {
+    "name": "Pâtisserie Tagadirt",
+    "type": "bakery",
+    "latitude": 30.4121385,
+    "longitude": -9.590158
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "bakery",
+    "latitude": 30.4202728,
+    "longitude": -9.5954279
+  },
+  {
+    "name": "Rotisserie NAHDA",
+    "type": "restaurant",
+    "latitude": 30.4272258,
+    "longitude": -9.587554
+  },
+  {
+    "name": "Sodivias",
+    "type": "restaurant",
+    "latitude": 30.3982853,
+    "longitude": -9.5253241
+  },
+  {
+    "name": "Ennaser",
+    "type": "restaurant",
+    "latitude": 30.4125616,
+    "longitude": -9.5879459
+  },
+  {
+    "name": "Grillade Fadelo Allah",
+    "type": "restaurant",
+    "latitude": 30.4125901,
+    "longitude": -9.5878082
+  },
+  {
+    "name": "Aswak Assalam",
+    "type": "supermarket",
+    "latitude": 30.4263176,
+    "longitude": -9.5924335
+  },
+  {
+    "name": "Caramel",
+    "type": "cafe",
+    "latitude": 30.4260216,
+    "longitude": -9.5919032
+  },
+  {
+    "name": "BMCI البنك المغربي للتجارة والصناعة",
+    "type": "bank",
+    "latitude": 30.4305259,
+    "longitude": -9.586159
+  },
+  {
+    "name": "Saham Bank سهام بنك",
+    "type": "bank",
+    "latitude": 30.4311186,
+    "longitude": -9.5857662
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.4309793,
+    "longitude": -9.5851612
+  },
+  {
+    "name": "12 COOL",
+    "type": "fast_food",
+    "latitude": 30.4338367,
+    "longitude": -9.5884724
+  },
+  {
+    "name": "BMCI البنك المغربي للتجارة والصناعة",
+    "type": "bank",
+    "latitude": 30.4189041,
+    "longitude": -9.5979394
+  },
+  {
+    "name": "Mikey's Burger",
+    "type": "fast_food",
+    "latitude": 30.4182336,
+    "longitude": -9.5970894
+  },
+  {
+    "name": "Saham Bank سهام بنك",
+    "type": "bank",
+    "latitude": 30.4223813,
+    "longitude": -9.6014038
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.4234724,
+    "longitude": -9.6026478
+  },
+  {
+    "name": "Libre Service",
+    "type": "convenience",
+    "latitude": 30.4261122,
+    "longitude": -9.5998076
+  },
+  {
+    "name": "Salon de coiffure Nathalie",
+    "type": "hairdresser",
+    "latitude": 30.4262343,
+    "longitude": -9.5996979
+  },
+  {
+    "name": "Centre Américain",
+    "type": "school",
+    "latitude": 30.4302106,
+    "longitude": -9.595442
+  },
+  {
+    "name": "Les Blancs",
+    "type": "restaurant",
+    "latitude": 30.4239984,
+    "longitude": -9.6153658
+  },
+  {
+    "name": "Da Celsi",
+    "type": "restaurant",
+    "latitude": 30.4236565,
+    "longitude": -9.6116249
+  },
+  {
+    "name": "First",
+    "type": "cafe",
+    "latitude": 30.4236474,
+    "longitude": -9.6120248
+  },
+  {
+    "name": "CIH Bank القرض العقاري والسياحي",
+    "type": "bank",
+    "latitude": 30.4303389,
+    "longitude": -9.5641724
+  },
+  {
+    "name": "Café Aslal مقهى أسلال",
+    "type": "cafe",
+    "latitude": 30.4090353,
+    "longitude": -9.5673744
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "school",
+    "latitude": 30.4084354,
+    "longitude": -9.5476165
+  },
+  {
+    "name": "AS Burger",
+    "type": "fast_food",
+    "latitude": 30.4171111,
+    "longitude": -9.5649341
+  },
+  {
+    "name": "116",
+    "type": "restaurant",
+    "latitude": 30.4226487,
+    "longitude": -9.6001023
+  },
+  {
+    "name": "Little Italy",
+    "type": "restaurant",
+    "latitude": 30.4210182,
+    "longitude": -9.5999877
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.3589885,
+    "longitude": -9.5498919
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.4231292,
+    "longitude": -9.6116504
+  },
+  {
+    "name": "Attijariwafa Bank التجاري وفا بنك",
+    "type": "bank",
+    "latitude": 30.4347874,
+    "longitude": -9.5714441
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.4339965,
+    "longitude": -9.5711947
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.4179339,
+    "longitude": -9.5766369
+  },
+  {
+    "name": "Pharmacie Imam Al Boukhari صيدلية الامام البخاري",
+    "type": "pharmacy",
+    "latitude": 30.4242448,
+    "longitude": -9.5642551
+  },
+  {
+    "name": "Pharmacie Al Moukaouama صيدلية المقاومة",
+    "type": "pharmacy",
+    "latitude": 30.4154659,
+    "longitude": -9.5824948
+  },
+  {
+    "name": "Rotisserie Marché شواية المارشي",
+    "type": "restaurant",
+    "latitude": 30.4244185,
+    "longitude": -9.5934832
+  },
+  {
+    "name": "BMCI البنك المغربي للتجارة والصناعة",
+    "type": "bank",
+    "latitude": 30.4161297,
+    "longitude": -9.5890944
+  },
+  {
+    "name": "BMCI البنك المغربي للتجارة والصناعة",
+    "type": "bank",
+    "latitude": 30.421249,
+    "longitude": -9.5980476
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.4132014,
+    "longitude": -9.572973
+  },
+  {
+    "name": "البنك المغربي للتجارة الخارجية",
+    "type": "bank",
+    "latitude": 30.4107783,
+    "longitude": -9.589891
+  },
+  {
+    "name": "CIH Bank القرض العقاري والسياحي",
+    "type": "bank",
+    "latitude": 30.4152427,
+    "longitude": -9.5940632
+  },
+  {
+    "name": "BMCI البنك المغربي للتجارة والصناعة",
+    "type": "bank",
+    "latitude": 30.4097143,
+    "longitude": -9.5836669
+  },
+  {
+    "name": "Pharmacie El Hanane صيدلية الحنان",
+    "type": "pharmacy",
+    "latitude": 30.4325751,
+    "longitude": -9.5827459
+  },
+  {
+    "name": "Pharmacie Aït Souss صيدلية أيت سوس",
+    "type": "pharmacy",
+    "latitude": 30.4288873,
+    "longitude": -9.5540807
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4226849,
+    "longitude": -9.6019594
+  },
+  {
+    "name": "La Veranda",
+    "type": "cafe",
+    "latitude": 30.4182303,
+    "longitude": -9.5969522
+  },
+  {
+    "name": "O.quotidien",
+    "type": "cafe",
+    "latitude": 30.3997438,
+    "longitude": -9.5878898
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.427227,
+    "longitude": -9.5879643
+  },
+  {
+    "name": "Rasta Pasta",
+    "type": "restaurant",
+    "latitude": 30.4115109,
+    "longitude": -9.5802585
+  },
+  {
+    "name": "K-Moon",
+    "type": "restaurant",
+    "latitude": 30.4231724,
+    "longitude": -9.6013733
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4215421,
+    "longitude": -9.6188342
+  },
+  {
+    "name": "Café Maure",
+    "type": "cafe",
+    "latitude": 30.3874864,
+    "longitude": -9.5943528
+  },
+  {
+    "name": "Hauptrestaurant",
+    "type": "restaurant",
+    "latitude": 30.3877756,
+    "longitude": -9.5946814
+  },
+  {
+    "name": "مقهى اسايس تكوين",
+    "type": "cafe",
+    "latitude": 30.3736912,
+    "longitude": -9.5043931
+  },
+  {
+    "name": "Attijariwafa Bank التجاري وفا بنك",
+    "type": "bank",
+    "latitude": 30.4127851,
+    "longitude": -9.5918566
+  },
+  {
+    "name": "BMCI البنك المغربي للتجارة والصناعة",
+    "type": "bank",
+    "latitude": 30.4130326,
+    "longitude": -9.5921114
+  },
+  {
+    "name": "Carrefour Market",
+    "type": "supermarket",
+    "latitude": 30.4140596,
+    "longitude": -9.5934659
+  },
+  {
+    "name": "Le Z",
+    "type": "restaurant",
+    "latitude": 30.4143283,
+    "longitude": -9.6012146
+  },
+  {
+    "name": "Le Jardin d'eau",
+    "type": "restaurant",
+    "latitude": 30.4138682,
+    "longitude": -9.6008507
+  },
+  {
+    "name": "Fouquet's",
+    "type": "restaurant",
+    "latitude": 30.4136409,
+    "longitude": -9.600514
+  },
+  {
+    "name": "Blue Note Agadir",
+    "type": "restaurant",
+    "latitude": 30.4173016,
+    "longitude": -9.6032377
+  },
+  {
+    "name": "Pharmacie Anbary صيدلية عنبري",
+    "type": "pharmacy",
+    "latitude": 30.4235212,
+    "longitude": -9.6053285
+  },
+  {
+    "name": "S.O.S Pizza Kim's",
+    "type": "fast_food",
+    "latitude": 30.4238152,
+    "longitude": -9.5955203
+  },
+  {
+    "name": "Mezzo Mezzo",
+    "type": "restaurant",
+    "latitude": 30.4160583,
+    "longitude": -9.5954236
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.4177644,
+    "longitude": -9.5966031
+  },
+  {
+    "name": "Narcos",
+    "type": "restaurant",
+    "latitude": 30.4228602,
+    "longitude": -9.60268
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.4163473,
+    "longitude": -9.5951559
+  },
+  {
+    "name": "Attijariwafa Bank التجاري وفا بنك",
+    "type": "bank",
+    "latitude": 30.4160992,
+    "longitude": -9.5950031
+  },
+  {
+    "name": "البنك المغربي للتجارة الخارجية",
+    "type": "bank",
+    "latitude": 30.4126967,
+    "longitude": -9.5922249
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "clinic",
+    "latitude": 30.4166174,
+    "longitude": -9.594056
+  },
+  {
+    "name": "La Grillardière",
+    "type": "restaurant",
+    "latitude": 30.4089992,
+    "longitude": -9.5955075
+  },
+  {
+    "name": "ça papote",
+    "type": "cafe",
+    "latitude": 30.4211942,
+    "longitude": -9.5995615
+  },
+  {
+    "name": "Crédit du Maroc",
+    "type": "bank",
+    "latitude": 30.423065,
+    "longitude": -9.5990031
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.4200648,
+    "longitude": -9.5965283
+  },
+  {
+    "name": "SOS Poulet",
+    "type": "fast_food",
+    "latitude": 30.4203156,
+    "longitude": -9.5968542
+  },
+  {
+    "name": "Grande Pharmacie d'Agadir الصيدلية الكبرى لأكادير",
+    "type": "pharmacy",
+    "latitude": 30.4205999,
+    "longitude": -9.5971631
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "hairdresser",
+    "latitude": 30.4193476,
+    "longitude": -9.5983802
+  },
+  {
+    "name": "Pesca Del Dia",
+    "type": "restaurant",
+    "latitude": 30.4224814,
+    "longitude": -9.6002253
+  },
+  {
+    "name": "Vitamix",
+    "type": "restaurant",
+    "latitude": 30.4226107,
+    "longitude": -9.6000023
+  },
+  {
+    "name": "Panoramique",
+    "type": "restaurant",
+    "latitude": 30.4588179,
+    "longitude": -9.5685418
+  },
+  {
+    "name": "Saham Bank سهام بنك",
+    "type": "bank",
+    "latitude": 30.4081684,
+    "longitude": -9.5558536
+  },
+  {
+    "name": "CIH Bank القرض العقاري والسياحي",
+    "type": "bank",
+    "latitude": 30.4072649,
+    "longitude": -9.555259
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.4074087,
+    "longitude": -9.5554816
+  },
+  {
+    "name": "Yours Cafe",
+    "type": "cafe",
+    "latitude": 30.4035416,
+    "longitude": -9.5451541
+  },
+  {
+    "name": "Jnane Fruits",
+    "type": "cafe",
+    "latitude": 30.409336,
+    "longitude": -9.5573262
+  },
+  {
+    "name": "Café Tanmirt",
+    "type": "cafe",
+    "latitude": 30.4104678,
+    "longitude": -9.5554279
+  },
+  {
+    "name": "WafaCash",
+    "type": "bank",
+    "latitude": 30.4105463,
+    "longitude": -9.5557361
+  },
+  {
+    "name": "Carrefour Market",
+    "type": "marketplace",
+    "latitude": 30.4110976,
+    "longitude": -9.5615744
+  },
+  {
+    "name": "La Siciliana",
+    "type": "restaurant",
+    "latitude": 30.4218043,
+    "longitude": -9.6010767
+  },
+  {
+    "name": "Pharmacie Dakhla صيدلية الداخلة",
+    "type": "pharmacy",
+    "latitude": 30.4103795,
+    "longitude": -9.5558578
+  },
+  {
+    "name": "Paramedical Handi Medic",
+    "type": "pharmacy",
+    "latitude": 30.4105352,
+    "longitude": -9.5558667
+  },
+  {
+    "name": "Pharmacie Ennajd صيدلية النجد",
+    "type": "pharmacy",
+    "latitude": 30.4077853,
+    "longitude": -9.556302
+  },
+  {
+    "name": "Pharmacie Europa صيدلية أوروبا",
+    "type": "pharmacy",
+    "latitude": 30.4168524,
+    "longitude": -9.6028858
+  },
+  {
+    "name": "Pharmacie Amsernat صيدلية امصرنات",
+    "type": "pharmacy",
+    "latitude": 30.4151186,
+    "longitude": -9.5786618
+  },
+  {
+    "name": "Pharmacie Souk Al Had et صيدلية سوق الاحد",
+    "type": "pharmacy",
+    "latitude": 30.4134465,
+    "longitude": -9.5821857
+  },
+  {
+    "name": "Pharmacie Laazib صيدلية العزيب",
+    "type": "pharmacy",
+    "latitude": 30.4155152,
+    "longitude": -9.5716457
+  },
+  {
+    "name": "Pharmacie Al Andalous صيدلية الأندلس",
+    "type": "pharmacy",
+    "latitude": 30.418024,
+    "longitude": -9.5756627
+  },
+  {
+    "name": "Pharmacie Cadi Ayad صيدلية القاضي عياض",
+    "type": "pharmacy",
+    "latitude": 30.4204545,
+    "longitude": -9.5807737
+  },
+  {
+    "name": "Pharmacie Ihchach صيدلية احشاش",
+    "type": "pharmacy",
+    "latitude": 30.4238332,
+    "longitude": -9.5847713
+  },
+  {
+    "name": "Pharmacie Al Menzah صيدلية المنزه",
+    "type": "pharmacy",
+    "latitude": 30.4272011,
+    "longitude": -9.5927661
+  },
+  {
+    "name": "Pharmacie Borj Taddart صيدلية برج تادارت",
+    "type": "pharmacy",
+    "latitude": 30.4304343,
+    "longitude": -9.5870736
+  },
+  {
+    "name": "Pharmacie Malak صيدلية ملاك",
+    "type": "pharmacy",
+    "latitude": 30.4339972,
+    "longitude": -9.578525
+  },
+  {
+    "name": "Pharmacie Ennajah صيدلية النجاح",
+    "type": "pharmacy",
+    "latitude": 30.4308624,
+    "longitude": -9.5739157
+  },
+  {
+    "name": "Pharmacie Bahara صيدلية البحارة",
+    "type": "pharmacy",
+    "latitude": 30.4287451,
+    "longitude": -9.5752492
+  },
+  {
+    "name": "Pharmacie Al Hana صيدلية الهناء",
+    "type": "pharmacy",
+    "latitude": 30.4283834,
+    "longitude": -9.5805446
+  },
+  {
+    "name": "Pharmacy Propharma",
+    "type": "pharmacy",
+    "latitude": 30.4278178,
+    "longitude": -9.5793755
+  },
+  {
+    "name": "Pharmacie Al Kastalani صيدلية القسطلاني",
+    "type": "pharmacy",
+    "latitude": 30.4262391,
+    "longitude": -9.5802531
+  },
+  {
+    "name": "Pharmacie 20 Août صيدلية 20 غشت",
+    "type": "pharmacy",
+    "latitude": 30.4260397,
+    "longitude": -9.5675576
+  },
+  {
+    "name": "Pharmacie Agharass صيدلية أغراس",
+    "type": "pharmacy",
+    "latitude": 30.4230144,
+    "longitude": -9.5681188
+  },
+  {
+    "name": "Houssam Para",
+    "type": "pharmacy",
+    "latitude": 30.4226583,
+    "longitude": -9.5683998
+  },
+  {
+    "name": "Pharmacie Lakhiam صيدلية الخيام",
+    "type": "pharmacy",
+    "latitude": 30.4207802,
+    "longitude": -9.5674074
+  },
+  {
+    "name": "Pharmacie Allal Fassi صيدلية علال الفاسي",
+    "type": "pharmacy",
+    "latitude": 30.4220014,
+    "longitude": -9.5646715
+  },
+  {
+    "name": "Pharmacie Conseil صيدلية النصيحة",
+    "type": "pharmacy",
+    "latitude": 30.4219205,
+    "longitude": -9.5602728
+  },
+  {
+    "name": "Pharmacie El Wafa صيدلية الوفاء",
+    "type": "pharmacy",
+    "latitude": 30.4226522,
+    "longitude": -9.5576955
+  },
+  {
+    "name": "Pharmacie Moutaoakil صيدلية متوكل",
+    "type": "pharmacy",
+    "latitude": 30.4200075,
+    "longitude": -9.5545375
+  },
+  {
+    "name": "Pharmacie Al Qods صيدلية القدس",
+    "type": "pharmacy",
+    "latitude": 30.4169312,
+    "longitude": -9.5552081
+  },
+  {
+    "name": "Pharmacie Pasteur صيدلية باستور",
+    "type": "pharmacy",
+    "latitude": 30.4168341,
+    "longitude": -9.5586252
+  },
+  {
+    "name": "Pharmacie Rachid صيدلية رشيد",
+    "type": "pharmacy",
+    "latitude": 30.4143164,
+    "longitude": -9.5576724
+  },
+  {
+    "name": "Pharmacie Al Fath صيدلية الفتح",
+    "type": "pharmacy",
+    "latitude": 30.4131046,
+    "longitude": -9.5543245
+  },
+  {
+    "name": "Pharmacie La Jeunesse صيدلية الشباب",
+    "type": "pharmacy",
+    "latitude": 30.4103729,
+    "longitude": -9.5527953
+  },
+  {
+    "name": "Pharmacie Lotfy صيدلية لوطفي",
+    "type": "pharmacy",
+    "latitude": 30.4116377,
+    "longitude": -9.5506139
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.4081712,
+    "longitude": -9.5873711
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "clinic",
+    "latitude": 30.3967573,
+    "longitude": -9.538113
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "doctors",
+    "latitude": 30.4010916,
+    "longitude": -9.5910903
+  },
+  {
+    "name": "Docteur Aghanaj",
+    "type": "doctors",
+    "latitude": 30.4113411,
+    "longitude": -9.5911344
+  },
+  {
+    "name": "مطعم الرباطي",
+    "type": "restaurant",
+    "latitude": 30.4026674,
+    "longitude": -9.5502484
+  },
+  {
+    "name": "Senzo",
+    "type": "cafe",
+    "latitude": 30.4235041,
+    "longitude": -9.6179518
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "pharmacy",
+    "latitude": 30.3995782,
+    "longitude": -9.5593305
+  },
+  {
+    "name": "Bianca Beach",
+    "type": "restaurant",
+    "latitude": 30.4209263,
+    "longitude": -9.6169652
+  },
+  {
+    "name": "Cafe Blaze",
+    "type": "cafe",
+    "latitude": 30.436709,
+    "longitude": -9.5706299
+  },
+  {
+    "name": "Cafe Grumium",
+    "type": "cafe",
+    "latitude": 30.4361956,
+    "longitude": -9.5700452
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4076191,
+    "longitude": -9.5982375
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.41306,
+    "longitude": -9.5744771
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "bank",
+    "latitude": 30.4168132,
+    "longitude": -9.574056
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.3958783,
+    "longitude": -9.5465216
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.3958816,
+    "longitude": -9.5464805
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "bakery",
+    "latitude": 30.3970322,
+    "longitude": -9.5481696
+  },
+  {
+    "name": "عصير اسكلو",
+    "type": "restaurant",
+    "latitude": 30.3969349,
+    "longitude": -9.5483102
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.3970226,
+    "longitude": -9.5484126
+  },
+  {
+    "name": "Restaurant/Bar LOCOLOCO",
+    "type": "restaurant",
+    "latitude": 30.4183273,
+    "longitude": -9.6038006
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4697387,
+    "longitude": -9.5987223
+  },
+  {
+    "name": "البنك المغربي للتجارة و الصناعة",
+    "type": "bank",
+    "latitude": 30.3590852,
+    "longitude": -9.5331548
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.4006754,
+    "longitude": -9.5355976
+  },
+  {
+    "name": "بيتزا سليمان",
+    "type": "restaurant",
+    "latitude": 30.4108667,
+    "longitude": -9.5875791
+  },
+  {
+    "name": "أزيار",
+    "type": "school",
+    "latitude": 30.4341555,
+    "longitude": -9.553751
+  },
+  {
+    "name": "لي جون طالون",
+    "type": "school",
+    "latitude": 30.4293643,
+    "longitude": -9.5620845
+  },
+  {
+    "name": "ابن سينا",
+    "type": "school",
+    "latitude": 30.4324333,
+    "longitude": -9.5525097
+  },
+  {
+    "name": "محمد السادس للنهوض بالتعليم الأولي",
+    "type": "school",
+    "latitude": 30.4158387,
+    "longitude": -9.5752054
+  },
+  {
+    "name": "بيير باشوليي",
+    "type": "school",
+    "latitude": 30.4340413,
+    "longitude": -9.5534867
+  },
+  {
+    "name": "ابن سينا",
+    "type": "school",
+    "latitude": 30.4336954,
+    "longitude": -9.5529437
+  },
+  {
+    "name": "كافي الكلاسيكو",
+    "type": "cafe",
+    "latitude": 30.3557474,
+    "longitude": -9.5388224
+  },
+  {
+    "name": "مطعم بيت المنــــدي الخليجـــي",
+    "type": "restaurant",
+    "latitude": 30.4161251,
+    "longitude": -9.5956677
+  },
+  {
+    "name": "Dr Oubellahcene Abdallah",
+    "type": "doctors",
+    "latitude": 30.3621709,
+    "longitude": -9.5340252
+  },
+  {
+    "name": "Pharmacie Grande Pharmacie الصيدلية الكبرى",
+    "type": "pharmacy",
+    "latitude": 30.35135,
+    "longitude": -9.5386546
+  },
+  {
+    "name": "Pharmacie Taj صيدلية تاج",
+    "type": "pharmacy",
+    "latitude": 30.3519425,
+    "longitude": -9.5413046
+  },
+  {
+    "name": "Pharmacie 10 Ramadan صيدلية 10 رمضان",
+    "type": "pharmacy",
+    "latitude": 30.3511,
+    "longitude": -9.5438205
+  },
+  {
+    "name": "Pharmacie Les Hôpitaux صيدلية المستشفيات",
+    "type": "pharmacy",
+    "latitude": 30.3522182,
+    "longitude": -9.5379187
+  },
+  {
+    "name": "Pharmacie Essaada صيدلية السعادة",
+    "type": "pharmacy",
+    "latitude": 30.3552733,
+    "longitude": -9.5383156
+  },
+  {
+    "name": "Pharmacie L'Unité صيدلية الوحدة",
+    "type": "pharmacy",
+    "latitude": 30.3519179,
+    "longitude": -9.5521299
+  },
+  {
+    "name": "Pharmacie Al Wafaa صيدلية الوفاء",
+    "type": "pharmacy",
+    "latitude": 30.3523128,
+    "longitude": -9.5505376
+  },
+  {
+    "name": "Pharmacie Tarraste صيدلية تاراست",
+    "type": "pharmacy",
+    "latitude": 30.352322,
+    "longitude": -9.5475282
+  },
+  {
+    "name": "Pharmacie Al Massira صيدلية المسيرة",
+    "type": "pharmacy",
+    "latitude": 30.3551854,
+    "longitude": -9.5334179
+  },
+  {
+    "name": "Pharmacie Zahra صيدلية زهراء",
+    "type": "pharmacy",
+    "latitude": 30.3541901,
+    "longitude": -9.5421297
+  },
+  {
+    "name": "Pharmacie Almogar صيدلية الموكار",
+    "type": "pharmacy",
+    "latitude": 30.3566204,
+    "longitude": -9.5318998
+  },
+  {
+    "name": "Pharmacie Argana صيدلية أركانة",
+    "type": "pharmacy",
+    "latitude": 30.3578887,
+    "longitude": -9.5380152
+  },
+  {
+    "name": "Pharmacie Abir صيدلية عبير",
+    "type": "pharmacy",
+    "latitude": 30.360663,
+    "longitude": -9.5371498
+  },
+  {
+    "name": "Pharmacie Conseil صيدلية النصيحة",
+    "type": "pharmacy",
+    "latitude": 30.3541547,
+    "longitude": -9.5589527
+  },
+  {
+    "name": "Pharmacie Al Andalouss صيدلية الأندلس",
+    "type": "pharmacy",
+    "latitude": 30.3616772,
+    "longitude": -9.5403677
+  },
+  {
+    "name": "Pharmacie Taghazoute صيدلية تغازوت",
+    "type": "pharmacy",
+    "latitude": 30.3599203,
+    "longitude": -9.5339556
+  },
+  {
+    "name": "Pharmacie Jamal صيدلية جمال",
+    "type": "pharmacy",
+    "latitude": 30.3641032,
+    "longitude": -9.5396173
+  },
+  {
+    "name": "Pharmacie Amlal صيدلية أملال",
+    "type": "pharmacy",
+    "latitude": 30.3551894,
+    "longitude": -9.5524179
+  },
+  {
+    "name": "Pharmacie Hader صيدلية حاضر",
+    "type": "pharmacy",
+    "latitude": 30.3585031,
+    "longitude": -9.5498036
+  },
+  {
+    "name": "Pharmacie Souk صيدلية السوق",
+    "type": "pharmacy",
+    "latitude": 30.3592935,
+    "longitude": -9.5301967
+  },
+  {
+    "name": "Pharmacie Hagounia صيدلية الحكونية",
+    "type": "pharmacy",
+    "latitude": 30.360173,
+    "longitude": -9.5282762
+  },
+  {
+    "name": "Pharmacie Annour صيدلية النور",
+    "type": "pharmacy",
+    "latitude": 30.351784,
+    "longitude": -9.5572448
+  },
+  {
+    "name": "Pharmacie Rmel صيدلية رمل",
+    "type": "pharmacy",
+    "latitude": 30.3559595,
+    "longitude": -9.5476869
+  },
+  {
+    "name": "Pharmacie Rhal Ben Ahmed صيدلية رحال بن أحمد",
+    "type": "pharmacy",
+    "latitude": 30.3585662,
+    "longitude": -9.5459945
+  },
+  {
+    "name": "Pharmacie Souk Al Houriya صيدلية سوق الحرية",
+    "type": "pharmacy",
+    "latitude": 30.3570403,
+    "longitude": -9.5263432
+  },
+  {
+    "name": "Pharmacie Jihadia صيدلية جهادية",
+    "type": "pharmacy",
+    "latitude": 30.3644272,
+    "longitude": -9.5262425
+  },
+  {
+    "name": "Pharmacie Al Jihadis صيدلية الجهادي",
+    "type": "pharmacy",
+    "latitude": 30.3624794,
+    "longitude": -9.5300207
+  },
+  {
+    "name": "Pharmacie Rahma صيدلية رحمة",
+    "type": "pharmacy",
+    "latitude": 30.3665921,
+    "longitude": -9.5260101
+  },
+  {
+    "name": "Pharmacie Khouya صيدلية خويا",
+    "type": "pharmacy",
+    "latitude": 30.3695953,
+    "longitude": -9.51961
+  },
+  {
+    "name": "Pharmacie Titrite صيدلية تيتريت",
+    "type": "pharmacy",
+    "latitude": 30.3700512,
+    "longitude": -9.5262245
+  },
+  {
+    "name": "Pharmacie Amougay صيدلية أموكاي",
+    "type": "pharmacy",
+    "latitude": 30.3664997,
+    "longitude": -9.5331602
+  },
+  {
+    "name": "Pharmacie Fetouaki صيدلية فطواكي",
+    "type": "pharmacy",
+    "latitude": 30.3644233,
+    "longitude": -9.5270046
+  },
+  {
+    "name": "Pharmacie Al Amine صيدلية الأمين",
+    "type": "pharmacy",
+    "latitude": 30.3663321,
+    "longitude": -9.5380839
+  },
+  {
+    "name": "Pharmacie Principale الصيدلية الرئيسية",
+    "type": "pharmacy",
+    "latitude": 30.371081,
+    "longitude": -9.535116
+  },
+  {
+    "name": "Pharmacie Al Kaoutar صيدلية الكوثر",
+    "type": "pharmacy",
+    "latitude": 30.3689967,
+    "longitude": -9.5347901
+  },
+  {
+    "name": "Pharmacie Ksima صيدلية كسيما",
+    "type": "pharmacy",
+    "latitude": 30.3703588,
+    "longitude": -9.5372958
+  },
+  {
+    "name": "Pharmacie Hamzaoui صيدلية حمزاوي",
+    "type": "pharmacy",
+    "latitude": 30.369462,
+    "longitude": -9.544678
+  },
+  {
+    "name": "Pharmacie La Liberté صيدلية الحرية",
+    "type": "pharmacy",
+    "latitude": 30.3716093,
+    "longitude": -9.5443634
+  },
+  {
+    "name": "Pharmacie La Pergola صيدلية لابيركولا",
+    "type": "pharmacy",
+    "latitude": 30.3720843,
+    "longitude": -9.550622
+  },
+  {
+    "name": "Pharmacie Tabarin صيدلية طاباران",
+    "type": "pharmacy",
+    "latitude": 30.3749628,
+    "longitude": -9.5323302
+  },
+  {
+    "name": "Pharmacie Najah Igroumai صيدلية نجاح اكروماي",
+    "type": "pharmacy",
+    "latitude": 30.3774992,
+    "longitude": -9.5391625
+  },
+  {
+    "name": "Pharmacie Tilila صيدلية تليلا",
+    "type": "pharmacy",
+    "latitude": 30.3743036,
+    "longitude": -9.5397798
+  },
+  {
+    "name": "Pharmacie Hammam Aachak صيدلية حمام أعشاق",
+    "type": "pharmacy",
+    "latitude": 30.373974,
+    "longitude": -9.5355831
+  },
+  {
+    "name": "Pharmacie Cokail صيدلية كوكاي",
+    "type": "pharmacy",
+    "latitude": 30.3747473,
+    "longitude": -9.5166802
+  },
+  {
+    "name": "Pharmacie Ibn El Haitam صيدلية ابن الهيثم",
+    "type": "pharmacy",
+    "latitude": 30.3775502,
+    "longitude": -9.5181789
+  },
+  {
+    "name": "Pharmacie Hay Sbai صيدلية حي السباعي",
+    "type": "pharmacy",
+    "latitude": 30.3768836,
+    "longitude": -9.534314
+  },
+  {
+    "name": "Pharmacie Darif صيدلية ضريف",
+    "type": "pharmacy",
+    "latitude": 30.3716331,
+    "longitude": -9.5238023
+  },
+  {
+    "name": "Pharmacie Fadesa صيدلية فاديزا",
+    "type": "pharmacy",
+    "latitude": 30.3768581,
+    "longitude": -9.5266676
+  },
+  {
+    "name": "Pharmacie Masjid Assaka صيدلية مسجد أساكا",
+    "type": "pharmacy",
+    "latitude": 30.3811756,
+    "longitude": -9.5127637
+  },
+  {
+    "name": "Pharmacie Hay El Mers صيدلية حي المرس",
+    "type": "pharmacy",
+    "latitude": 30.3712453,
+    "longitude": -9.5288137
+  },
+  {
+    "name": "Pharmacie Bella صيدلية بلا",
+    "type": "pharmacy",
+    "latitude": 30.3746265,
+    "longitude": -9.5110591
+  },
+  {
+    "name": "Pharmacie Al Yosr صيدلية اليسر",
+    "type": "pharmacy",
+    "latitude": 30.3755591,
+    "longitude": -9.5235046
+  },
+  {
+    "name": "Pharmacie Al Walae صيدلية الولاء",
+    "type": "pharmacy",
+    "latitude": 30.3723262,
+    "longitude": -9.5202854
+  },
+  {
+    "name": "Pharmacie Assaka صيدلية أساكا",
+    "type": "pharmacy",
+    "latitude": 30.3788332,
+    "longitude": -9.5153135
+  },
+  {
+    "name": "Pharmacie Bir Anzarane صيدلية بئر أنزران",
+    "type": "pharmacy",
+    "latitude": 30.3759548,
+    "longitude": -9.5081874
+  },
+  {
+    "name": "Pharmacie Souiri صيدلية صويري",
+    "type": "pharmacy",
+    "latitude": 30.3782698,
+    "longitude": -9.5095061
+  },
+  {
+    "name": "Pharmacie Said صيدلية سعيد",
+    "type": "pharmacy",
+    "latitude": 30.373721,
+    "longitude": -9.5501004
+  },
+  {
+    "name": "Pharmacie Amgala صيدلية أمكالا",
+    "type": "pharmacy",
+    "latitude": 30.3748601,
+    "longitude": -9.5485723
+  },
+  {
+    "name": "Pharmacie Dahabia صيدلية ذهبية",
+    "type": "pharmacy",
+    "latitude": 30.3955216,
+    "longitude": -9.5417417
+  },
+  {
+    "name": "Pharmacie Houch صيدلية حوش",
+    "type": "pharmacy",
+    "latitude": 30.3925587,
+    "longitude": -9.5368408
+  },
+  {
+    "name": "Pharmacie Anir صيدلية أنير",
+    "type": "pharmacy",
+    "latitude": 30.388669,
+    "longitude": -9.5375829
+  },
+  {
+    "name": "Pharmacie Adlouni صيدلية أدلوني",
+    "type": "pharmacy",
+    "latitude": 30.3925807,
+    "longitude": -9.5408253
+  },
+  {
+    "name": "Pharmacie La Santé صيدلية الصحة",
+    "type": "pharmacy",
+    "latitude": 30.3773271,
+    "longitude": -9.5017706
+  },
+  {
+    "name": "Pharmacie Tikiouine صيدلية تكوين",
+    "type": "pharmacy",
+    "latitude": 30.3753981,
+    "longitude": -9.5032987
+  },
+  {
+    "name": "Pharmacie Al Adouiya صيدلية الأدوية",
+    "type": "pharmacy",
+    "latitude": 30.3801042,
+    "longitude": -9.5044246
+  },
+  {
+    "name": "Pharmacie Adrar صيدلية أدرار",
+    "type": "pharmacy",
+    "latitude": 30.3859415,
+    "longitude": -9.5025404
+  },
+  {
+    "name": "Pharmacie Elmira صيدلية الميرة",
+    "type": "pharmacy",
+    "latitude": 30.3943069,
+    "longitude": -9.5151001
+  },
+  {
+    "name": "Pharmacie Paris صيدلية باريس",
+    "type": "pharmacy",
+    "latitude": 30.3877177,
+    "longitude": -9.5075163
+  },
+  {
+    "name": "Pharmacie Al Akhawayne صيدلية الأخوين",
+    "type": "pharmacy",
+    "latitude": 30.3898485,
+    "longitude": -9.5007026
+  },
+  {
+    "name": "Pharmacie Africaine صيدلية أفريقيا",
+    "type": "pharmacy",
+    "latitude": 30.394081,
+    "longitude": -9.5079484
+  },
+  {
+    "name": "Pharmacie Grand Tilila صيدلية تليلا الكبرى",
+    "type": "pharmacy",
+    "latitude": 30.3993223,
+    "longitude": -9.511027
+  },
+  {
+    "name": "Pharmacie Liya صيدلية لية",
+    "type": "pharmacy",
+    "latitude": 30.3940161,
+    "longitude": -9.5160721
+  },
+  {
+    "name": "Pharmacie Al Bouchra صيدلية البشرى",
+    "type": "pharmacy",
+    "latitude": 30.3975944,
+    "longitude": -9.5183694
+  },
+  {
+    "name": "Pharmacie City Center صيدلية الحي المركزي",
+    "type": "pharmacy",
+    "latitude": 30.3960679,
+    "longitude": -9.5026055
+  },
+  {
+    "name": "Pharmacie La Nouvelle الصيدلية الجديدة",
+    "type": "pharmacy",
+    "latitude": 30.3933119,
+    "longitude": -9.5026897
+  },
+  {
+    "name": "Pharmacie Amrani صيدلية العمراني",
+    "type": "pharmacy",
+    "latitude": 30.3994366,
+    "longitude": -9.5145979
+  },
+  {
+    "name": "Pharmacie Majd صيدلية مجد",
+    "type": "pharmacy",
+    "latitude": 30.3985941,
+    "longitude": -9.5225822
+  },
+  {
+    "name": "Pharmacie Adam صيدلية ادم",
+    "type": "pharmacy",
+    "latitude": 30.3965118,
+    "longitude": -9.512527
+  },
+  {
+    "name": "Pharmacie Agdal صيدلية أكدال",
+    "type": "pharmacy",
+    "latitude": 30.401771,
+    "longitude": -9.5182517
+  },
+  {
+    "name": "Pharmacie Aghroud صيدلية أغروض",
+    "type": "pharmacy",
+    "latitude": 30.3725299,
+    "longitude": -9.5729042
+  },
+  {
+    "name": "Pharmacie Tilila صيدلية تيليلا",
+    "type": "pharmacy",
+    "latitude": 30.4028215,
+    "longitude": -9.5213054
+  },
+  {
+    "name": "Pharmacie Niaamat Allah صيدلية نعمة الله",
+    "type": "pharmacy",
+    "latitude": 30.4037552,
+    "longitude": -9.5157982
+  },
+  {
+    "name": "Pharmacie Riad El Houda صيدلية رياض الهدى",
+    "type": "pharmacy",
+    "latitude": 30.4002042,
+    "longitude": -9.536471
+  },
+  {
+    "name": "Pharmacie Cité Universitaire Tilila صيدلية الحي الجامعي تبليلا",
+    "type": "pharmacy",
+    "latitude": 30.4043475,
+    "longitude": -9.5253672
+  },
+  {
+    "name": "Pharmacie Ayour صيدلية أيور",
+    "type": "pharmacy",
+    "latitude": 30.398576,
+    "longitude": -9.5308865
+  },
+  {
+    "name": "Pharmacie Al Messahat صيدلية المصحات",
+    "type": "pharmacy",
+    "latitude": 30.4009677,
+    "longitude": -9.5238197
+  },
+  {
+    "name": "Pharmacie Assafar صيدلية السفر",
+    "type": "pharmacy",
+    "latitude": 30.3984888,
+    "longitude": -9.533954
+  },
+  {
+    "name": "Pharmacie Noor El Houda صيدلية نور الهدى",
+    "type": "pharmacy",
+    "latitude": 30.3954359,
+    "longitude": -9.5347181
+  },
+  {
+    "name": "Pharmacie Leghzaoui صيدلية لغزاوي",
+    "type": "pharmacy",
+    "latitude": 30.3907086,
+    "longitude": -9.5454138
+  },
+  {
+    "name": "Pharmacie Mejjane صيدلية مجان",
+    "type": "pharmacy",
+    "latitude": 30.3952358,
+    "longitude": -9.5444007
+  },
+  {
+    "name": "Pharmacie Attawhid صيدلية التوحيد",
+    "type": "pharmacy",
+    "latitude": 30.3947575,
+    "longitude": -9.5379879
+  },
+  {
+    "name": "Pharmacie El Amri صيدلية العمري",
+    "type": "pharmacy",
+    "latitude": 30.3998587,
+    "longitude": -9.5460524
+  },
+  {
+    "name": "Pharmacie Al Manar صيدلية المنار",
+    "type": "pharmacy",
+    "latitude": 30.3985794,
+    "longitude": -9.548884
+  },
+  {
+    "name": "Pharmacie Tikida صيدلية تيكيدا",
+    "type": "pharmacy",
+    "latitude": 30.3991997,
+    "longitude": -9.5434344
+  },
+  {
+    "name": "Pharmacie Adouz صيدلية أدوز",
+    "type": "pharmacy",
+    "latitude": 30.3966236,
+    "longitude": -9.5497657
+  },
+  {
+    "name": "Pharmacie Rajaa صيدلية رجاء",
+    "type": "pharmacy",
+    "latitude": 30.3972032,
+    "longitude": -9.5460637
+  },
+  {
+    "name": "Pharmacie JetSakan صيدلية جيت سكن",
+    "type": "pharmacy",
+    "latitude": 30.3931191,
+    "longitude": -9.5487691
+  },
+  {
+    "name": "Pharmacie Attadamoun صيدلية التضامن",
+    "type": "pharmacy",
+    "latitude": 30.3899149,
+    "longitude": -9.5488971
+  },
+  {
+    "name": "Pharmacie Aicha صيدلية عائشة",
+    "type": "pharmacy",
+    "latitude": 30.3885261,
+    "longitude": -9.5638686
+  },
+  {
+    "name": "Pharmacie Tarik El Kheir صيدلية طريق الخير",
+    "type": "pharmacy",
+    "latitude": 30.3914696,
+    "longitude": -9.5549592
+  },
+  {
+    "name": "Pharmacie Anouar صيدلية أنور",
+    "type": "pharmacy",
+    "latitude": 30.3906273,
+    "longitude": -9.5590497
+  },
+  {
+    "name": "Pharmacie La Caserne صيدلية القشلة",
+    "type": "pharmacy",
+    "latitude": 30.3830386,
+    "longitude": -9.5674363
+  },
+  {
+    "name": "Pharmacie Bensergao صيدلية بنسركاو",
+    "type": "pharmacy",
+    "latitude": 30.3854998,
+    "longitude": -9.5719162
+  },
+  {
+    "name": "Pharmacie Benchrif صيدلية بن شريف",
+    "type": "pharmacy",
+    "latitude": 30.3851924,
+    "longitude": -9.5687432
+  },
+  {
+    "name": "Pharmacie Souika صيدلية سويقة",
+    "type": "pharmacy",
+    "latitude": 30.3874764,
+    "longitude": -9.5688138
+  },
+  {
+    "name": "Pharmacie Karima صيدلية كريمة",
+    "type": "pharmacy",
+    "latitude": 30.3890391,
+    "longitude": -9.56805
+  },
+  {
+    "name": "Pharmacie Moustawsaf صيدلية مستوصف",
+    "type": "pharmacy",
+    "latitude": 30.3910703,
+    "longitude": -9.5699476
+  },
+  {
+    "name": "Pharmacie Hassan صيدلية حسن",
+    "type": "pharmacy",
+    "latitude": 30.388877,
+    "longitude": -9.5707336
+  },
+  {
+    "name": "Pharmacie El Wifaq صيدلية الوفاق",
+    "type": "pharmacy",
+    "latitude": 30.392532,
+    "longitude": -9.5636561
+  },
+  {
+    "name": "Pharmacie Nessrine صيدلية نسرين",
+    "type": "pharmacy",
+    "latitude": 30.3874259,
+    "longitude": -9.5729581
+  },
+  {
+    "name": "Pharmacie Radi صيدلية راضي",
+    "type": "pharmacy",
+    "latitude": 30.390562,
+    "longitude": -9.573639
+  },
+  {
+    "name": "Pharmacie La Grande Al Farah صيدلية الفرح الكبرى",
+    "type": "pharmacy",
+    "latitude": 30.3974601,
+    "longitude": -9.5684309
+  },
+  {
+    "name": "Pharmacie Ibn Zohr صيدلية ابن زهر",
+    "type": "pharmacy",
+    "latitude": 30.4025028,
+    "longitude": -9.5526991
+  },
+  {
+    "name": "Pharmacie Al Jisr صيدلية الجسر",
+    "type": "pharmacy",
+    "latitude": 30.3908949,
+    "longitude": -9.5658405
+  },
+  {
+    "name": "Pharmacie Oubelkhir صيدلية أوبلخير",
+    "type": "pharmacy",
+    "latitude": 30.3996068,
+    "longitude": -9.5592815
+  },
+  {
+    "name": "Pharmacie Chifaa Al Farah صيدلية الشفاء الفرح",
+    "type": "pharmacy",
+    "latitude": 30.3955122,
+    "longitude": -9.5580586
+  },
+  {
+    "name": "Pharmacie Le Complexe صيدلية المركب",
+    "type": "pharmacy",
+    "latitude": 30.3929041,
+    "longitude": -9.5611481
+  },
+  {
+    "name": "Pharmacie Ahl El Kheir صيدلية أهل الخير",
+    "type": "pharmacy",
+    "latitude": 30.4000382,
+    "longitude": -9.5674718
+  },
+  {
+    "name": "Pharmacie Odessa صيدلية أوديسا",
+    "type": "pharmacy",
+    "latitude": 30.3954828,
+    "longitude": -9.554416
+  },
+  {
+    "name": "Pharmacie Al Farah صيدلية الفرح",
+    "type": "pharmacy",
+    "latitude": 30.3973291,
+    "longitude": -9.5615653
+  },
+  {
+    "name": "Pharmacie Le Corail Salam صيدلية مرجان السلام",
+    "type": "pharmacy",
+    "latitude": 30.3999359,
+    "longitude": -9.5528638
+  },
+  {
+    "name": "Pharmacie Al Ikhlas صيدلية الإخلاص",
+    "type": "pharmacy",
+    "latitude": 30.4022288,
+    "longitude": -9.5458327
+  },
+  {
+    "name": "Pharmacie Andalousia صيدلية الأندلسية",
+    "type": "pharmacy",
+    "latitude": 30.3979864,
+    "longitude": -9.5556763
+  },
+  {
+    "name": "Pharmacie Assalam صيدلية السلام",
+    "type": "pharmacy",
+    "latitude": 30.402178,
+    "longitude": -9.5492924
+  },
+  {
+    "name": "Pharmacie Sara صيدلية سارة",
+    "type": "pharmacy",
+    "latitude": 30.4024775,
+    "longitude": -9.5426554
+  },
+  {
+    "name": "Pharmacie Alma Vita صيدلية ألما فيتا",
+    "type": "pharmacy",
+    "latitude": 30.3990925,
+    "longitude": -9.539537
+  },
+  {
+    "name": "Pharmacie Azizi صيدلية عزيزي",
+    "type": "pharmacy",
+    "latitude": 30.4123769,
+    "longitude": -9.5470525
+  },
+  {
+    "name": "Pharmacie Ibn Sina صيدلية ابن سينا",
+    "type": "pharmacy",
+    "latitude": 30.4152505,
+    "longitude": -9.5503004
+  },
+  {
+    "name": "Pharmacie Inezgane صيدلية إنزكان",
+    "type": "pharmacy",
+    "latitude": 30.3572713,
+    "longitude": -9.5336576
+  },
+  {
+    "name": "Pharmacie El Hilal صيدلية الهلال",
+    "type": "pharmacy",
+    "latitude": 30.3503715,
+    "longitude": -9.5470536
+  },
+  {
+    "name": "Pharmacie Populaire الصيدلية الشعبية",
+    "type": "pharmacy",
+    "latitude": 30.3568301,
+    "longitude": -9.5361553
+  },
+  {
+    "name": "Pharmacie Al Amane صيدلية الأمان",
+    "type": "pharmacy",
+    "latitude": 30.3645081,
+    "longitude": -9.5250753
+  },
+  {
+    "name": "Pharmacie Faiçal صيدلية فيصل",
+    "type": "pharmacy",
+    "latitude": 30.405527,
+    "longitude": -9.5531847
+  },
+  {
+    "name": "Pharmacie Des Facultés صيدلية الكليات",
+    "type": "pharmacy",
+    "latitude": 30.4064359,
+    "longitude": -9.5503711
+  },
+  {
+    "name": "Pharmacie Bachouch صيدلية بشوش",
+    "type": "pharmacy",
+    "latitude": 30.4057815,
+    "longitude": -9.5607674
+  },
+  {
+    "name": "Pharmacie L'Université صيدلية الجامعة",
+    "type": "pharmacy",
+    "latitude": 30.4097384,
+    "longitude": -9.548379
+  },
+  {
+    "name": "Pharmacie Mansour Dahbi صيدلية المنصور الدهبي",
+    "type": "pharmacy",
+    "latitude": 30.4145427,
+    "longitude": -9.5513744
+  },
+  {
+    "name": "Pharmacie Marjane Founty صيدلية مرجان فونتي",
+    "type": "pharmacy",
+    "latitude": 30.4147476,
+    "longitude": -9.5628623
+  },
+  {
+    "name": "Pharmacie Yousra صيدلية يسرى",
+    "type": "pharmacy",
+    "latitude": 30.4117256,
+    "longitude": -9.560468
+  },
+  {
+    "name": "Pharmacie Chifa صيدلية شفاء",
+    "type": "pharmacy",
+    "latitude": 30.4092154,
+    "longitude": -9.5589192
+  },
+  {
+    "name": "Pharmacie El Kadi Ben Driss صيدلية القاضي بن ادريس",
+    "type": "pharmacy",
+    "latitude": 30.4144916,
+    "longitude": -9.5638626
+  },
+  {
+    "name": "Pharmacie De France صيدلية فرنسا",
+    "type": "pharmacy",
+    "latitude": 30.4133364,
+    "longitude": -9.574119
+  },
+  {
+    "name": "Pharmacie Elmghari صيدلية المغاري",
+    "type": "pharmacy",
+    "latitude": 30.4117756,
+    "longitude": -9.5640562
+  },
+  {
+    "name": "Pharmacie Itry صيدلية اتري",
+    "type": "pharmacy",
+    "latitude": 30.4076204,
+    "longitude": -9.5767262
+  },
+  {
+    "name": "Pharmacie Toubkal صيدلية توبقال",
+    "type": "pharmacy",
+    "latitude": 30.4091709,
+    "longitude": -9.5641788
+  },
+  {
+    "name": "Pharmacie Al Massira صيدلية المسيرة",
+    "type": "pharmacy",
+    "latitude": 30.4109293,
+    "longitude": -9.568023
+  },
+  {
+    "name": "Pharmacie Erraji صيدلية الراجي",
+    "type": "pharmacy",
+    "latitude": 30.4121724,
+    "longitude": -9.5711049
+  },
+  {
+    "name": "Pharmacie Al Michwar صيدلية المشوار",
+    "type": "pharmacy",
+    "latitude": 30.3946862,
+    "longitude": -9.5710401
+  },
+  {
+    "name": "Pharmacie Al Hamra صيدلية الحمرى",
+    "type": "pharmacy",
+    "latitude": 30.4122733,
+    "longitude": -9.5771392
+  },
+  {
+    "name": "Pharmacie Amjad صيدلية أمجد",
+    "type": "pharmacy",
+    "latitude": 30.3981152,
+    "longitude": -9.5724017
+  },
+  {
+    "name": "Pharmacie El Alami صيدلية العلمي",
+    "type": "pharmacy",
+    "latitude": 30.4067855,
+    "longitude": -9.5742029
+  },
+  {
+    "name": "Pharmacie Haut Founty صيدلية فونتي العليا",
+    "type": "pharmacy",
+    "latitude": 30.4012335,
+    "longitude": -9.5795913
+  },
+  {
+    "name": "Pharmacie Agadir Bay صيدلية أكادير باي",
+    "type": "pharmacy",
+    "latitude": 30.4010683,
+    "longitude": -9.5847458
+  },
+  {
+    "name": "Pharmacie Hay Founty صيدلية حي فونتي",
+    "type": "pharmacy",
+    "latitude": 30.4017834,
+    "longitude": -9.5730536
+  },
+  {
+    "name": "Pharmacie Boutasra صيدلية بوتاسرا",
+    "type": "pharmacy",
+    "latitude": 30.3958719,
+    "longitude": -9.5737957
+  },
+  {
+    "name": "Pharmacie Al Mouna صيدلية المنى",
+    "type": "pharmacy",
+    "latitude": 30.4098619,
+    "longitude": -9.5833796
+  },
+  {
+    "name": "Pharmacie Ayour صيدلية أيور",
+    "type": "pharmacy",
+    "latitude": 30.3878079,
+    "longitude": -9.5883787
+  },
+  {
+    "name": "Pharmacie Marjane Agadir صيدلية مرجان أكادير",
+    "type": "pharmacy",
+    "latitude": 30.3937761,
+    "longitude": -9.5813813
+  },
+  {
+    "name": "Pharmacie du Palais",
+    "type": "pharmacy",
+    "latitude": 30.4109102,
+    "longitude": -9.5919713
+  },
+  {
+    "name": "Pharmacie Chellaoui",
+    "type": "pharmacy",
+    "latitude": 30.4107725,
+    "longitude": -9.5891116
+  },
+  {
+    "name": "Pharmacie Al Hayat صيدلية الحياة",
+    "type": "pharmacy",
+    "latitude": 30.4117721,
+    "longitude": -9.5884188
+  },
+  {
+    "name": "Pharmacie centrale",
+    "type": "pharmacy",
+    "latitude": 30.4127543,
+    "longitude": -9.5886993
+  },
+  {
+    "name": "Pharmacie Riad Salam الصيدلية رياض السلام",
+    "type": "pharmacy",
+    "latitude": 30.4096973,
+    "longitude": -9.5762705
+  },
+  {
+    "name": "Pharmacie Les Parents صيدلية الوالدين",
+    "type": "pharmacy",
+    "latitude": 30.4087537,
+    "longitude": -9.570152
+  },
+  {
+    "name": "Pharmacie Azmi صيدلية عزمي",
+    "type": "pharmacy",
+    "latitude": 30.4104154,
+    "longitude": -9.5728841
+  },
+  {
+    "name": "Pharmacie La Gare صيدلية المحطة",
+    "type": "pharmacy",
+    "latitude": 30.4158124,
+    "longitude": -9.568102
+  },
+  {
+    "name": "Pharmacie Abou Said صيدلية أبو سعيد",
+    "type": "pharmacy",
+    "latitude": 30.4182626,
+    "longitude": -9.564649
+  },
+  {
+    "name": "Pharmacie Atiqi صيدلية عاتيقي",
+    "type": "pharmacy",
+    "latitude": 30.4260985,
+    "longitude": -9.5622621
+  },
+  {
+    "name": "Pharmacie La Famille صيدلية الأسرة",
+    "type": "pharmacy",
+    "latitude": 30.4172687,
+    "longitude": -9.5733916
+  },
+  {
+    "name": "Pharmacie Chaab صيدلية الشعب",
+    "type": "pharmacy",
+    "latitude": 30.4162324,
+    "longitude": -9.5890281
+  },
+  {
+    "name": "Pharmacie Le Caducee صيدلية الكادوسي",
+    "type": "pharmacy",
+    "latitude": 30.4190695,
+    "longitude": -9.5620418
+  },
+  {
+    "name": "Pharmacie Annasr صيدلية النصر",
+    "type": "pharmacy",
+    "latitude": 30.4198128,
+    "longitude": -9.5707627
+  },
+  {
+    "name": "Pharmacie Tildi صيدلية تلدي",
+    "type": "pharmacy",
+    "latitude": 30.4163048,
+    "longitude": -9.586608
+  },
+  {
+    "name": "Pharmacie Zerktouni صيدلية الزرقطوني",
+    "type": "pharmacy",
+    "latitude": 30.4185885,
+    "longitude": -9.5676779
+  },
+  {
+    "name": "Pharmacie Moussa صيدلية موسى",
+    "type": "pharmacy",
+    "latitude": 30.4178965,
+    "longitude": -9.584317
+  },
+  {
+    "name": "Pharmacie Mouisset صيدلية مويسيت",
+    "type": "pharmacy",
+    "latitude": 30.4188036,
+    "longitude": -9.5905576
+  },
+  {
+    "name": "Pharmacie Hadrane صيدلية حاضران",
+    "type": "pharmacy",
+    "latitude": 30.4221304,
+    "longitude": -9.576433
+  },
+  {
+    "name": "Pharmacie Ennahda صيدلية النهضة",
+    "type": "pharmacy",
+    "latitude": 30.4271745,
+    "longitude": -9.584439
+  },
+  {
+    "name": "Pharmacie El Hajjouji صيدلية الحجوجي",
+    "type": "pharmacy",
+    "latitude": 30.4235767,
+    "longitude": -9.5877891
+  },
+  {
+    "name": "Pharmacie et Laboratoire Tahiri صيدلية ومختبر الطاهري",
+    "type": "pharmacy",
+    "latitude": 30.4220575,
+    "longitude": -9.5953526
+  },
+  {
+    "name": "Pharmacie Bouargan صيدلية بواركان",
+    "type": "pharmacy",
+    "latitude": 30.4236385,
+    "longitude": -9.5716252
+  },
+  {
+    "name": "Pharmacie Argane صيدلية أركان",
+    "type": "pharmacy",
+    "latitude": 30.4278637,
+    "longitude": -9.5657564
+  },
+  {
+    "name": "Pharmacie Bousaid صيدلية بوسعيد",
+    "type": "pharmacy",
+    "latitude": 30.426657,
+    "longitude": -9.5776458
+  },
+  {
+    "name": "Pharmacie Ouahbi صيدلية وهبي",
+    "type": "pharmacy",
+    "latitude": 30.4306165,
+    "longitude": -9.5771819
+  },
+  {
+    "name": "Pharmacie Les Amicales صيدلية ليزاميكال",
+    "type": "pharmacy",
+    "latitude": 30.4309382,
+    "longitude": -9.5801867
+  },
+  {
+    "name": "Pharmacie Moulay Youssef صيدلية مولاي يوسف",
+    "type": "pharmacy",
+    "latitude": 30.4270325,
+    "longitude": -9.5888329
+  },
+  {
+    "name": "Pharmacie Talberjt صيدلية تلبرجت",
+    "type": "pharmacy",
+    "latitude": 30.4238666,
+    "longitude": -9.5926974
+  },
+  {
+    "name": "Pharmacie La Mosquée Du Liban صيدلية مسجد لبنان",
+    "type": "pharmacy",
+    "latitude": 30.422844,
+    "longitude": -9.600835
+  },
+  {
+    "name": "Pharmacie Hôpital Hassan II صيدلية مستشفى الحسن الثاني",
+    "type": "pharmacy",
+    "latitude": 30.4358914,
+    "longitude": -9.5868276
+  },
+  {
+    "name": "Pharmacie Des FAR صيدلية الجيش الملكي",
+    "type": "pharmacy",
+    "latitude": 30.4287023,
+    "longitude": -9.5904516
+  },
+  {
+    "name": "Pharmacie Iligh صيدلية ايليغ",
+    "type": "pharmacy",
+    "latitude": 30.4399575,
+    "longitude": -9.5895212
+  },
+  {
+    "name": "Pharmacie Anza صيدلية أنزا",
+    "type": "pharmacy",
+    "latitude": 30.446843,
+    "longitude": -9.6582516
+  },
+  {
+    "name": "Pharmacie Aloulya صيدلية العليا",
+    "type": "pharmacy",
+    "latitude": 30.4567468,
+    "longitude": -9.6344918
+  },
+  {
+    "name": "Pharmacie Bd Mohamed V صيدلية شارع محمد الخامس",
+    "type": "pharmacy",
+    "latitude": 30.4229135,
+    "longitude": -9.608763
+  },
+  {
+    "name": "Pharmacie Ibn Malik صيدلية ابن مالك",
+    "type": "pharmacy",
+    "latitude": 30.4484255,
+    "longitude": -9.6570207
+  },
+  {
+    "name": "Pharmacie La Santé صيدلية الصحة",
+    "type": "pharmacy",
+    "latitude": 30.4436931,
+    "longitude": -9.6528004
+  },
+  {
+    "name": "Pharmacie Al Hassania صيدلية الحسنية",
+    "type": "pharmacy",
+    "latitude": 30.4574364,
+    "longitude": -9.6603238
+  },
+  {
+    "name": "Pharmacie Agadir Oufella صيدلية أكادير أوفلا",
+    "type": "pharmacy",
+    "latitude": 30.4244851,
+    "longitude": -9.6114672
+  },
+  {
+    "name": "Pharmacie Chadia صيدلية شادية",
+    "type": "pharmacy",
+    "latitude": 30.4261888,
+    "longitude": -9.5549061
+  },
+  {
+    "name": "Pharmacie Taddart صيدلية تادارت",
+    "type": "pharmacy",
+    "latitude": 30.4555972,
+    "longitude": -9.6473877
+  },
+  {
+    "name": "Pharmacie Taiba صيدلية طيبة",
+    "type": "pharmacy",
+    "latitude": 30.4578248,
+    "longitude": -9.643941
+  },
+  {
+    "name": "Pharmacie Jawhara صيدلية جوهرة",
+    "type": "pharmacy",
+    "latitude": 30.4314017,
+    "longitude": -9.5608697
+  },
+  {
+    "name": "Pharmacie Ben Omar صيدلية بن عمر",
+    "type": "pharmacy",
+    "latitude": 30.4647919,
+    "longitude": -9.6388067
+  },
+  {
+    "name": "Pharmacie Addoha صيدلية الضحى",
+    "type": "pharmacy",
+    "latitude": 30.4311165,
+    "longitude": -9.5654535
+  },
+  {
+    "name": "Pharmacie Isafaren صيدلية اسافارن",
+    "type": "pharmacy",
+    "latitude": 30.4586592,
+    "longitude": -9.648465
+  },
+  {
+    "name": "Pharmacie Bab Al Hay صيدلية باب الحي",
+    "type": "pharmacy",
+    "latitude": 30.4286681,
+    "longitude": -9.5569671
+  },
+  {
+    "name": "Pharmacie Immeubles Assafa صيدلية عمارات الصفاء",
+    "type": "pharmacy",
+    "latitude": 30.432428,
+    "longitude": -9.5554076
+  },
+  {
+    "name": "Pharmacie Marhaba صيدلية مرحبا",
+    "type": "pharmacy",
+    "latitude": 30.4392562,
+    "longitude": -9.5565864
+  },
+  {
+    "name": "Pharmacie Hay Mohammadi صيدلية حي المحمدي",
+    "type": "pharmacy",
+    "latitude": 30.4330512,
+    "longitude": -9.5511547
+  },
+  {
+    "name": "Pharmacie Errahma صيدلية الرحمة",
+    "type": "pharmacy",
+    "latitude": 30.4366961,
+    "longitude": -9.5524505
+  },
+  {
+    "name": "Pharmacie Aiyar صيدلية عيار",
+    "type": "pharmacy",
+    "latitude": 30.4359073,
+    "longitude": -9.5559484
+  },
+  {
+    "name": "Pharmacie Zineb صيدلية زينب",
+    "type": "pharmacy",
+    "latitude": 30.4406249,
+    "longitude": -9.5600391
+  },
+  {
+    "name": "Pharmacie Illy صيدلية الي",
+    "type": "pharmacy",
+    "latitude": 30.4360541,
+    "longitude": -9.5493594
+  },
+  {
+    "name": "Pharmacie Reda صيدلية رضى",
+    "type": "pharmacy",
+    "latitude": 30.4452291,
+    "longitude": -9.5562261
+  },
+  {
+    "name": "Pharmacie Mohamed Rayane صيدلية محمد ريان",
+    "type": "pharmacy",
+    "latitude": 30.4423981,
+    "longitude": -9.5559889
+  },
+  {
+    "name": "Pharmacie El Ouazzani صيدلية الوزاني",
+    "type": "pharmacy",
+    "latitude": 30.4360317,
+    "longitude": -9.5737263
+  },
+  {
+    "name": "Pharmacie Bayti صيدلية بيتي",
+    "type": "pharmacy",
+    "latitude": 30.4396125,
+    "longitude": -9.5639779
+  },
+  {
+    "name": "Pharmacie Les Jardins De Souss صيدلية حدائق سوس",
+    "type": "pharmacy",
+    "latitude": 30.4362442,
+    "longitude": -9.5699058
+  },
+  {
+    "name": "Pharmacie 2000 صيدلية",
+    "type": "pharmacy",
+    "latitude": 30.4180699,
+    "longitude": -9.5939044
+  },
+  {
+    "name": "Pharmacie Nour Al Farah 3 صيدلية نور الفرح",
+    "type": "pharmacy",
+    "latitude": 30.400773,
+    "longitude": -9.5620105
+  },
+  {
+    "name": "Pharmacie Charaf صيدلية شرف",
+    "type": "pharmacy",
+    "latitude": 30.4327214,
+    "longitude": -9.5897908
+  },
+  {
+    "name": "Pharmacie Aswak Assalam صيدلية أسواق السلام",
+    "type": "pharmacy",
+    "latitude": 30.4062193,
+    "longitude": -9.5377237
+  },
+  {
+    "name": "Pharmacie Ben Rahal صيدلية بن رحال",
+    "type": "pharmacy",
+    "latitude": 30.409047,
+    "longitude": -9.5873048
+  },
+  {
+    "name": "Pharmacie El Bradi صيدلية البرادي",
+    "type": "pharmacy",
+    "latitude": 30.3762682,
+    "longitude": -9.5059146
+  },
+  {
+    "name": "Pharmacie Errami صيدلية الرامي",
+    "type": "pharmacy",
+    "latitude": 30.427509,
+    "longitude": -9.5718362
+  },
+  {
+    "name": "Pharmacie Extension Dakhla صيدلية نطاق الداخلة",
+    "type": "pharmacy",
+    "latitude": 30.4052274,
+    "longitude": -9.557644
+  },
+  {
+    "name": "Pharmacie Inbiaat صيدلية الإنبعاث",
+    "type": "pharmacy",
+    "latitude": 30.413734,
+    "longitude": -9.5927306
+  },
+  {
+    "name": "Pharmacie Iqbal صيدلية إقبال",
+    "type": "pharmacy",
+    "latitude": 30.4159939,
+    "longitude": -9.5757681
+  },
+  {
+    "name": "Pharmacie Marina Agadir صيدلية مارينا أكادير",
+    "type": "pharmacy",
+    "latitude": 30.4237022,
+    "longitude": -9.6182405
+  },
+  {
+    "name": "Pharmacie du Maroc صيدلية المغرب",
+    "type": "pharmacy",
+    "latitude": 30.3979724,
+    "longitude": -9.5365712
+  },
+  {
+    "name": "Pharmacie Diet صيدلية دايت",
+    "type": "pharmacy",
+    "latitude": 30.4089448,
+    "longitude": -9.5602012
+  },
+  {
+    "name": "Pharmacie Soufi صيدلية الصوفي",
+    "type": "pharmacy",
+    "latitude": 30.4133125,
+    "longitude": -9.5682721
+  },
+  {
+    "name": "Pharmacie Valtur صيدلية فالتور",
+    "type": "pharmacy",
+    "latitude": 30.4071431,
+    "longitude": -9.5973277
+  },
+  {
+    "name": "Dar Chouaya",
+    "type": "restaurant",
+    "latitude": 30.4171205,
+    "longitude": -9.5796913
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.4168071,
+    "longitude": -9.5792962
+  },
+  {
+    "name": "Carrefour",
+    "type": "supermarket",
+    "latitude": 30.4190834,
+    "longitude": -9.5778246
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "butcher",
+    "latitude": 30.4083617,
+    "longitude": -9.5812368
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.4132179,
+    "longitude": -9.5789631
+  },
+  {
+    "name": "Pâtisserie Salam",
+    "type": "bakery",
+    "latitude": 30.4129155,
+    "longitude": -9.5886136
+  },
+  {
+    "name": "Café Mauro",
+    "type": "cafe",
+    "latitude": 30.4187636,
+    "longitude": -9.5965894
+  },
+  {
+    "name": "Carrito",
+    "type": "restaurant",
+    "latitude": 30.4223303,
+    "longitude": -9.5933698
+  },
+  {
+    "name": "Pharmacie Haboucha",
+    "type": "pharmacy",
+    "latitude": 30.4216817,
+    "longitude": -9.6058295
+  },
+  {
+    "name": "Le Calisson",
+    "type": "cafe",
+    "latitude": 30.421922,
+    "longitude": -9.6055479
+  },
+  {
+    "name": "Tourtite",
+    "type": "convenience",
+    "latitude": 30.3996903,
+    "longitude": -9.5878875
+  },
+  {
+    "name": "Narjisse",
+    "type": "restaurant",
+    "latitude": 30.4012041,
+    "longitude": -9.5887048
+  },
+  {
+    "name": "Vita mix",
+    "type": "restaurant",
+    "latitude": 30.3995781,
+    "longitude": -9.5879027
+  },
+  {
+    "name": "Caisse de dépôt et de gestion",
+    "type": "bank",
+    "latitude": 30.4006112,
+    "longitude": -9.5872671
+  },
+  {
+    "name": "Sonaba",
+    "type": "pharmacy",
+    "latitude": 30.3996557,
+    "longitude": -9.5878933
+  },
+  {
+    "name": "EL-Tepeyac",
+    "type": "restaurant",
+    "latitude": 30.399052,
+    "longitude": -9.5872171
+  },
+  {
+    "name": "Roastery",
+    "type": "restaurant",
+    "latitude": 30.3997123,
+    "longitude": -9.5874165
+  },
+  {
+    "name": "Dar Jad",
+    "type": "restaurant",
+    "latitude": 30.4016716,
+    "longitude": -9.5849387
+  },
+  {
+    "name": "Green's",
+    "type": "restaurant",
+    "latitude": 30.4009585,
+    "longitude": -9.5868299
+  },
+  {
+    "name": "Crémerie Sonaba",
+    "type": "cafe",
+    "latitude": 30.4003632,
+    "longitude": -9.5866799
+  },
+  {
+    "name": "La cuccina di Mamma",
+    "type": "restaurant",
+    "latitude": 30.3999966,
+    "longitude": -9.5870628
+  },
+  {
+    "name": "Brooklyn Pizza",
+    "type": "restaurant",
+    "latitude": 30.4005526,
+    "longitude": -9.5866642
+  },
+  {
+    "name": "Zone 11",
+    "type": "restaurant",
+    "latitude": 30.4005922,
+    "longitude": -9.5869803
+  },
+  {
+    "name": "Arôme de Paris",
+    "type": "restaurant",
+    "latitude": 30.3995171,
+    "longitude": -9.5879234
+  },
+  {
+    "name": "Attijariwafa Bank",
+    "type": "bank",
+    "latitude": 30.3991295,
+    "longitude": -9.5875621
+  },
+  {
+    "name": "Waffle city",
+    "type": "fast_food",
+    "latitude": 30.4005653,
+    "longitude": -9.5867671
+  },
+  {
+    "name": "Salon Samir",
+    "type": "hairdresser",
+    "latitude": 30.4004851,
+    "longitude": -9.5866658
+  },
+  {
+    "name": "Crédit du Maroc",
+    "type": "bank",
+    "latitude": 30.3990227,
+    "longitude": -9.5879897
+  },
+  {
+    "name": "Lahcen Market",
+    "type": "convenience",
+    "latitude": 30.4003057,
+    "longitude": -9.5866867
+  },
+  {
+    "name": "Mini Market Sonaba",
+    "type": "supermarket",
+    "latitude": 30.3995289,
+    "longitude": -9.5874837
+  },
+  {
+    "name": "O'Comptoir",
+    "type": "restaurant",
+    "latitude": 30.3992313,
+    "longitude": -9.5875377
+  },
+  {
+    "name": "Stop Shop",
+    "type": "convenience",
+    "latitude": 30.3996874,
+    "longitude": -9.587298
+  },
+  {
+    "name": "Karisma",
+    "type": "restaurant",
+    "latitude": 30.3990954,
+    "longitude": -9.5879869
+  },
+  {
+    "name": "Sushi Fleur de Ming",
+    "type": "restaurant",
+    "latitude": 30.3994745,
+    "longitude": -9.587488
+  },
+  {
+    "name": "Crémerie Bay",
+    "type": "cafe",
+    "latitude": 30.3996743,
+    "longitude": -9.5870621
+  },
+  {
+    "name": "Yuzaki",
+    "type": "restaurant",
+    "latitude": 30.399987,
+    "longitude": -9.5869932
+  },
+  {
+    "name": "Dar Tajine",
+    "type": "restaurant",
+    "latitude": 30.4169395,
+    "longitude": -9.5796009
+  },
+  {
+    "name": "Banque Populaire البنك الشعبي",
+    "type": "bank",
+    "latitude": 30.4142948,
+    "longitude": -9.5805313
+  },
+  {
+    "name": "Bo Passage",
+    "type": "restaurant",
+    "latitude": 30.4012773,
+    "longitude": -9.5854013
+  },
+  {
+    "name": "Sodivias",
+    "type": "butcher",
+    "latitude": 30.4012058,
+    "longitude": -9.5859604
+  },
+  {
+    "name": "Restaurants",
+    "type": "restaurant",
+    "latitude": 30.4144344,
+    "longitude": -9.5789127
+  },
+  {
+    "name": "pratic fatima",
+    "type": "clinic",
+    "latitude": 30.4123849,
+    "longitude": -9.5647443
+  },
+  {
+    "name": "pratic fatima",
+    "type": "clinic",
+    "latitude": 30.4119543,
+    "longitude": -9.564409
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.448417,
+    "longitude": -9.6601069
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.4121297,
+    "longitude": -9.5837073
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.419333,
+    "longitude": -9.5783149
+  },
+  {
+    "name": "ALIMENTATION SOUFI",
+    "type": "supermarket",
+    "latitude": 30.3976623,
+    "longitude": -9.5320926
+  },
+  {
+    "name": "Kim Hoa",
+    "type": "restaurant",
+    "latitude": 30.4107582,
+    "longitude": -9.59651
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "hairdresser",
+    "latitude": 30.4108775,
+    "longitude": -9.5966698
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.4109705,
+    "longitude": -9.596787
+  },
+  {
+    "name": "Seven X",
+    "type": "hairdresser",
+    "latitude": 30.4110652,
+    "longitude": -9.5971788
+  },
+  {
+    "name": "Belle Passion",
+    "type": "restaurant",
+    "latitude": 30.4103022,
+    "longitude": -9.5831611
+  },
+  {
+    "name": "Nour",
+    "type": "hairdresser",
+    "latitude": 30.4086899,
+    "longitude": -9.5873775
+  },
+  {
+    "name": "Bank Al Yousr بنك اليسر",
+    "type": "bank",
+    "latitude": 30.4083248,
+    "longitude": -9.5873189
+  },
+  {
+    "name": "Mini Market",
+    "type": "convenience",
+    "latitude": 30.4108848,
+    "longitude": -9.5971881
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.4080409,
+    "longitude": -9.5975163
+  },
+  {
+    "name": "Little Mamma",
+    "type": "restaurant",
+    "latitude": 30.4009641,
+    "longitude": -9.5846682
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4364058,
+    "longitude": -9.5704308
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.4142057,
+    "longitude": -9.5808439
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "pharmacy",
+    "latitude": 30.4124208,
+    "longitude": -9.5984953
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.4233094,
+    "longitude": -9.6185397
+  },
+  {
+    "name": "Le20",
+    "type": "restaurant",
+    "latitude": 30.414166,
+    "longitude": -9.6012168
+  },
+  {
+    "name": "iMiM",
+    "type": "cafe",
+    "latitude": 30.421973,
+    "longitude": -9.5936098
+  },
+  {
+    "name": "Cremerie Mazagan",
+    "type": "cafe",
+    "latitude": 30.42277,
+    "longitude": -9.5943783
+  },
+  {
+    "name": "Sweet Hamid",
+    "type": "restaurant",
+    "latitude": 30.423193,
+    "longitude": -9.5922902
+  },
+  {
+    "name": "Cafe Santiago",
+    "type": "cafe",
+    "latitude": 30.4244373,
+    "longitude": -9.5919905
+  },
+  {
+    "name": "Cafe Holanda",
+    "type": "cafe",
+    "latitude": 30.4245151,
+    "longitude": -9.5920938
+  },
+  {
+    "name": "Restaurant Cafe Nasr",
+    "type": "fast_food",
+    "latitude": 30.4243598,
+    "longitude": -9.5923033
+  },
+  {
+    "name": "Al Fajer",
+    "type": "cafe",
+    "latitude": 30.4122939,
+    "longitude": -9.5893344
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "supermarket",
+    "latitude": 30.4210225,
+    "longitude": -9.5941607
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "supermarket",
+    "latitude": 30.4254809,
+    "longitude": -9.6138701
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "supermarket",
+    "latitude": 30.4253056,
+    "longitude": -9.6134248
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.4147013,
+    "longitude": -9.6000115
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.4146801,
+    "longitude": -9.6000599
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.4147817,
+    "longitude": -9.5998235
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.4147157,
+    "longitude": -9.5999631
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.4147398,
+    "longitude": -9.5998947
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "post_office",
+    "latitude": 30.4248398,
+    "longitude": -9.6123795
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4083063,
+    "longitude": -9.5995719
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4083141,
+    "longitude": -9.5994067
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4083227,
+    "longitude": -9.5992563
+  },
+  {
+    "name": "RIU",
+    "type": "restaurant",
+    "latitude": 30.4085796,
+    "longitude": -9.6014653
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.4138545,
+    "longitude": -9.5931553
+  },
+  {
+    "name": "Boulangerie l'océan",
+    "type": "bakery",
+    "latitude": 30.4233897,
+    "longitude": -9.5735289
+  },
+  {
+    "name": "Delice Pizza Bay Sonaba",
+    "type": "restaurant",
+    "latitude": 30.3990631,
+    "longitude": -9.5869064
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.4018027,
+    "longitude": -9.5904301
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.4016113,
+    "longitude": -9.5888771
+  },
+  {
+    "name": "Halom beauty",
+    "type": "hairdresser",
+    "latitude": 30.3916401,
+    "longitude": -9.5452462
+  },
+  {
+    "name": "AUTO ECOLE ELBAZ",
+    "type": "driving_school",
+    "latitude": 30.3898654,
+    "longitude": -9.5687865
+  },
+  {
+    "name": "Vala",
+    "type": "cafe",
+    "latitude": 30.3804757,
+    "longitude": -9.5020553
+  },
+  {
+    "name": "Carrefour",
+    "type": "supermarket",
+    "latitude": 30.4482323,
+    "longitude": -9.6538261
+  },
+  {
+    "name": "Dinde mixe",
+    "type": "butcher",
+    "latitude": 30.3971012,
+    "longitude": -9.5507509
+  },
+  {
+    "name": "Cafe Rayan",
+    "type": "cafe",
+    "latitude": 30.3990293,
+    "longitude": -9.5510911
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.4123367,
+    "longitude": -9.5767684
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "convenience",
+    "latitude": 30.4123423,
+    "longitude": -9.5767579
+  },
+  {
+    "name": "NOUVION (wifi only inside, code:20202020)",
+    "type": "cafe",
+    "latitude": 30.3965358,
+    "longitude": -9.5457447
+  },
+  {
+    "name": "Poki Surf Morocco",
+    "type": "surf_school",
+    "latitude": 30.393868,
+    "longitude": -9.5988895
+  },
+  {
+    "name": "ماكدونالدز",
+    "type": "fast_food",
+    "latitude": 30.4177005,
+    "longitude": -9.6055539
+  },
+  {
+    "name": "Pizza Hut",
+    "type": "restaurant",
+    "latitude": 30.4177541,
+    "longitude": -9.6058312
+  },
+  {
+    "name": "Superette Atlas",
+    "type": "supermarket",
+    "latitude": 30.3977166,
+    "longitude": -9.557278
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "cafe",
+    "latitude": 30.4229292,
+    "longitude": -9.6092771
+  },
+  {
+    "name": "الثانوية التأهيلية الگرگرات",
+    "type": "school",
+    "latitude": 30.444507,
+    "longitude": -9.5627834
+  },
+  {
+    "name": "الثانوية الاعدادية أسايس",
+    "type": "school",
+    "latitude": 30.4412939,
+    "longitude": -9.563491
+  },
+  {
+    "name": "Carrefour",
+    "type": "supermarket",
+    "latitude": 30.3893617,
+    "longitude": -9.5103843
+  },
+  {
+    "name": "uniprix",
+    "type": "supermarket",
+    "latitude": 30.4206324,
+    "longitude": -9.5993646
+  },
+  {
+    "name": "Aswak Assalam",
+    "type": "supermarket",
+    "latitude": 30.4064546,
+    "longitude": -9.5379665
+  },
+  {
+    "name": "Ecole Youssufia",
+    "type": "school",
+    "latitude": 30.4252119,
+    "longitude": -9.5954158
+  },
+  {
+    "name": "FOSE Agadir Restaurant",
+    "type": "restaurant",
+    "latitude": 30.425059,
+    "longitude": -9.5951577
+  },
+  {
+    "name": "Collège Abdel Ali Benchekroun",
+    "type": "school",
+    "latitude": 30.393162,
+    "longitude": -9.5706228
+  },
+  {
+    "name": "Ecole Primaire Al-Matar",
+    "type": "school",
+    "latitude": 30.3884994,
+    "longitude": -9.5722939
+  },
+  {
+    "name": "bibliothèque",
+    "type": "library",
+    "latitude": 30.4067602,
+    "longitude": -9.5794647
+  },
+  {
+    "name": "Restaurant universitaire",
+    "type": "restaurant",
+    "latitude": 30.4060581,
+    "longitude": -9.5791735
+  },
+  {
+    "name": "Institution Blaise Pascal",
+    "type": "school",
+    "latitude": 30.4055744,
+    "longitude": -9.5803185
+  },
+  {
+    "name": "Ecole le défi",
+    "type": "school",
+    "latitude": 30.4057989,
+    "longitude": -9.5821788
+  },
+  {
+    "name": "OFPPT Hotelerie et Restauration, Agadir",
+    "type": "school",
+    "latitude": 30.4044692,
+    "longitude": -9.5712199
+  },
+  {
+    "name": "Collège IBN AL HAYTHAM",
+    "type": "school",
+    "latitude": 30.4094121,
+    "longitude": -9.5450262
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "school",
+    "latitude": 30.407711,
+    "longitude": -9.5383182
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "school",
+    "latitude": 30.4058595,
+    "longitude": -9.5357467
+  },
+  {
+    "name": "Marjane",
+    "type": "supermarket",
+    "latitude": 30.3592998,
+    "longitude": -9.5255311
+  },
+  {
+    "name": "École Saadiyine مدرسة السعديين",
+    "type": "school",
+    "latitude": 30.3698941,
+    "longitude": -9.5386194
+  },
+  {
+    "name": "Poste Maroc",
+    "type": "post_office",
+    "latitude": 30.3693549,
+    "longitude": -9.539588
+  },
+  {
+    "name": "Ecole Oume Al-Mouminine",
+    "type": "school",
+    "latitude": 30.3695452,
+    "longitude": -9.5415978
+  },
+  {
+    "name": "Collège Cadi Ayyad اعدادية القاضي عياض",
+    "type": "school",
+    "latitude": 30.3701856,
+    "longitude": -9.5426932
+  },
+  {
+    "name": "Ecole Allal Ben Abdellah",
+    "type": "school",
+    "latitude": 30.3656357,
+    "longitude": -9.5308984
+  },
+  {
+    "name": "Lycée Omar El Khayame ثانوية عمر الخيام",
+    "type": "school",
+    "latitude": 30.3659029,
+    "longitude": -9.5392751
+  },
+  {
+    "name": "Ecole Enahda مدرسة النهضة",
+    "type": "school",
+    "latitude": 30.3655968,
+    "longitude": -9.536741
+  },
+  {
+    "name": "Ecole Ibn Nafiss",
+    "type": "school",
+    "latitude": 30.3649638,
+    "longitude": -9.5367558
+  },
+  {
+    "name": "Collège Fayçal Ibn Abdelaziz إعدادية فيصل بن عبد العزيز",
+    "type": "school",
+    "latitude": 30.3676437,
+    "longitude": -9.5442214
+  },
+  {
+    "name": "Ecole Banque Populaire",
+    "type": "school",
+    "latitude": 30.3674867,
+    "longitude": -9.5465536
+  },
+  {
+    "name": "Lycée Allal Al Fassi ثانوية علال الفاسي",
+    "type": "school",
+    "latitude": 30.3717304,
+    "longitude": -9.5364409
+  },
+  {
+    "name": "Ecole SALAM",
+    "type": "school",
+    "latitude": 30.3726061,
+    "longitude": -9.5370683
+  },
+  {
+    "name": "مدرسة سبيل النجاح الخاصة",
+    "type": "school",
+    "latitude": 30.3624736,
+    "longitude": -9.5284032
+  },
+  {
+    "name": "École Khalid Ibn Al Walid",
+    "type": "school",
+    "latitude": 30.4278738,
+    "longitude": -9.5883114
+  },
+  {
+    "name": "Collège MOHAMMED VI",
+    "type": "school",
+    "latitude": 30.4285325,
+    "longitude": -9.5854528
+  },
+  {
+    "name": "Lycée AL MOUTANABI",
+    "type": "school",
+    "latitude": 30.4294023,
+    "longitude": -9.5860673
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "school",
+    "latitude": 30.4241592,
+    "longitude": -9.5803904
+  },
+  {
+    "name": "Collège Al Firdaous",
+    "type": "school",
+    "latitude": 30.3689438,
+    "longitude": -9.527954
+  },
+  {
+    "name": "Ecole KHALID BNOU AL WALID",
+    "type": "school",
+    "latitude": 30.3686567,
+    "longitude": -9.5286084
+  },
+  {
+    "name": "Ecole 2O AOUT",
+    "type": "school",
+    "latitude": 30.3665845,
+    "longitude": -9.5248607
+  },
+  {
+    "name": "Ecole Al Mouahidine",
+    "type": "school",
+    "latitude": 30.3581724,
+    "longitude": -9.5394417
+  },
+  {
+    "name": "Ecole Al Fadila",
+    "type": "school",
+    "latitude": 30.3582968,
+    "longitude": -9.5409657
+  },
+  {
+    "name": "Lycée Abdellah Ben Yassin",
+    "type": "school",
+    "latitude": 30.3584009,
+    "longitude": -9.5427661
+  },
+  {
+    "name": "Collège Ibn Zohr",
+    "type": "school",
+    "latitude": 30.359034,
+    "longitude": -9.5440508
+  },
+  {
+    "name": "Ecole Hassan Al Khayat",
+    "type": "school",
+    "latitude": 30.3575073,
+    "longitude": -9.5448669
+  },
+  {
+    "name": "Collège Ahmed Al Manssour Dahbi",
+    "type": "school",
+    "latitude": 30.3598893,
+    "longitude": -9.5417786
+  },
+  {
+    "name": "Ecole FATIMA AL FIHRYA",
+    "type": "school",
+    "latitude": 30.4172442,
+    "longitude": -9.5881276
+  },
+  {
+    "name": "Ecole Chohadaa مدرسة الشهداء",
+    "type": "school",
+    "latitude": 30.3735316,
+    "longitude": -9.5486855
+  },
+  {
+    "name": "Ecole 18 Novembre",
+    "type": "school",
+    "latitude": 30.3758283,
+    "longitude": -9.5452177
+  },
+  {
+    "name": "مدرسة عمر بن عبد العزيز",
+    "type": "school",
+    "latitude": 30.3538053,
+    "longitude": -9.5391063
+  },
+  {
+    "name": "مدرسة المرابطين",
+    "type": "school",
+    "latitude": 30.3538541,
+    "longitude": -9.5399098
+  },
+  {
+    "name": "Collège Rahal Ben Ahmed",
+    "type": "school",
+    "latitude": 30.3596978,
+    "longitude": -9.5468701
+  },
+  {
+    "name": "Ecole Ali Ben Abi Taleb",
+    "type": "school",
+    "latitude": 30.3554797,
+    "longitude": -9.5473475
+  },
+  {
+    "name": "Ecole Al Irfane",
+    "type": "school",
+    "latitude": 30.3545863,
+    "longitude": -9.5464839
+  },
+  {
+    "name": "مدرسة أبو الحسن الالغي",
+    "type": "school",
+    "latitude": 30.3547275,
+    "longitude": -9.547318
+  },
+  {
+    "name": "مدرسة البحتري",
+    "type": "school",
+    "latitude": 30.355416,
+    "longitude": -9.5531169
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "school",
+    "latitude": 30.3535448,
+    "longitude": -9.5544983
+  },
+  {
+    "name": "Ecole Al Afaq",
+    "type": "school",
+    "latitude": 30.3523667,
+    "longitude": -9.5596669
+  },
+  {
+    "name": "Ecole Idriss 1",
+    "type": "school",
+    "latitude": 30.3496516,
+    "longitude": -9.556569
+  },
+  {
+    "name": "Ecole Moussa Ibnou Nousair",
+    "type": "school",
+    "latitude": 30.3595313,
+    "longitude": -9.5362769
+  },
+  {
+    "name": "Ecole IBN HAZM",
+    "type": "school",
+    "latitude": 30.3640994,
+    "longitude": -9.5236702
+  },
+  {
+    "name": "Ecole Imam Al Boukhari",
+    "type": "school",
+    "latitude": 30.3758064,
+    "longitude": -9.5418176
+  },
+  {
+    "name": "Lycée YOUSSEF BNOU TACHFIN",
+    "type": "school",
+    "latitude": 30.4325602,
+    "longitude": -9.5961922
+  },
+  {
+    "name": "Lycée LALLA MERIYEM",
+    "type": "school",
+    "latitude": 30.4345485,
+    "longitude": -9.5964554
+  },
+  {
+    "name": "Institut Spécialisé de Technologie Appliquée المعهد التطبيقي اكادير",
+    "type": "school",
+    "latitude": 30.4360061,
+    "longitude": -9.5854731
+  },
+  {
+    "name": "Collége Souss Al Alima",
+    "type": "school",
+    "latitude": 30.4250396,
+    "longitude": -9.6005183
+  },
+  {
+    "name": "Ecole Ouad El-Makhazin",
+    "type": "school",
+    "latitude": 30.4177496,
+    "longitude": -9.5696389
+  },
+  {
+    "name": "Collège MOHAMED CHEIKH SAADI",
+    "type": "school",
+    "latitude": 30.4079036,
+    "longitude": -9.5860538
+  },
+  {
+    "name": "École bilal bensemlali",
+    "type": "school",
+    "latitude": 30.410275,
+    "longitude": -9.5848622
+  },
+  {
+    "name": "Lycée Ajdir",
+    "type": "school",
+    "latitude": 30.3954137,
+    "longitude": -9.5435708
+  },
+  {
+    "name": "مدرسة ابن خلدون",
+    "type": "school",
+    "latitude": 30.3534727,
+    "longitude": -9.5519578
+  },
+  {
+    "name": "مدرسة الأدارسة",
+    "type": "school",
+    "latitude": 30.3762727,
+    "longitude": -9.5326757
+  },
+  {
+    "name": "RIDA SLAOUI",
+    "type": "school",
+    "latitude": 30.4277791,
+    "longitude": -9.5986694
+  },
+  {
+    "name": "Ecole AL MOUJAHIDINE",
+    "type": "school",
+    "latitude": 30.4118669,
+    "longitude": -9.5526648
+  },
+  {
+    "name": "Ecole IBN HANBAL",
+    "type": "school",
+    "latitude": 30.4159739,
+    "longitude": -9.5527381
+  },
+  {
+    "name": "إعدادية الفضية",
+    "type": "school",
+    "latitude": 30.4154506,
+    "longitude": -9.5607961
+  },
+  {
+    "name": "مدرسة شاعر الحمراء",
+    "type": "school",
+    "latitude": 30.417953,
+    "longitude": -9.566128
+  },
+  {
+    "name": "مدرسة المحيط",
+    "type": "school",
+    "latitude": 30.4540976,
+    "longitude": -9.6595553
+  },
+  {
+    "name": "Ecole ALLAL BEN ABDALLAH",
+    "type": "school",
+    "latitude": 30.4630668,
+    "longitude": -9.6489585
+  },
+  {
+    "name": "Institut Spécialisé de Technologie Appliquée Hôtelière et Touristique",
+    "type": "school",
+    "latitude": 30.402646,
+    "longitude": -9.5895651
+  },
+  {
+    "name": "école Al Massamida",
+    "type": "school",
+    "latitude": 30.378151,
+    "longitude": -9.5027928
+  },
+  {
+    "name": "Lycée MOHAMED DERFOUFI",
+    "type": "school",
+    "latitude": 30.3833549,
+    "longitude": -9.50355
+  },
+  {
+    "name": "المقهى الادبي",
+    "type": "cafe",
+    "latitude": 30.3654639,
+    "longitude": -9.5299917
+  },
+  {
+    "name": "Ecole ASSALAM",
+    "type": "school",
+    "latitude": 30.3996973,
+    "longitude": -9.5483735
+  },
+  {
+    "name": "مدرسة بئرانزران",
+    "type": "school",
+    "latitude": 30.3779989,
+    "longitude": -9.5114635
+  },
+  {
+    "name": "اعدادية أبي فراس الحمداني",
+    "type": "school",
+    "latitude": 30.3803978,
+    "longitude": -9.5111453
+  },
+  {
+    "name": "Ecole AL GHAZALI",
+    "type": "school",
+    "latitude": 30.383708,
+    "longitude": -9.5027242
+  },
+  {
+    "name": "Ecole ABOU BAKR ASSIDDIQ",
+    "type": "school",
+    "latitude": 30.3730236,
+    "longitude": -9.5639804
+  },
+  {
+    "name": "مدرسة إبن الفارض",
+    "type": "school",
+    "latitude": 30.3732388,
+    "longitude": -9.5282657
+  },
+  {
+    "name": "Collège Ibn Toufail",
+    "type": "school",
+    "latitude": 30.3539927,
+    "longitude": -9.5551349
+  },
+  {
+    "name": "Ecole Oued Dahab",
+    "type": "school",
+    "latitude": 30.3506236,
+    "longitude": -9.5370829
+  },
+  {
+    "name": "DPEF Inezgane Ait Melloul / CRMEF-SM",
+    "type": "school",
+    "latitude": 30.3607709,
+    "longitude": -9.5439186
+  },
+  {
+    "name": "Collège Bouchouariyine",
+    "type": "school",
+    "latitude": 30.3764812,
+    "longitude": -9.545598
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "school",
+    "latitude": 30.3622675,
+    "longitude": -9.5426768
+  },
+  {
+    "name": "Ecole Moussa Ben El Housseine",
+    "type": "school",
+    "latitude": 30.3717289,
+    "longitude": -9.5371327
+  },
+  {
+    "name": "Groupe Scolaire Al Hanane",
+    "type": "school",
+    "latitude": 30.4309648,
+    "longitude": -9.5845347
+  },
+  {
+    "name": "Clinique Illigh",
+    "type": "clinic",
+    "latitude": 30.440023,
+    "longitude": -9.5901521
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.3518862,
+    "longitude": -9.5412183
+  },
+  {
+    "name": "Credit Agricole du Marde",
+    "type": "bank",
+    "latitude": 30.3556158,
+    "longitude": -9.5331743
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.3598123,
+    "longitude": -9.5337356
+  },
+  {
+    "name": "Groupe Scolaire Al Hanane Prive",
+    "type": "school",
+    "latitude": 30.3632783,
+    "longitude": -9.5376641
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.3706864,
+    "longitude": -9.5367831
+  },
+  {
+    "name": "Lycée Franaçais d'Agadir",
+    "type": "school",
+    "latitude": 30.3991957,
+    "longitude": -9.5852227
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.3959508,
+    "longitude": -9.5455213
+  },
+  {
+    "name": "Ecole Maria",
+    "type": "school",
+    "latitude": 30.4416342,
+    "longitude": -9.5944232
+  },
+  {
+    "name": "Institution Al Inssane Privó",
+    "type": "school",
+    "latitude": 30.4409976,
+    "longitude": -9.5545307
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.4293169,
+    "longitude": -9.5886232
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.4227199,
+    "longitude": -9.5940424
+  },
+  {
+    "name": "Bank of Africa ⵍⴱⴰⵏⴽ ⵏ ⴰⴼⵔⵉⵇⵢⴰ بنك أفريقيا",
+    "type": "bank",
+    "latitude": 30.4238071,
+    "longitude": -9.5994802
+  },
+  {
+    "name": "CIH Bank القرض العقاري والسياحي",
+    "type": "bank",
+    "latitude": 30.4243696,
+    "longitude": -9.5894649
+  },
+  {
+    "name": "البنك المغربي للتجارة الخارجية",
+    "type": "bank",
+    "latitude": 30.4112956,
+    "longitude": -9.5903523
+  },
+  {
+    "name": "BMCI البنك المغربي للتجارة والصناعة",
+    "type": "bank",
+    "latitude": 30.4224859,
+    "longitude": -9.6045058
+  },
+  {
+    "name": "CHITAL",
+    "type": "restaurant",
+    "latitude": 30.4214088,
+    "longitude": -9.5998274
+  },
+  {
+    "name": "Clinic Ibn Sina",
+    "type": "clinic",
+    "latitude": 30.4116529,
+    "longitude": -9.5627573
+  },
+  {
+    "name": "Ecole Privée Mounib",
+    "type": "school",
+    "latitude": 30.4054928,
+    "longitude": -9.5563148
+  },
+  {
+    "name": "Institution Al Inbiaat Prive",
+    "type": "school",
+    "latitude": 30.4194661,
+    "longitude": -9.5537895
+  },
+  {
+    "name": "Collège Ahmed Chawqi",
+    "type": "school",
+    "latitude": 30.4078971,
+    "longitude": -9.5618501
+  },
+  {
+    "name": "CRMEF-SM Agadir",
+    "type": "school",
+    "latitude": 30.4285108,
+    "longitude": -9.5824995
+  },
+  {
+    "name": "Kastalani",
+    "type": "school",
+    "latitude": 30.4246272,
+    "longitude": -9.5778123
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "school",
+    "latitude": 30.418969,
+    "longitude": -9.5593642
+  },
+  {
+    "name": "école lwahda",
+    "type": "school",
+    "latitude": 30.388649,
+    "longitude": -9.5659067
+  },
+  {
+    "name": "ANNEXE ECOLE AL WAHDA",
+    "type": "school",
+    "latitude": 30.3846272,
+    "longitude": -9.568253
+  },
+  {
+    "name": "École Atahir Ifrani",
+    "type": "school",
+    "latitude": 30.3902536,
+    "longitude": -9.572065
+  },
+  {
+    "name": "Lycée aby laabass sebty",
+    "type": "school",
+    "latitude": 30.3952823,
+    "longitude": -9.5637998
+  },
+  {
+    "name": "college ibn tofail",
+    "type": "school",
+    "latitude": 30.3903357,
+    "longitude": -9.5558283
+  },
+  {
+    "name": "مدرسة الكرسيفي",
+    "type": "school",
+    "latitude": 30.3909303,
+    "longitude": -9.5601346
+  },
+  {
+    "name": "école Al Massira",
+    "type": "school",
+    "latitude": 30.408391,
+    "longitude": -9.5662627
+  },
+  {
+    "name": "Collège Al Mobadara",
+    "type": "school",
+    "latitude": 30.3747953,
+    "longitude": -9.5148018
+  },
+  {
+    "name": "Ecole OMAR IBN ABDELAZIZ",
+    "type": "school",
+    "latitude": 30.3727561,
+    "longitude": -9.5020875
+  },
+  {
+    "name": "Ecole IBN BATTOUTA",
+    "type": "school",
+    "latitude": 30.4153644,
+    "longitude": -9.5745756
+  },
+  {
+    "name": "Lycée ANOUAL",
+    "type": "school",
+    "latitude": 30.4193773,
+    "longitude": -9.5636898
+  },
+  {
+    "name": "Lycée ZERKTOUNI",
+    "type": "school",
+    "latitude": 30.4197085,
+    "longitude": -9.562853
+  },
+  {
+    "name": "Ecole ABDELMAJID BEN JALLOUN",
+    "type": "school",
+    "latitude": 30.4229819,
+    "longitude": -9.559527
+  },
+  {
+    "name": "Ecole ANNAJAH",
+    "type": "school",
+    "latitude": 30.4286854,
+    "longitude": -9.5678191
+  },
+  {
+    "name": "Collège 20 AOUT",
+    "type": "school",
+    "latitude": 30.4252902,
+    "longitude": -9.568829
+  },
+  {
+    "name": "Ecole ANNASR",
+    "type": "school",
+    "latitude": 30.4245315,
+    "longitude": -9.5691267
+  },
+  {
+    "name": "Ecole AL FATH",
+    "type": "school",
+    "latitude": 30.4241985,
+    "longitude": -9.5684467
+  },
+  {
+    "name": "Ecole IBN SINA",
+    "type": "school",
+    "latitude": 30.4297492,
+    "longitude": -9.5763351
+  },
+  {
+    "name": "Ecole OMAR IBN AL KHATTAB",
+    "type": "school",
+    "latitude": 30.4268305,
+    "longitude": -9.5790106
+  },
+  {
+    "name": "Ecole ATTAQADDOUM",
+    "type": "school",
+    "latitude": 30.423795,
+    "longitude": -9.5892325
+  },
+  {
+    "name": "Ecole AL MAGHRIB AL KABIR",
+    "type": "school",
+    "latitude": 30.4120714,
+    "longitude": -9.5665131
+  },
+  {
+    "name": "Ecole AL FARABI",
+    "type": "school",
+    "latitude": 30.3944939,
+    "longitude": -9.5728898
+  },
+  {
+    "name": "Ecole AL FARAH",
+    "type": "school",
+    "latitude": 30.3968884,
+    "longitude": -9.5542706
+  },
+  {
+    "name": "Collège AL INBIAAT",
+    "type": "school",
+    "latitude": 30.3953505,
+    "longitude": -9.5497316
+  },
+  {
+    "name": "Ecole AL IZDIHAR",
+    "type": "school",
+    "latitude": 30.3948599,
+    "longitude": -9.5465049
+  },
+  {
+    "name": "Ecole ATTAKADDOUM II",
+    "type": "school",
+    "latitude": 30.3911917,
+    "longitude": -9.5377944
+  },
+  {
+    "name": "Ecole AL ADARISSA",
+    "type": "school",
+    "latitude": 30.3998571,
+    "longitude": -9.5301824
+  },
+  {
+    "name": "Ecole AL ATLAS TILILA",
+    "type": "school",
+    "latitude": 30.394594,
+    "longitude": -9.5135259
+  },
+  {
+    "name": "Collège Al Khalil",
+    "type": "school",
+    "latitude": 30.4004413,
+    "longitude": -9.5217844
+  },
+  {
+    "name": "Ecole AL MARINYINE",
+    "type": "school",
+    "latitude": 30.4039484,
+    "longitude": -9.5179313
+  },
+  {
+    "name": "SS MSIGUINA IGHIL OUDARDOR",
+    "type": "school",
+    "latitude": 30.4409775,
+    "longitude": -9.5446863
+  },
+  {
+    "name": "college AL QODS",
+    "type": "school",
+    "latitude": 30.4343295,
+    "longitude": -9.5491147
+  },
+  {
+    "name": "Ecole ABDELAZIZ AL MASSI",
+    "type": "school",
+    "latitude": 30.4339074,
+    "longitude": -9.5498965
+  },
+  {
+    "name": "Ecole HAY MOHAMMADI",
+    "type": "school",
+    "latitude": 30.4318387,
+    "longitude": -9.5547822
+  },
+  {
+    "name": "مدرسة الامُوَيين",
+    "type": "school",
+    "latitude": 30.3510069,
+    "longitude": -9.5541104
+  },
+  {
+    "name": "مدرسة الفلاح",
+    "type": "school",
+    "latitude": 30.3519942,
+    "longitude": -9.5450391
+  },
+  {
+    "name": "مدرسة الزلاقة",
+    "type": "school",
+    "latitude": 30.3556314,
+    "longitude": -9.5435854
+  },
+  {
+    "name": "مدرسة ابي حنيفة",
+    "type": "school",
+    "latitude": 30.3504913,
+    "longitude": -9.5365952
+  },
+  {
+    "name": "Collège ibnou hanbal",
+    "type": "school",
+    "latitude": 30.3549578,
+    "longitude": -9.555659
+  },
+  {
+    "name": "Agadir Founty",
+    "type": "post_office",
+    "latitude": 30.4017983,
+    "longitude": -9.5900218
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4011769,
+    "longitude": -9.5990668
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4010138,
+    "longitude": -9.5992384
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4008439,
+    "longitude": -9.5993933
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4115046,
+    "longitude": -9.6021473
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4114474,
+    "longitude": -9.6023659
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4113803,
+    "longitude": -9.602608
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4113196,
+    "longitude": -9.6028179
+  },
+  {
+    "name": "Poste Centrale",
+    "type": "post_office",
+    "latitude": 30.4206157,
+    "longitude": -9.5975698
+  },
+  {
+    "name": "ISTA",
+    "type": "school",
+    "latitude": 30.4198832,
+    "longitude": -9.586569
+  },
+  {
+    "name": "Institution Founty - Alexandre Pouchkine",
+    "type": "school",
+    "latitude": 30.3993049,
+    "longitude": -9.5862117
+  },
+  {
+    "name": "ECOLE AL ATLAS",
+    "type": "school",
+    "latitude": 30.4462539,
+    "longitude": -9.5531186
+  },
+  {
+    "name": "Annexe Ecole Al Mobadara AKHLIJ",
+    "type": "school",
+    "latitude": 30.3634668,
+    "longitude": -9.5098109
+  },
+  {
+    "name": "Collège MEHDI BNOU TOUMERT",
+    "type": "school",
+    "latitude": 30.3981371,
+    "longitude": -9.5434419
+  },
+  {
+    "name": "Collège Ramallah",
+    "type": "school",
+    "latitude": 30.4578484,
+    "longitude": -9.6304313
+  },
+  {
+    "name": "Ecole Medersatcom Taddart",
+    "type": "school",
+    "latitude": 30.4627244,
+    "longitude": -9.6357621
+  },
+  {
+    "name": "Ecole ABDELMOUMEN BEN ALI",
+    "type": "school",
+    "latitude": 30.4560472,
+    "longitude": -9.6473191
+  },
+  {
+    "name": "Ecole ABDERRAHIM BOUABID",
+    "type": "school",
+    "latitude": 30.4559421,
+    "longitude": -9.6497869
+  },
+  {
+    "name": "Ecole AL MOKHTAR SOUSSI",
+    "type": "school",
+    "latitude": 30.4472088,
+    "longitude": -9.6576262
+  },
+  {
+    "name": "Ecole MOHAMED KHOUIBI",
+    "type": "school",
+    "latitude": 30.4616359,
+    "longitude": -9.6595857
+  },
+  {
+    "name": "Collège IBN KHALDOUN",
+    "type": "school",
+    "latitude": 30.4554024,
+    "longitude": -9.6613071
+  },
+  {
+    "name": "Centre de fécondation in vitro",
+    "type": "doctors",
+    "latitude": 30.4202596,
+    "longitude": -9.5958157
+  },
+  {
+    "name": "barid bank / Poste Maroc",
+    "type": "post_office;bank",
+    "latitude": 30.3584662,
+    "longitude": -9.5330306
+  },
+  {
+    "name": "Groupe scolaire Denis Diderot",
+    "type": "school",
+    "latitude": 30.4420082,
+    "longitude": -9.5627828
+  },
+  {
+    "name": "Restaurant Les Dinosaures",
+    "type": "restaurant",
+    "latitude": 30.4582128,
+    "longitude": -9.6656902
+  },
+  {
+    "name": "Lycée Al Majd",
+    "type": "school",
+    "latitude": 30.430592,
+    "longitude": -9.5600242
+  },
+  {
+    "name": "LYCEE AMRU BIN LASSS",
+    "type": "school",
+    "latitude": 30.4628326,
+    "longitude": -9.6408219
+  },
+  {
+    "name": "مدرسة علي أزيكو الإبتدائية",
+    "type": "school",
+    "latitude": 30.4625251,
+    "longitude": -9.6413819
+  },
+  {
+    "name": "مدرسة ايت تاووكت",
+    "type": "school",
+    "latitude": 30.4512019,
+    "longitude": -9.5639763
+  },
+  {
+    "name": "Buddha Bar Agadir",
+    "type": "restaurant",
+    "latitude": 30.4152548,
+    "longitude": -9.6025522
+  },
+  {
+    "name": "Unnamed Location",
+    "type": "restaurant",
+    "latitude": 30.4227331,
+    "longitude": -9.6086526
+  }
+]
