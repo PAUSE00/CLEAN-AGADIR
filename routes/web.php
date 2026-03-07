@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\CollectionPointController;
 use App\Http\Controllers\Api\VrpController;
 use App\Http\Controllers\Api\PdfController;
 use App\Http\Controllers\Api\AnalyticsController;
+use App\Http\Controllers\Api\CitizenController;
 
 // ── Pages ────────────────────────────────────────────────────────────
 Route::get('/', fn() => redirect()->route('login'));
@@ -20,6 +21,10 @@ Route::get('/driver',     fn() => Inertia::render('DriverDashboard'))
 
 Route::get('/analytics',  fn() => Inertia::render('Analytics'))
     ->middleware(['auth'])->name('analytics');
+
+// ── Public Pages ─────────────────────────────────────────────────────
+Route::get('/report', fn() => Inertia::render('CitizenReport'))->name('report');
+Route::post('/api/report', [CitizenController::class, 'report']);
 
 // ── Protected API ────────────────────────────────────────────────────
 Route::middleware('auth')->group(function () {
