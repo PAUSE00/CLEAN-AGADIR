@@ -18,6 +18,11 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/driver', function () {
+    return Inertia::render('DriverDashboard');
+})->middleware(['auth'])->name('driver');
+
+
 // Protected API routes accessible only when authenticated
 Route::middleware('auth')->group(function () {
     // Mapbox
