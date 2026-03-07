@@ -10,6 +10,7 @@ import RouteList from '../Components/Sidebar/RouteList';
 import VrpControls from '../Components/Sidebar/VrpControls';
 import StatsPanel from '../Components/Sidebar/StatsPanel';
 import { Sec, AnimatedCounter, LoadingSkeleton, EmptyState } from '../Components/UI/Shared';
+import AutoDemo from '../Components/UI/AutoDemo';
 
 // Constants
 const WC = { medical: '#f43f5e', organic: '#22c55e', recyclable: '#38bdf8', paper: '#fbbf24', general: '#a78bfa' };
@@ -701,6 +702,24 @@ function DashboardInner({ auth }) {
                     />
                 </div>
             </div>
+
+            {/* ── Auto Demo Panel ── */}
+            {showDemo && (
+                <AutoDemo
+                    pts={pts}
+                    routes={routes}
+                    runVRP={runVRP}
+                    playRoute={playRoute}
+                    triggerBreakdown={triggerBreakdown}
+                    playbackRouteIndex={playbackRouteIndex}
+                    replanningActive={replanningActive}
+                    onClose={() => setShowDemo(false)}
+                    setActiveTab={setActiveTab}
+                    addLog={addLog}
+                    addToast={addToast}
+                    vrpResult={vrpResult}
+                />
+            )}
         </>
     );
 }
