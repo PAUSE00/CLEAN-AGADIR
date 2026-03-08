@@ -20,7 +20,11 @@ function BenchTab({ capacity, numTrucks, pts, benchRunning, benchResult, setBenc
         try {
             const res = await fetch('/api/vrp/benchmark', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content
+                },
                 body: JSON.stringify({ capacity, num_trucks: numTrucks, points_count: Math.min(pts.length, 100) })
             });
             const data = await res.json();
@@ -157,7 +161,14 @@ export default function StatsPanel({
                         addLog('▶ Simulation IoT démarrée', 'ok');
                         const runSim = async () => {
                             try {
-                                const res = await fetch('/api/iot/simulate', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content } });
+                                const res = await fetch('/api/iot/simulate', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                        'Accept': 'application/json',
+                                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content
+                                    }
+                                });
                                 const data = await res.json();
                                 if (data.alerts?.length) {
                                     setIotAlerts(prev => [...data.alerts, ...prev].slice(0, 20));
@@ -177,7 +188,14 @@ export default function StatsPanel({
                 </button>
                 <button className="btn bb" onClick={async () => {
                     try {
-                        await fetch('/api/iot/reset', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content } });
+                        await fetch('/api/iot/reset', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json',
+                                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content
+                            }
+                        });
                         addLog('↺ Niveaux réinitialisés', 'ok'); setIotAlerts([]); loadData();
                     } catch (e) { addLog(`✗ Reset: ${e.message}`, 'err'); }
                 }}>↺ Réinitialiser Niveaux</button>
