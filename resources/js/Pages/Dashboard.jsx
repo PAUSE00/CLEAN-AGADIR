@@ -78,6 +78,7 @@ function DashboardInner({ auth }) {
     const [lyDep, setLyDep] = useState(true);
     const [lyHeat, setLyHeat] = useState(false);
     const [lyZones, setLyZones] = useState(false);
+    const [ly3D, setLy3D] = useState(true);
     const [wasteFilters, setWasteFilters] = useState({ medical: true, organic: true, recyclable: true, paper: true, general: true });
     const [highlightRoute, setHighlightRoute] = useState(null);
 
@@ -651,6 +652,7 @@ function DashboardInner({ auth }) {
                                         <label className="ly-row"><input type="checkbox" checked={lyRt} onChange={e => setLyRt(e.target.checked)} /> Tracés routes</label>
                                         <label className="ly-row"><input type="checkbox" checked={lyHeat} onChange={e => setLyHeat(e.target.checked)} /> Heatmap densité</label>
                                         <label className="ly-row"><input type="checkbox" checked={lyZones} onChange={e => setLyZones(e.target.checked)} /> Zones (Contours)</label>
+                                        <label className="ly-row"><input type="checkbox" checked={ly3D} onChange={e => setLy3D(e.target.checked)} /> Bâtiments 3D</label>
                                     </Sec>
                                     <RouteList
                                         routes={routes}
@@ -719,7 +721,7 @@ function DashboardInner({ auth }) {
                         pts={pts}
                         wasteFilters={wasteFilters}
                         collectedPoints={collectedPoints}
-                        lyPts={lyPts} lyDep={lyDep} lyRt={lyRt} lyHeat={lyHeat} lyZones={lyZones}
+                        lyPts={lyPts} lyDep={lyDep} lyRt={lyRt} lyHeat={lyHeat} lyZones={lyZones} ly3D={ly3D}
                         routes={routes}
                         highlightRoute={highlightRoute}
                         playbackRouteIndex={playbackRouteIndex}

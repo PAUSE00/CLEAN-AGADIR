@@ -10,7 +10,7 @@ const RC = ['#00e5b8', '#fb923c', '#a78bfa', '#38bdf8', '#f43f5e', '#22c55e', '#
 
 export default function MapContainer({
     mapContainerRef, mapRef, markersRef, routesLayerIds,
-    pts, wasteFilters, collectedPoints, lyPts, lyDep, lyRt, lyHeat, lyZones,
+    pts, wasteFilters, collectedPoints, lyPts, lyDep, lyRt, lyHeat, lyZones, ly3D,
     routes, highlightRoute, playbackRouteIndex,
     mapStyleLoaded, setMapStyleLoaded,
     toasts, vrpResult,
@@ -249,6 +249,25 @@ export default function MapContainer({
 
         return () => cleanupZones();
     }, [pts, lyZones]);
+
+    // Handle 3D Layer toggle
+    useEffect(() => {
+        const map = mapRef.current;
+        if (!map || !map.isStyleLoaded()) return;
+
+        const toggle3D = () => {
+            if (map.getLayer('3d-buildings')) {
+                map.setPaintProperty(
+                    '3d-buildings',
+                    'fill-extrusion-opacity',
+                    ly3D ? 0.8 : 0
+                );
+            }
+        };
+
+        if (map.isStyleLoaded()) toggle3D();
+        else map.once('styledata', toggle3D);
+    }, [ly3D, mapStyleLoaded]);
 
     return (
         <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
