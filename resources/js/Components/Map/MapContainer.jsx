@@ -76,12 +76,12 @@ export default function MapContainer({
             inner.addEventListener('mouseleave', () => { inner.style.transform = 'scale(1)'; });
             container.appendChild(inner);
 
-            const popupHTML = `<div style="background:#0d1b2a;border:1px solid ${color}44;border-radius:8px;padding:8px 12px;font-family:'Space Grotesk',sans-serif;min-width:140px">
-                <div style="font-weight:700;font-size:12px;color:#dde6f4;margin-bottom:2px">${p.name}</div>
-                ${!p.is_depot && p.zone ? `<div style="font-size:10px;color:#7a92aa;margin-bottom:6px">📍 ${p.zone}</div>` : ''}
+            const popupHTML = `<div style="background:var(--bg-dark);border:1px solid ${color}44;border-radius:8px;padding:8px 12px;font-family:'Space Grotesk',sans-serif;min-width:140px;box-shadow:var(--glass-shadow)">
+                <div style="font-weight:700;font-size:12px;color:var(--text-primary);margin-bottom:2px">${p.name}</div>
+                ${!p.is_depot && p.zone ? `<div style="font-size:10px;color:var(--text-secondary);margin-bottom:6px">📍 ${p.zone}</div>` : ''}
                 <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:${color}">${WC_ICON[wc] || ''} ${wc} · <b>${fillPct}%</b></div>
-                ${!p.is_depot ? `<div style="margin-top:6px;margin-bottom:6px;height:4px;background:#1a2e42;border-radius:4px"><div style="height:100%;width:${fillPct}%;background:${color};border-radius:4px"></div></div>` : ''}
-                ${p.open_time && p.close_time ? `<div style="font-size:10px;color:#a0aec0;border-top:1px dashed #1a2e42;padding-top:6px;margin-top:4px">🕒 ${p.open_time.slice(0, 5)} — ${p.close_time.slice(0, 5)}</div>` : ''}
+                ${!p.is_depot ? `<div style="margin-top:6px;margin-bottom:6px;height:4px;background:var(--border);border-radius:4px"><div style="height:100%;width:${fillPct}%;background:${color};border-radius:4px"></div></div>` : ''}
+                ${p.open_time && p.close_time ? `<div style="font-size:10px;color:var(--text-muted);border-top:1px dashed var(--border);padding-top:6px;margin-top:4px">🕒 ${p.open_time.slice(0, 5)} — ${p.close_time.slice(0, 5)}</div>` : ''}
             </div>`;
 
             const popup = new mapboxgl.Popup({ offset: 18, closeButton: false, className: 'vp-popup' }).setHTML(popupHTML);

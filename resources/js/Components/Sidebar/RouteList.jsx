@@ -22,14 +22,14 @@ export default function RouteList({
         <div style={{ padding: '0 0 8px 0' }}>
             {/* Global live progress bar when animating */}
             {playbackRouteIndex !== null && (
-                <div style={{ padding: '8px 13px 10px', borderBottom: '1px solid #1a2e42', marginBottom: 8 }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, color: '#7a92aa', marginBottom: 5 }}>
+                <div style={{ padding: '8px 13px 10px', borderBottom: '1px solid var(--border)', marginBottom: 8 }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, color: 'var(--text-secondary)', marginBottom: 5 }}>
                         <span>🚛 Route {playbackRouteIndex + 1} en cours</span>
                         <span style={{ fontFamily: "'JetBrains Mono',monospace", color: '#00e5b8' }}>
                             {Math.round(playbackProgress * 100)}%
                         </span>
                     </div>
-                    <div style={{ height: 4, background: '#1a2e42', borderRadius: 99, overflow: 'hidden' }}>
+                    <div style={{ height: 4, background: 'var(--border)', borderRadius: 99, overflow: 'hidden' }}>
                         <div style={{
                             height: '100%', width: `${playbackProgress * 100}%`,
                             background: 'linear-gradient(90deg, #00e5b8, #38bdf8)',
@@ -66,7 +66,7 @@ export default function RouteList({
             )}
 
             {/* Section title */}
-            <div style={{ padding: '0 13px 6px', fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.5, color: '#374e64' }}>
+            <div style={{ padding: '0 13px 6px', fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--text-muted)' }}>
                 Routes Actives — {routes.length} route{routes.length > 1 ? 's' : ''}
                 {vrpResult && (
                     <span style={{ float: 'right', color: '#00e5b8', fontFamily: "'JetBrains Mono',monospace" }}>
@@ -87,8 +87,8 @@ export default function RouteList({
                         onClick={() => setHighlightRoute(isHighlighted ? null : i)}
                         style={{
                             margin: '4px 8px', padding: '10px 12px', borderRadius: 10,
-                            border: `1px solid ${isActive ? color : isHighlighted ? `${color}66` : '#1a2e42'}`,
-                            background: isActive ? `${color}10` : isHighlighted ? `${color}08` : '#0a1424',
+                            border: `1px solid ${isActive ? color : isHighlighted ? `${color}66` : 'var(--border)'}`,
+                            background: isActive ? `${color}10` : isHighlighted ? `${color}08` : 'var(--bg-card)',
                             cursor: 'pointer', transition: '.2s',
                             boxShadow: isActive ? `0 0 12px ${color}33` : 'none',
                         }}
@@ -97,11 +97,11 @@ export default function RouteList({
                         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
                             <div style={{ width: 10, height: 10, borderRadius: '50%', background: color, boxShadow: isActive ? `0 0 8px ${color}` : 'none', flexShrink: 0 }} />
                             <div style={{ flex: 1 }}>
-                                <div style={{ fontWeight: 700, fontSize: 12, color: '#dde6f4' }}>
+                                <div style={{ fontWeight: 700, fontSize: 12, color: 'var(--text-primary)' }}>
                                     Route {i + 1}
                                     {isActive && <span style={{ marginLeft: 6, fontSize: 9, background: `${color}20`, color, padding: '1px 6px', borderRadius: 10, fontFamily: "'JetBrains Mono',monospace" }}>● EN COURS</span>}
                                 </div>
-                                <div style={{ fontSize: 10, color: '#7a92aa', fontFamily: "'JetBrains Mono',monospace" }}>
+                                <div style={{ fontSize: 10, color: 'var(--text-secondary)', fontFamily: "'JetBrains Mono',monospace" }}>
                                     {r.points.length} arrêts · {r.distance_km}km · {r.waste_type || 'général'}
                                 </div>
                             </div>
@@ -110,11 +110,11 @@ export default function RouteList({
                         {/* Per-route progress bar */}
                         {collected > 0 && (
                             <div style={{ marginBottom: 6 }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 9, color: '#7a92aa', marginBottom: 3 }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 9, color: 'var(--text-secondary)', marginBottom: 3 }}>
                                     <span>Collectés: {collected}/{r.points.length}</span>
                                     <span style={{ color: '#00e5b8', fontFamily: "'JetBrains Mono',monospace" }}>{pct}%</span>
                                 </div>
-                                <div style={{ height: 3, background: '#1a2e42', borderRadius: 99 }}>
+                                <div style={{ height: 3, background: 'var(--border)', borderRadius: 99 }}>
                                     <div style={{ height: '100%', width: `${pct}%`, background: color, borderRadius: 99, transition: 'width .4s ease' }} />
                                 </div>
                             </div>

@@ -17,7 +17,7 @@ export default function VrpControls({
 }) {
     if (!isAdmin) {
         return (
-            <div style={{ padding: 20, textAlign: 'center', color: '#7a92aa', fontSize: 13, background: 'rgba(244,63,94,.05)', borderRadius: 8, border: '1px solid rgba(244,63,94,.2)', margin: 12 }}>
+            <div style={{ padding: 20, textAlign: 'center', color: 'var(--text-secondary)', fontSize: 13, background: 'rgba(244,63,94,.05)', borderRadius: 8, border: '1px solid rgba(244,63,94,.2)', margin: 12 }}>
                 <div style={{ fontSize: 30, marginBottom: 10 }}>🔒</div>
                 <div style={{ color: '#f43f5e', fontWeight: 600, marginBottom: 8 }}>Accès Restreint</div>
                 Seul un Administrateur peut générer des plans VRP.

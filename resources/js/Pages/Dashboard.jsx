@@ -26,7 +26,7 @@ class ErrorBoundary extends React.Component {
             <div style={{ background: '#06101c', color: '#f43f5e', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontFamily: 'monospace', padding: 40 }}>
                 <div style={{ fontSize: 40, marginBottom: 16 }}>⚠️</div>
                 <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 8 }}>Erreur d'affichage</div>
-                <div style={{ fontSize: 12, color: '#7a92aa', maxWidth: 600, textAlign: 'center', marginBottom: 24 }}>{this.state.error?.message}</div>
+                <div style={{ fontSize: 12, color: 'var(--text-secondary)', maxWidth: 600, textAlign: 'center', marginBottom: 24 }}>{this.state.error?.message}</div>
                 <button onClick={() => this.setState({ hasError: false, error: null })} style={{ background: '#00e5b8', color: '#06101c', border: 'none', padding: '10px 24px', borderRadius: 8, fontWeight: 700, cursor: 'pointer' }}>↻ Recharger</button>
             </div>
         );
@@ -68,6 +68,7 @@ function DashboardInner({ auth }) {
     const [wasteFilter, setWasteFilter] = useState('all');
 
     // Sidebar & UI
+    const [theme, setTheme] = useState(() => localStorage.getItem('vp-theme') || 'dark');
     const [activeTab, setActiveTab] = useState('carte');
     const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
     const [showDemo, setShowDemo] = useState(false);
@@ -122,6 +123,48 @@ function DashboardInner({ auth }) {
 
     // ── Map Init ────────────────────────────────────────────────────
     useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('vp-theme', theme);
+        if (mapRef.current) {
+            setMapStyleLoaded(false);
+            mapRef.current.setStyle(`mapbox://styles/mapbox/${theme}-v11`);
+        }
+    }, [theme]);
+
+    useEffect(() => {
+        if (!mapRef.current || !mapStyleLoaded) return;
+        const map = mapRef.current;
+        if (map.getLayer('3d-buildings')) return;
+
+        const layers = map.getStyle().layers;
+        let labelLayerId;
+        for (let i = 0; i < layers.length; i++) {
+            if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+                labelLayerId = layers[i].id;
+                break;
+            }
+        }
+
+        map.addLayer(
+            {
+                'id': '3d-buildings',
+                'source': 'composite',
+                'source-layer': 'building',
+                'filter': ['==', 'extrude', 'true'],
+                'type': 'fill-extrusion',
+                'minzoom': 11,
+                'paint': {
+                    'fill-extrusion-color': theme === 'light' ? '#cbd5e1' : '#0d1b2a',
+                    'fill-extrusion-height': ['get', 'height'],
+                    'fill-extrusion-base': ['get', 'min_height'],
+                    'fill-extrusion-opacity': 0.8
+                }
+            },
+            labelLayerId
+        );
+    }, [mapStyleLoaded, theme]);
+
+    useEffect(() => {
         fetch('/api/mapbox/token')
             .then(r => r.json())
             .then(data => {
@@ -137,7 +180,7 @@ function DashboardInner({ auth }) {
         if (!mapContainerRef.current || mapRef.current) return;
         const map = new mapboxgl.Map({
             container: mapContainerRef.current,
-            style: 'mapbox://styles/mapbox/dark-v11',
+            style: `mapbox://styles/mapbox/${theme}-v11`,
             center: [-9.5981, 30.4278],
             zoom: 13,
             pitch: 60,
@@ -147,37 +190,7 @@ function DashboardInner({ auth }) {
         map.addControl(new mapboxgl.NavigationControl({ showCompass: true, visualizePitch: true }), 'bottom-right');
         map.addControl(new mapboxgl.ScaleControl({ unit: 'metric' }), 'bottom-left');
         mapRef.current = map;
-        map.on('style.load', () => {
-            setMapStyleLoaded(true);
-
-            // Insert 3D buildings layer beneath symbol layers
-            const layers = map.getStyle().layers;
-            let labelLayerId;
-            for (let i = 0; i < layers.length; i++) {
-                if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
-                    labelLayerId = layers[i].id;
-                    break;
-                }
-            }
-
-            map.addLayer(
-                {
-                    'id': '3d-buildings',
-                    'source': 'composite',
-                    'source-layer': 'building',
-                    'filter': ['==', 'extrude', 'true'],
-                    'type': 'fill-extrusion',
-                    'minzoom': 11,
-                    'paint': {
-                        'fill-extrusion-color': '#0d1b2a',
-                        'fill-extrusion-height': ['get', 'height'],
-                        'fill-extrusion-base': ['get', 'min_height'],
-                        'fill-extrusion-opacity': 0.8
-                    }
-                },
-                labelLayerId
-            );
-        });
+        map.on('style.load', () => setMapStyleLoaded(true));
     };
 
     // ── Data Loading ─────────────────────────────────────────────────
@@ -590,6 +603,9 @@ function DashboardInner({ auth }) {
 
                     <div className="vp-topbar-right">
                         <span className="pulse" />
+                        <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} style={{ padding: '4px 10px', background: 'transparent', border: '1px solid var(--border)', color: 'var(--text-primary)', borderRadius: 12, fontSize: 13, cursor: 'pointer', transition: '.2s' }}>
+                            {theme === 'dark' ? '☀️' : '🌙'}
+                        </button>
                         {!isAdmin && (
                             <a href="/driver" style={{ padding: '4px 10px', background: 'rgba(0,229,184,.1)', border: '1px solid rgba(0,229,184,.3)', color: '#00e5b8', borderRadius: 12, fontSize: 11, fontWeight: 600, textDecoration: 'none' }}>
                                 🚛 Vue Chauffeur
@@ -605,11 +621,11 @@ function DashboardInner({ auth }) {
                         <span>Km:<b style={{ color: '#00e5b8', marginLeft: 4 }}>{vrpResult?.total_km || '—'}</b></span>
                         <span>Routes:<b style={{ color: '#00e5b8', marginLeft: 4 }}>{routes.length}</b></span>
                         {auth.user && (
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 8, paddingLeft: 10, borderLeft: '1px solid #1a2e42' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 8, paddingLeft: 10, borderLeft: '1px solid var(--border)' }}>
                                 <span style={{ fontSize: 9, fontWeight: 700, padding: '2px 6px', borderRadius: 4, background: isAdmin ? 'rgba(244,63,94,.1)' : 'rgba(34,197,94,.1)', color: isAdmin ? '#f43f5e' : '#22c55e', border: isAdmin ? '1px solid rgba(244,63,94,.2)' : '1px solid rgba(34,197,94,.2)' }}>
                                     {isAdmin ? 'ADMIN' : 'CHAUFFEUR'}
                                 </span>
-                                <span style={{ fontSize: 11, fontWeight: 500, color: '#dde6f4' }}>{auth.user.name}</span>
+                                <span style={{ fontSize: 11, fontWeight: 500, color: 'var(--text-primary)' }}>{auth.user.name}</span>
                                 <Link href={route('logout')} method="post" as="button" style={{ background: 'transparent', border: 'none', color: '#f43f5e', fontSize: 10, cursor: 'pointer', fontWeight: 600 }}>[Sortie]</Link>
                             </div>
                         )}
@@ -641,7 +657,7 @@ function DashboardInner({ auth }) {
                                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 4 }}>
                                             {Object.entries({ medical: 'Medical', organic: 'Organic', recyclable: 'Recyclable', paper: 'Paper', general: 'General' }).map(([k, label]) => (
                                                 <div key={k} onClick={() => toggleWaste(k)} className={`chip ${wasteFilters[k] ? 'on' : 'off'}`}
-                                                    style={{ border: wasteFilters[k] ? `1px solid ${WC[k]}` : '1px solid #1a2e42', color: wasteFilters[k] ? WC[k] : '#7a92aa' }}>
+                                                    style={{ border: wasteFilters[k] ? `1px solid ${WC[k]}` : '1px solid var(--border)', color: wasteFilters[k] ? WC[k] : 'var(--text-secondary)' }}>
                                                     {label}
                                                 </div>
                                             ))}
@@ -705,8 +721,8 @@ function DashboardInner({ auth }) {
                             )}
 
                             {/* Terminal always visible at bottom */}
-                            <div style={{ marginTop: 'auto', borderTop: '1px solid #1a2e42', background: '#07111e' }}>
-                                <div style={{ padding: '6px 13px', fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.5, color: '#374e64' }}>Core IA Terminal</div>
+                            <div style={{ marginTop: 'auto', borderTop: '1px solid var(--border)', background: 'var(--bg-primary)' }}>
+                                <div style={{ padding: '6px 13px', fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--text-muted)' }}>Core IA Terminal</div>
                                 <div className="log" style={{ height: 130 }}>{logs.map(l => <div key={l.id} className={`ll ${l.type}`}>[{l.time}] {l.msg}</div>)}</div>
                             </div>
                         </>)}

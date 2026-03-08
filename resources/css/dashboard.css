@@ -28,6 +28,25 @@
   --glass-shadow:  0 8px 32px rgba(0,0,0,.5);
 }
 
+:root[data-theme="light"] {
+  --bg-primary:    #f8fafc;
+  --bg-secondary:  #ffffff;
+  --bg-card:       #f1f5f9;
+  --bg-dark:       #e2e8f0;
+  --bg-darker:     #cbd5e1;
+  --border:        #e2e8f0;
+  --border-light:  #cbd5e1;
+  --accent:        #0ea5e9; /* Sky blue for contrast */
+  --accent-dark:   #0284c7;
+  --accent-glow:   rgba(14,165,233,.18);
+  --text-primary:  #0f172a;
+  --text-secondary:#475569;
+  --text-muted:    #94a3b8;
+  --glass-bg:      rgba(255,255,255,.92);
+  --glass-border:  rgba(0,0,0,.08);
+  --glass-shadow:  0 8px 32px rgba(0,0,0,.08);
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-thumb { background: #21384f; border-radius: 3px; }

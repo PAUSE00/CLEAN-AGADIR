@@ -50,9 +50,9 @@ function BenchTab({ capacity, numTrucks, pts, benchRunning, benchResult, setBenc
                                 </div>
                             );
                         })}
-                        <div style={{ fontSize: 9, color: '#374e64', marginTop: 8, textAlign: 'center' }}>{benchResult.points_tested} points testés</div>
+                        <div style={{ fontSize: 9, color: 'var(--text-muted)', marginTop: 8, textAlign: 'center' }}>{benchResult.points_tested} points testés</div>
                     </div>
-                ) : <div style={{ color: '#374e64', fontSize: 11, padding: 10, textAlign: 'center' }}>Lance le benchmark pour voir les résultats</div>}
+                ) : <div style={{ color: 'var(--text-muted)', fontSize: 11, padding: 10, textAlign: 'center' }}>Lance le benchmark pour voir les résultats</div>}
             </Sec>
             <Sec title="Complexité Temporelle">
                 <table className="bt">
@@ -63,7 +63,7 @@ function BenchTab({ capacity, numTrucks, pts, benchRunning, benchResult, setBenc
                             return (
                                 <tr key={key}>
                                     <td>{name}</td>
-                                    <td style={{ color: '#7a92aa' }}>{cx}</td>
+                                    <td style={{ color: 'var(--text-secondary)' }}>{cx}</td>
                                     <td style={{ color: '#00e5b8' }}>{r ? r.time_ms + 'ms' : '—'}</td>
                                     <td>{r ? r.distance + 'km' : '—'}</td>
                                 </tr>
@@ -86,7 +86,7 @@ export default function StatsPanel({
     addLog, addToast, runVRP, setActiveTab,
     loadData
 }) {
-    const tooltipStyle = { background: '#0d1b2a', border: '1px solid #1a2e42', borderRadius: 8, color: '#dde6f4', fontSize: 11 };
+    const tooltipStyle = { background: 'var(--bg-dark)', border: '1px solid var(--border)', borderRadius: 8, color: 'var(--text-primary)', fontSize: 11 };
 
     if (activeTab === 'stats') return (
         <div className="fade-in">
@@ -104,7 +104,7 @@ export default function StatsPanel({
                 {/* Legend */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 4 }}>
                     {statsChart.map(s => (
-                        <div key={s.name} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, color: '#7a92aa' }}>
+                        <div key={s.name} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, color: 'var(--text-secondary)' }}>
                             <div style={{ width: 8, height: 8, borderRadius: '50%', background: s.fill }} />
                             {s.name} ({s.value})
                         </div>
@@ -116,7 +116,7 @@ export default function StatsPanel({
                     <div style={{ height: 150 }}>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart data={routes.map((r, i) => ({ name: `R${i + 1}`, km: r.distance_km }))}>
-                                <XAxis dataKey="name" stroke="#7a92aa" fontSize={9} tickLine={false} axisLine={false} />
+                                <XAxis dataKey="name" stroke="var(--text-secondary)" fontSize={9} tickLine={false} axisLine={false} />
                                 <Tooltip contentStyle={tooltipStyle} />
                                 <Bar dataKey="km" fill="#00e5b8" radius={[4, 4, 0, 0]} />
                             </BarChart>
@@ -128,7 +128,7 @@ export default function StatsPanel({
                 <table className="bt">
                     <thead><tr><th>Algo</th><th>Complexité</th></tr></thead>
                     <tbody>
-                        {ALGO_ROWS.map(([name, cx]) => <tr key={name}><td>{name}</td><td style={{ color: '#7a92aa' }}>{cx}</td></tr>)}
+                        {ALGO_ROWS.map(([name, cx]) => <tr key={name}><td>{name}</td><td style={{ color: 'var(--text-secondary)' }}>{cx}</td></tr>)}
                     </tbody>
                 </table>
             </Sec>
@@ -191,14 +191,14 @@ export default function StatsPanel({
             <Sec title="Top 10 — Niveaux Critiques">
                 {[...pts].sort((a, b) => (b.fill_level || 0) - (a.fill_level || 0)).slice(0, 10).map((p, i) => (
                     <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 11, marginBottom: 4 }}>
-                        <span style={{ color: (p.fill_level || 0) >= 85 ? '#f43f5e' : (p.fill_level || 0) >= 60 ? '#fbbf24' : '#dde6f4', fontWeight: 500, flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.name?.substring(0, 30)}</span>
+                        <span style={{ color: (p.fill_level || 0) >= 85 ? '#f43f5e' : (p.fill_level || 0) >= 60 ? '#fbbf24' : 'var(--text-primary)', fontWeight: 500, flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.name?.substring(0, 30)}</span>
                         <span style={{ fontFamily: "'JetBrains Mono',monospace", color: '#00e5b8', marginLeft: 8 }}>{p.fill_level || 0}%</span>
                     </div>
                 ))}
             </Sec>
             <Sec title="Alertes Actives">
                 {iotAlerts.length === 0
-                    ? <div style={{ color: '#374e64', fontSize: 11, padding: 10 }}>Aucune alerte — Lance la simulation</div>
+                    ? <div style={{ color: 'var(--text-muted)', fontSize: 11, padding: 10 }}>Aucune alerte — Lance la simulation</div>
                     : <div style={{ maxHeight: 150, overflowY: 'auto' }}>
                         {iotAlerts.map((a, i) => (
                             <div key={i} className="ri" style={{ borderColor: a.fire_alert ? '#f43f5e' : '#fbbf24' }}>
@@ -225,7 +225,7 @@ export default function StatsPanel({
             </Sec>
             <Sec title="Flotte Active">
                 {trucks.length === 0
-                    ? <div style={{ color: '#374e64', fontSize: 11, padding: 12, textAlign: 'center' }}>Aucun véhicule</div>
+                    ? <div style={{ color: 'var(--text-muted)', fontSize: 11, padding: 12, textAlign: 'center' }}>Aucun véhicule</div>
                     : <div style={{ maxHeight: 200, overflowY: 'auto' }}>
                         {trucks.map((t, i) => (
                             <div key={i} className="fi" style={{ justifyContent: 'space-between', paddingRight: 4 }}>
@@ -233,7 +233,7 @@ export default function StatsPanel({
                                     <div style={{ width: 8, height: 8, borderRadius: '50%', background: t.status === 'active' ? '#00e5b8' : '#f43f5e' }} />
                                     <div>
                                         <div style={{ fontWeight: 600, fontSize: 11 }}>{t.name || `Camion ${i + 1}`}</div>
-                                        <div style={{ color: '#7a92aa', fontSize: 10, fontFamily: "'JetBrains Mono',monospace" }}>{t.capacity || 500}L · {t.size?.toUpperCase() || 'STD'}</div>
+                                        <div style={{ color: 'var(--text-secondary)', fontSize: 10, fontFamily: "'JetBrains Mono',monospace" }}>{t.capacity || 500}L · {t.size?.toUpperCase() || 'STD'}</div>
                                     </div>
                                 </div>
                                 <button onClick={() => removeTruck(t.id)} style={{ background: 'transparent', border: 'none', color: '#f43f5e', cursor: 'pointer', fontSize: 14, padding: 4, borderRadius: 4 }}>×</button>
@@ -244,11 +244,11 @@ export default function StatsPanel({
             <Sec title="Statistiques">
                 <div style={{ fontSize: 11, display: 'flex', flexDirection: 'column', gap: 6 }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <span style={{ color: '#7a92aa' }}>Capacité totale</span>
+                        <span style={{ color: 'var(--text-secondary)' }}>Capacité totale</span>
                         <span style={{ fontFamily: "'JetBrains Mono',monospace" }}>{trucks.reduce((s, t) => s + (t.capacity || 500), 0)} L</span>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <span style={{ color: '#7a92aa' }}>Camions actifs</span>
+                        <span style={{ color: 'var(--text-secondary)' }}>Camions actifs</span>
                         <span style={{ fontFamily: "'JetBrains Mono',monospace", color: '#00e5b8' }}>{trucks.length}</span>
                     </div>
                 </div>
