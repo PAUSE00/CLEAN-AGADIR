@@ -7,6 +7,7 @@ use App\Models\CollectionPoint;
 use App\Models\IotReading;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Cache;
 use Carbon\Carbon;
 
 class IoTController extends Controller
@@ -66,7 +67,8 @@ class IoTController extends Controller
             $updated++;
         }
 
-        \Illuminate\Support\Facades\Cache::forget('collection_points_active');
+        Cache::forget('collection_points_all');
+        Cache::forget('iot_status');
 
         return response()->json([
             'updated'        => $updated,
@@ -79,21 +81,25 @@ class IoTController extends Controller
 
     public function status(): JsonResponse
     {
-        $points = CollectionPoint::where('is_active', true)
-            ->select('id', 'name', 'waste_category', 'fill_level', 'priority', 'lat', 'lng')
-            ->orderByDesc('fill_level')
-            ->get();
+        $data = Cache::remember('iot_status', 30, function () {
+            $points = CollectionPoint::where('is_active', true)
+                ->select('id', 'name', 'waste_category', 'fill_level', 'priority', 'lat', 'lng')
+                ->orderByDesc('fill_level')
+                ->get();
 
-        return response()->json([
-            'points'          => $points,
-            'critical_count'  => $points->where('priority', 'critical')->count(),
-            'high_count'      => $points->where('priority', 'high')->count(),
-            'avg_fill'        => round($points->avg('fill_level'), 1),
-            'by_category'     => $points->groupBy('waste_category')->map(fn($g) => [
-                'count'    => $g->count(),
-                'avg_fill' => round($g->avg('fill_level'), 1),
-            ]),
-        ]);
+            return [
+                'points'          => $points,
+                'critical_count'  => $points->where('priority', 'critical')->count(),
+                'high_count'      => $points->where('priority', 'high')->count(),
+                'avg_fill'        => round($points->avg('fill_level'), 1),
+                'by_category'     => $points->groupBy('waste_category')->map(fn($g) => [
+                    'count'    => $g->count(),
+                    'avg_fill' => round($g->avg('fill_level'), 1),
+                ]),
+            ];
+        });
+
+        return response()->json($data);
     }
 
     /**
@@ -102,7 +108,8 @@ class IoTController extends Controller
     public function reset(): JsonResponse
     {
         CollectionPoint::query()->update(['fill_level' => 0, 'priority' => 'low']);
-        \Illuminate\Support\Facades\Cache::forget('collection_points_active');
+        Cache::forget('collection_points_all');
+        Cache::forget('iot_status');
         return response()->json(['message' => 'Tous les niveaux réinitialisés.']);
     }
 }

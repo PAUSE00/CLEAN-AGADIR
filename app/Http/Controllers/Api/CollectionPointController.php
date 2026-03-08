@@ -7,17 +7,20 @@ use App\Models\CollectionPoint;
 use App\Models\Truck;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Cache;
 
 class CollectionPointController extends Controller
 {
     public function index(Request $request): JsonResponse
     {
-        // Fetch all active points + depot points (depots are always shown)
-        $allPoints = CollectionPoint::where(function ($q) {
-            $q->where('is_active', true)->orWhere('is_depot', true);
-        })
-            ->select('id', 'name', 'type', 'waste_category', 'lat', 'lng', 'fill_level', 'priority', 'last_collected_at', 'open_time', 'close_time', 'zone', 'is_depot')
-            ->get();
+        // Fetch all active points + depot points from cache to optimize DB access
+        $allPoints = Cache::remember('collection_points_all', 3600, function () {
+            return CollectionPoint::where(function ($q) {
+                $q->where('is_active', true)->orWhere('is_depot', true);
+            })
+                ->select('id', 'name', 'type', 'waste_category', 'lat', 'lng', 'fill_level', 'priority', 'last_collected_at', 'open_time', 'close_time', 'zone', 'is_depot')
+                ->get();
+        });
 
         // Filter the collection in memory
         $points = $allPoints;
@@ -46,6 +49,8 @@ class CollectionPointController extends Controller
 
         $data['waste_category'] = CollectionPoint::wasteCategory($data['type']);
         $point = CollectionPoint::create($data);
+
+        Cache::forget('collection_points_all'); // Invalidate cache
 
         return response()->json($point, 201);
     }
@@ -89,6 +94,8 @@ class CollectionPointController extends Controller
                 'priority'         => 'low',
                 'last_collected_at' => now(),
             ]);
+
+        Cache::forget('collection_points_all'); // Invalidate cache when collected
 
         return response()->json([
             'collected' => $count,

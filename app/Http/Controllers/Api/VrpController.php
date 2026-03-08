@@ -9,6 +9,7 @@ use App\Models\Route;
 use App\Services\VrpService;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Cache;
 
 class VrpController extends Controller
 {
@@ -42,13 +43,25 @@ class VrpController extends Controller
             return response()->json(['error' => 'Aucun point de collecte disponible.'], 422);
         }
 
-        $result = $this->vrp->optimize(
-            $points,
-            $validated['num_trucks'] ?? 0,
-            $validated['capacity'],
-            $validated['algorithm'],
-            $validated['iterations'] ?? 80
-        );
+        // --- Cache Cache Cache ---
+        // Hash the precise inputs to reuse the calculation if someone clicks "Generate" multiple times
+        $cacheKey = 'vrp_result_' . md5(json_encode([
+            'points' => $points,
+            'num_trucks' => $validated['num_trucks'] ?? 0,
+            'capacity' => $validated['capacity'],
+            'algo' => $validated['algorithm'],
+            'iter' => $validated['iterations'] ?? 80,
+        ]));
+
+        $result = Cache::remember($cacheKey, 3600, function () use ($points, $validated) {
+            return $this->vrp->optimize(
+                $points,
+                $validated['num_trucks'] ?? 0,
+                $validated['capacity'],
+                $validated['algorithm'],
+                $validated['iterations'] ?? 80
+            );
+        });
 
         // Persist routes if truck_ids provided
         if (!empty($validated['truck_ids'])) {
@@ -95,6 +108,7 @@ class VrpController extends Controller
         $algorithms = ['greedy', '2opt', 'tabu', 'kmeans', 'nsga'];
         $results = [];
 
+        // Note: Benchmarks bypass the cache purely for testing speed
         foreach ($algorithms as $algo) {
             $iter = $algo === 'tabu' ? 20 : ($algo === 'nsga' ? 8 : 80);
             $res = $this->vrp->optimize(
