@@ -40,6 +40,9 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Création du script d'initialisation pour configurer l'APP en production au démarrage
 RUN echo '#!/bin/bash\n\
+    echo "ServerName localhost" >> /etc/apache2/apache2.conf\n\
+    sed -i "s/Listen 80/Listen ${PORT:-80}/g" /etc/apache2/ports.conf\n\
+    sed -i "s/<VirtualHost \\*:80>/<VirtualHost \\*:${PORT:-80}>/g" /etc/apache2/sites-available/000-default.conf\n\
     composer install --no-dev --optimize-autoloader\n\
     npm install\n\
     npm run build\n\
@@ -55,13 +58,11 @@ RUN echo '#!/bin/bash\n\
     apache2-foreground' > /usr/local/bin/start-container && \
     chmod +x /usr/local/bin/start-container
 
-# Exposer le port par défaut Railway
+# Exposer le port par défaut (optionnel mais utile pour la doc)
 EXPOSE 80
 
 # Forcer le port apache à utiliser la variable PORT de Railway (ou 80 par défaut)
-# Listen to the dynamically injected PORT from Railway
-RUN sed -i 's/Listen 80/Listen ${PORT:-80}/g' /etc/apache2/ports.conf && \
-    sed -i 's/<VirtualHost \*:80>/<VirtualHost \*:${PORT:-80}>/g' /etc/apache2/sites-available/000-default.conf
+
 
 # Lancer via notre script
 CMD ["start-container"]
