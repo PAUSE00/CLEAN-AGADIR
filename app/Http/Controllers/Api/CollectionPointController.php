@@ -13,15 +13,6 @@ class CollectionPointController extends Controller
 {
     public function index(Request $request): JsonResponse
     {
-        // TEMPORARILY DISABLED CACHE TO DEBUG LOADING ERROR
-        $pointsArray = CollectionPoint::where(function ($q) {
-            $q->where('is_active', true)->orWhere('is_depot', true);
-        })
-            ->select('id', 'name', 'type', 'waste_category', 'lat', 'lng', 'fill_level', 'priority', 'last_collected_at', 'open_time', 'close_time', 'zone', 'is_depot')
-            ->get()
-            ->toArray();
-
-        /*
         $pointsArray = Cache::remember('collection_points_all', 3600, function () {
             return CollectionPoint::where(function ($q) {
                 $q->where('is_active', true)->orWhere('is_depot', true);
@@ -30,7 +21,6 @@ class CollectionPointController extends Controller
                 ->get()
                 ->toArray();
         });
-        */
 
         // Convert back to collection for easy filtering
         $allPoints = collect($pointsArray);

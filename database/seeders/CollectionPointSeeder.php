@@ -29,10 +29,10 @@ class CollectionPointSeeder extends Seeder
 
     public function run(): void
     {
-        // Check if we already have points to avoid duplicates on restart
-        if (CollectionPoint::where('is_depot', false)->exists()) {
-            return;
-        }
+        // Clean table to avoid duplicates on every redeploy and reset count to 834
+        \Illuminate\Support\Facades\Schema::disableForeignKeyConstraints();
+        CollectionPoint::truncate();
+        \Illuminate\Support\Facades\Schema::enableForeignKeyConstraints();
 
         // Load all 833 points from the JSON file
         $jsonPath = database_path('data/agadir_structures.json');
