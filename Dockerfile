@@ -38,26 +38,28 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Création du script d'initialisation pour configurer l'APP en production au démarrage
 RUN echo '#!/bin/bash\n\
-composer install --no-dev --optimize-autoloader\n\
-npm install\n\
-npm run build\n\
-php artisan key:generate --force\n\
-php artisan migrate --force\n\
-php artisan db:seed --force\n\
-php artisan optimize:clear\n\
-php artisan config:cache\n\
-php artisan route:cache\n\
-php artisan view:cache\n\
-chmod -R 775 storage bootstrap/cache\n\
-chown -R www-data:www-data /var/www/html\n\
-apache2-foreground' > /usr/local/bin/start-container && \
+    composer install --no-dev --optimize-autoloader\n\
+    npm install\n\
+    npm run build\n\
+    php artisan key:generate --force\n\
+    php artisan migrate --force\n\
+    php artisan db:seed --force\n\
+    php artisan optimize:clear\n\
+    php artisan config:cache\n\
+    php artisan route:cache\n\
+    php artisan view:cache\n\
+    chmod -R 775 storage bootstrap/cache\n\
+    chown -R www-data:www-data /var/www/html\n\
+    apache2-foreground' > /usr/local/bin/start-container && \
     chmod +x /usr/local/bin/start-container
 
 # Exposer le port par défaut Railway
 EXPOSE 80
 
-# Forcer le port apache
-RUN echo "Listen 80" > /etc/apache2/ports.conf
+# Forcer le port apache à utiliser la variable PORT de Railway (ou 80 par défaut)
+# Listen to the dynamically injected PORT from Railway
+RUN sed -i 's/Listen 80/Listen ${PORT:-80}/g' /etc/apache2/ports.conf && \
+    sed -i 's/<VirtualHost \*:80>/<VirtualHost \*:${PORT:-80}>/g' /etc/apache2/sites-available/000-default.conf
 
 # Lancer via notre script
 CMD ["start-container"]
