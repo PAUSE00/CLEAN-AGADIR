@@ -29,6 +29,11 @@ class CollectionPointSeeder extends Seeder
 
     public function run(): void
     {
+        // Check if we already have points to avoid duplicates on restart
+        if (CollectionPoint::where('is_depot', false)->exists()) {
+            return;
+        }
+
         // Load all 833 points from the JSON file
         $jsonPath = database_path('data/agadir_structures.json');
         $raw = json_decode(file_get_contents($jsonPath), true);
