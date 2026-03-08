@@ -52,6 +52,9 @@ RUN echo '#!/bin/bash\n\
     php artisan migrate --force\n\
     php artisan db:seed --force || true\n\
     php artisan optimize:clear\n\
+    php artisan config:cache\n\
+    php artisan route:cache\n\
+    php artisan view:cache\n\
     chmod -R 775 storage bootstrap/cache\n\
     chown -R www-data:www-data /var/www/html\n\
     source /etc/apache2/envvars\n\
