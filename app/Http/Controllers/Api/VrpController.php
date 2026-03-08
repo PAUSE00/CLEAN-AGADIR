@@ -44,7 +44,7 @@ class VrpController extends Controller
         }
 
         // --- Cache Cache Cache ---
-        // Hash the precise inputs to reuse the calculation if someone clicks "Generate" multiple times
+        // Hash the inputs to reuse calculation if someone clicks "Generate" multiple times
         $cacheKey = 'vrp_result_' . md5(json_encode([
             'points' => $points,
             'num_trucks' => $validated['num_trucks'] ?? 0,
@@ -53,6 +53,16 @@ class VrpController extends Controller
             'iter' => $validated['iterations'] ?? 80,
         ]));
 
+        // TEMPORARILY DISABLED CACHE TO DEBUG LOADING ERROR
+        $result = $this->vrp->optimize(
+            $points,
+            $validated['num_trucks'] ?? 0,
+            $validated['capacity'],
+            $validated['algorithm'],
+            $validated['iterations'] ?? 80
+        );
+
+        /*
         $result = Cache::remember($cacheKey, 3600, function () use ($points, $validated) {
             return $this->vrp->optimize(
                 $points,
@@ -62,6 +72,7 @@ class VrpController extends Controller
                 $validated['iterations'] ?? 80
             );
         });
+        */
 
         // Persist routes if truck_ids provided
         if (!empty($validated['truck_ids'])) {

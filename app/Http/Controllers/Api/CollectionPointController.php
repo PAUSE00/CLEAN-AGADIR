@@ -13,26 +13,39 @@ class CollectionPointController extends Controller
 {
     public function index(Request $request): JsonResponse
     {
-        // Fetch all active points + depot points from cache to optimize DB access
-        $allPoints = Cache::remember('collection_points_all', 3600, function () {
+        // TEMPORARILY DISABLED CACHE TO DEBUG LOADING ERROR
+        $pointsArray = CollectionPoint::where(function ($q) {
+            $q->where('is_active', true)->orWhere('is_depot', true);
+        })
+            ->select('id', 'name', 'type', 'waste_category', 'lat', 'lng', 'fill_level', 'priority', 'last_collected_at', 'open_time', 'close_time', 'zone', 'is_depot')
+            ->get()
+            ->toArray();
+
+        /*
+        $pointsArray = Cache::remember('collection_points_all', 3600, function () {
             return CollectionPoint::where(function ($q) {
                 $q->where('is_active', true)->orWhere('is_depot', true);
             })
                 ->select('id', 'name', 'type', 'waste_category', 'lat', 'lng', 'fill_level', 'priority', 'last_collected_at', 'open_time', 'close_time', 'zone', 'is_depot')
-                ->get();
+                ->get()
+                ->toArray();
         });
+        */
+
+        // Convert back to collection for easy filtering
+        $allPoints = collect($pointsArray);
 
         // Filter the collection in memory
         $points = $allPoints;
 
-        if ($request->category) {
+        if ($request->category && $request->category !== 'all') {
             $points = $points->where('waste_category', $request->category);
         }
-        if ($request->priority) {
+        if ($request->priority && $request->priority !== 'all') {
             $points = $points->where('priority', $request->priority);
         }
         if ($request->search) {
-            $points = $points->filter(fn($p) => str_contains(strtolower($p->name), strtolower($request->search)));
+            $points = $points->filter(fn($p) => str_contains(strtolower($p['name'] ?? ''), strtolower($request->search)));
         }
 
         return response()->json($points->values());

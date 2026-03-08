@@ -81,6 +81,24 @@ class IoTController extends Controller
 
     public function status(): JsonResponse
     {
+        // TEMPORARILY DISABLED CACHE TO DEBUG LOADING ERROR
+        $points = CollectionPoint::where('is_active', true)
+            ->select('id', 'name', 'waste_category', 'fill_level', 'priority', 'lat', 'lng')
+            ->orderByDesc('fill_level')
+            ->get();
+
+        $data = [
+            'points'          => $points->toArray(),
+            'critical_count'  => $points->where('priority', 'critical')->count(),
+            'high_count'      => $points->where('priority', 'high')->count(),
+            'avg_fill'        => round($points->avg('fill_level'), 1),
+            'by_category'     => $points->groupBy('waste_category')->map(fn($g) => [
+                'count'    => $g->count(),
+                'avg_fill' => round($g->avg('fill_level'), 1),
+            ]),
+        ];
+
+        /*
         $data = Cache::remember('iot_status', 30, function () {
             $points = CollectionPoint::where('is_active', true)
                 ->select('id', 'name', 'waste_category', 'fill_level', 'priority', 'lat', 'lng')
@@ -88,7 +106,7 @@ class IoTController extends Controller
                 ->get();
 
             return [
-                'points'          => $points,
+                'points'          => $points->toArray(),
                 'critical_count'  => $points->where('priority', 'critical')->count(),
                 'high_count'      => $points->where('priority', 'high')->count(),
                 'avg_fill'        => round($points->avg('fill_level'), 1),
@@ -98,6 +116,7 @@ class IoTController extends Controller
                 ]),
             ];
         });
+        */
 
         return response()->json($data);
     }
