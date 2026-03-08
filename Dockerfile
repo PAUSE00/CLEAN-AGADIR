@@ -19,10 +19,8 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 # Installation des extensions PHP requises par Laravel
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
-# Activation du module mod_rewrite pour Apache et désactivation des MPMs conflictuels
+# Activation du module mod_rewrite pour Apache
 RUN a2enmod rewrite
-RUN a2dismod mpm_event mpm_worker || true
-RUN a2enmod mpm_prefork || true
 
 # Configuration du DocumentRoot VHOST
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
@@ -41,21 +39,23 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Création du script d'initialisation pour configurer l'APP en production au démarrage
 RUN echo '#!/bin/bash\n\
     echo "ServerName localhost" >> /etc/apache2/apache2.conf\n\
+    a2dismod mpm_event mpm_worker || true\n\
+    a2enmod mpm_prefork || true\n\
     sed -i "s/Listen 80/Listen ${PORT:-80}/g" /etc/apache2/ports.conf\n\
     sed -i "s/<VirtualHost \\*:80>/<VirtualHost \\*:${PORT:-80}>/g" /etc/apache2/sites-available/000-default.conf\n\
     composer install --no-dev --optimize-autoloader\n\
     npm install\n\
     npm run build\n\
-    php artisan key:generate --force\n\
+    echo "Waiting for MySQL database to be ready..."\n\
+    sleep 5\n\
+    php artisan key:generate --force || true\n\
     php artisan migrate --force\n\
-    php artisan db:seed --force\n\
+    php artisan db:seed --force || true\n\
     php artisan optimize:clear\n\
-    php artisan config:cache\n\
-    php artisan route:cache\n\
-    php artisan view:cache\n\
     chmod -R 775 storage bootstrap/cache\n\
     chown -R www-data:www-data /var/www/html\n\
-    apache2-foreground' > /usr/local/bin/start-container && \
+    source /etc/apache2/envvars\n\
+    exec apache2 -D FOREGROUND' > /usr/local/bin/start-container && \
     chmod +x /usr/local/bin/start-container
 
 # Exposer le port par défaut (optionnel mais utile pour la doc)
