@@ -19,8 +19,10 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 # Installation des extensions PHP requises par Laravel
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
-# Activation du module mod_rewrite pour Apache
+# Activation du module mod_rewrite pour Apache et désactivation des MPMs conflictuels
 RUN a2enmod rewrite
+RUN a2dismod mpm_event mpm_worker || true
+RUN a2enmod mpm_prefork || true
 
 # Configuration du DocumentRoot VHOST
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
