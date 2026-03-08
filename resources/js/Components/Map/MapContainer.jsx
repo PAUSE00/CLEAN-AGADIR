@@ -20,63 +20,69 @@ export default function MapContainer({
 }) {
     // Marker rendering
     useEffect(() => {
-        if (!mapRef.current || !mapRef.current.isStyleLoaded()) return;
-        Object.values(markersRef.current).forEach(m => m.remove());
-        markersRef.current = {};
-        if (!lyPts && !lyDep) return;
+        const map = mapRef.current;
+        if (!map) return;
 
-        pts.forEach(p => {
-            const lat = Number(p.lat);
-            const lng = Number(p.lng);
-            if (!lat || !lng || isNaN(lat) || isNaN(lng) || (lat === 0 && lng === 0)) return;
-            if (!lyPts && !p.is_depot) return;
-            if (!lyDep && p.is_depot) return;
-            const wc = p.waste_category || 'general';
-            if (!wasteFilters[wc] && !p.is_depot) return;
+        const renderMarkers = () => {
+            if (!map.isStyleLoaded()) return;
 
-            const isCollected = collectedPoints.has(p.id);
-            const color = isCollected ? '#374e64' : (p.is_depot ? '#ffffff' : (WC[wc] || '#a78bfa'));
-            const fillPct = isCollected ? 0 : (p.fill_level || 0);
-            const isCritical = fillPct >= 85;
+            Object.values(markersRef.current).forEach(m => m.remove());
+            markersRef.current = {};
+            if (!lyPts && !lyDep) return;
 
-            const container = document.createElement('div');
-            container.style.cssText = 'display:flex;align-items:center;justify-content:center;cursor:pointer;';
-            const inner = document.createElement('div');
+            const ptsList = Array.isArray(pts) ? pts : [];
+            ptsList.forEach(p => {
+                const lat = Number(p.lat);
+                const lng = Number(p.lng);
+                if (!lat || !lng || isNaN(lat) || isNaN(lng) || (lat === 0 && lng === 0)) return;
+                if (!lyPts && !p.is_depot) return;
+                if (!lyDep && p.is_depot) return;
+                const wc = p.waste_category || 'general';
+                if (!wasteFilters[wc] && !p.is_depot) return;
 
-            if (p.is_depot) {
-                inner.style.cssText = [
-                    'background:#ffffff', 'color:#000000', 'font-size:11px',
-                    'font-weight:800', 'padding:3px 6px', 'border-radius:4px',
-                    'border:2px solid #000', 'box-shadow:0 4px 6px rgba(0,0,0,0.3)',
-                    'display:flex;align-items:center;justify-content:center',
-                    'cursor:pointer;user-select:none;z-index:50', 'transition:transform .15s'
-                ].join(';');
-                inner.textContent = `🏭 Dépôt`;
-            } else {
-                const size = 22;
-                const collectedColor = '#00e5b8';
-                inner.style.cssText = [
-                    `width:${size}px;height:${size}px;border-radius:50%`,
-                    `background:${isCollected ? '#001a14' : color + '40'}`,
-                    `border:2px solid ${isCollected ? collectedColor : color}`,
-                    `color:${isCollected ? collectedColor : '#ffffff'}`,
-                    'font-size:10px', 'font-weight:700',
-                    'display:flex;align-items:center;justify-content:center',
-                    'cursor:pointer;user-select:none',
-                    `box-shadow:0 0 ${isCollected ? 10 : (isCritical ? 14 : 6)}px ${isCollected ? collectedColor : color}`,
-                    'transition:all .3s ease',
-                    `z-index:${isCritical ? 40 : 30}`,
-                    isCritical && !isCollected ? 'animation:pulse-marker 1s infinite alternate;' : ''
-                ].join(';');
-                inner.textContent = isCollected ? '✓' : Math.round(fillPct);
-            }
+                const isCollected = collectedPoints.has(p.id);
+                const color = isCollected ? '#374e64' : (p.is_depot ? '#ffffff' : (WC[wc] || '#a78bfa'));
+                const fillPct = isCollected ? 0 : (p.fill_level || 0);
+                const isCritical = fillPct >= 85;
 
-            inner.title = `${p.name} — ${fillPct}%`;
-            inner.addEventListener('mouseenter', () => { inner.style.transform = 'scale(1.3)'; });
-            inner.addEventListener('mouseleave', () => { inner.style.transform = 'scale(1)'; });
-            container.appendChild(inner);
+                const container = document.createElement('div');
+                container.style.cssText = 'display:flex;align-items:center;justify-content:center;cursor:pointer;';
+                const inner = document.createElement('div');
 
-            const popupHTML = `<div style="background:var(--bg-dark);border:1px solid ${color}44;border-radius:8px;padding:8px 12px;font-family:'Space Grotesk',sans-serif;min-width:140px;box-shadow:var(--glass-shadow)">
+                if (p.is_depot) {
+                    inner.style.cssText = [
+                        'background:#ffffff', 'color:#000000', 'font-size:11px',
+                        'font-weight:800', 'padding:3px 6px', 'border-radius:4px',
+                        'border:2px solid #000', 'box-shadow:0 4px 6px rgba(0,0,0,0.3)',
+                        'display:flex;align-items:center;justify-content:center',
+                        'cursor:pointer;user-select:none;z-index:50', 'transition:transform .15s'
+                    ].join(';');
+                    inner.textContent = `🏭 Dépôt`;
+                } else {
+                    const size = 22;
+                    const collectedColor = '#00e5b8';
+                    inner.style.cssText = [
+                        `width:${size}px;height:${size}px;border-radius:50%`,
+                        `background:${isCollected ? '#001a14' : color + '40'}`,
+                        `border:2px solid ${isCollected ? collectedColor : color}`,
+                        `color:${isCollected ? collectedColor : '#ffffff'}`,
+                        'font-size:10px', 'font-weight:700',
+                        'display:flex;align-items:center;justify-content:center',
+                        'cursor:pointer;user-select:none',
+                        `box-shadow:0 0 ${isCollected ? 10 : (isCritical ? 14 : 6)}px ${isCollected ? collectedColor : color}`,
+                        'transition:all .3s ease',
+                        `z-index:${isCritical ? 40 : 30}`,
+                        isCritical && !isCollected ? 'animation:pulse-marker 1s infinite alternate;' : ''
+                    ].join(';');
+                    inner.textContent = isCollected ? '✓' : Math.round(fillPct);
+                }
+
+                inner.title = `${p.name} — ${fillPct}%`;
+                inner.addEventListener('mouseenter', () => { inner.style.transform = 'scale(1.3)'; });
+                inner.addEventListener('mouseleave', () => { inner.style.transform = 'scale(1)'; });
+                container.appendChild(inner);
+
+                const popupHTML = `<div style="background:var(--bg-dark);border:1px solid ${color}44;border-radius:8px;padding:8px 12px;font-family:'Space Grotesk',sans-serif;min-width:140px;box-shadow:var(--glass-shadow)">
                 <div style="font-weight:700;font-size:12px;color:var(--text-primary);margin-bottom:2px">${p.name}</div>
                 ${!p.is_depot && p.zone ? `<div style="font-size:10px;color:var(--text-secondary);margin-bottom:6px">📍 ${p.zone}</div>` : ''}
                 <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:${color}">${WC_ICON[wc] || ''} ${wc} · <b>${fillPct}%</b></div>
@@ -84,10 +90,21 @@ export default function MapContainer({
                 ${p.open_time && p.close_time ? `<div style="font-size:10px;color:var(--text-muted);border-top:1px dashed var(--border);padding-top:6px;margin-top:4px">🕒 ${p.open_time.slice(0, 5)} — ${p.close_time.slice(0, 5)}</div>` : ''}
             </div>`;
 
-            const popup = new mapboxgl.Popup({ offset: 18, closeButton: false, className: 'vp-popup' }).setHTML(popupHTML);
-            const marker = new mapboxgl.Marker(container).setLngLat([lng, lat]).setPopup(popup).addTo(mapRef.current);
-            markersRef.current[p.id] = marker;
-        });
+                const popup = new mapboxgl.Popup({ offset: 18, closeButton: false, className: 'vp-popup' }).setHTML(popupHTML);
+                const marker = new mapboxgl.Marker(container).setLngLat([lng, lat]).setPopup(popup).addTo(mapRef.current);
+                markersRef.current[p.id] = marker;
+            });
+        };
+
+        if (map.isStyleLoaded()) renderMarkers();
+
+        map.on('style.load', renderMarkers);
+        map.on('idle', renderMarkers);
+
+        return () => {
+            map.off('style.load', renderMarkers);
+            map.off('idle', renderMarkers);
+        };
     }, [pts, wasteFilters, collectedPoints, lyPts, lyDep, mapStyleLoaded]);
 
     // Route layers

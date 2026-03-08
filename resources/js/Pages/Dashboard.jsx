@@ -128,6 +128,7 @@ function DashboardInner({ auth }) {
         if (mapRef.current) {
             setMapStyleLoaded(false);
             mapRef.current.setStyle(`mapbox://styles/mapbox/${theme}-v11`);
+            mapRef.current.once('style.load', () => setMapStyleLoaded(true));
         }
     }, [theme]);
 
@@ -208,9 +209,15 @@ function DashboardInner({ auth }) {
             const tData = Array.isArray(tRes) ? tRes : (tRes.data || []);
             setPts(pData);
             setTrucks(Array.isArray(tData) ? tData : []);
-            if (isFirst) addLog(`✓ ${pData.length} points + ${tData.length} camions chargés`, 'ok');
+            if (isFirst) {
+                const first = pData[0] || {};
+                addLog(`✓ ${pData.length} pts (ex: ${first.lat},${first.lng}) + ${tData.length} camions`, 'ok');
+            }
             initialLoadDoneRef.current = true;
-        } catch (e) { addLog('Erreur chargement données', 'err'); }
+        } catch (e) {
+            console.error(e);
+            addLog(`✗ Erreur données: ${e.message}`, 'err');
+        }
         finally { if (isFirst) setLoading(false); }
     };
 
