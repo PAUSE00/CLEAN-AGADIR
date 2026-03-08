@@ -36,6 +36,11 @@ WORKDIR /var/www/html
 # Installer Composer globalement
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+# Pré-compiler les assets (ViteJS / React) pendant le build de l'image Docker plutôt qu'au runtime
+RUN composer install --no-dev --optimize-autoloader && \
+    npm install && \
+    npm run build
+
 # Création du script d'initialisation pour configurer l'APP en production au démarrage
 RUN echo '#!/bin/bash\n\
     echo "ServerName localhost" >> /etc/apache2/apache2.conf\n\
@@ -43,9 +48,6 @@ RUN echo '#!/bin/bash\n\
     a2enmod mpm_prefork || true\n\
     sed -i "s/Listen 80/Listen ${PORT:-80}/g" /etc/apache2/ports.conf\n\
     sed -i "s/<VirtualHost \\*:80>/<VirtualHost \\*:${PORT:-80}>/g" /etc/apache2/sites-available/000-default.conf\n\
-    composer install --no-dev --optimize-autoloader\n\
-    npm install\n\
-    npm run build\n\
     echo "Waiting for MySQL database to be ready..."\n\
     sleep 5\n\
     php artisan key:generate --force || true\n\
