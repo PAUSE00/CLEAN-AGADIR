@@ -50,6 +50,8 @@ RUN echo '#!/bin/bash\n\
     sed -i "s/<VirtualHost \\*:80>/<VirtualHost \\*:${PORT:-80}>/g" /etc/apache2/sites-available/000-default.conf\n\
     echo "Waiting for MySQL database to be ready..."\n\
     sleep 5\n\
+    chmod -R 775 storage bootstrap/cache public/build\n\
+    chown -R www-data:www-data /var/www/html\n\
     php artisan key:generate --force || true\n\
     php artisan migrate --force\n\
     php artisan db:seed --force || true\n\
@@ -57,8 +59,6 @@ RUN echo '#!/bin/bash\n\
     php artisan config:cache\n\
     php artisan route:cache\n\
     php artisan view:cache\n\
-    chmod -R 775 storage bootstrap/cache\n\
-    chown -R www-data:www-data /var/www/html\n\
     source /etc/apache2/envvars\n\
     exec apache2 -D FOREGROUND' > /usr/local/bin/start-container && \
     chmod +x /usr/local/bin/start-container
