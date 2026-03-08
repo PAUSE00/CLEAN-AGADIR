@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>CLEAN AGADIR - Hors ligne</title>
+    <style>
+        :root {
+            --bg: #07111e;
+            --text: #dde6f4;
+            --muted: #7a92aa;
+            --accent: #00e5b8;
+            --danger: #f43f5e;
+            --border: #1a2e42;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #f8fafc;
+                --text: #0f172a;
+                --muted: #475569;
+                --accent: #0ea5e9;
+                --border: #cbd5e1;
+            }
+        }
+        body { 
+            font-family: system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            text-align: center; 
+            padding: 50px 20px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .icon { font-size: 60px; margin-bottom: 20px; }
+        h1 { color: var(--danger); font-size: 24px; margin-bottom: 10px; }
+        p { color: var(--muted); font-size: 14px; max-width: 300px; line-height: 1.5; margin-bottom: 30px; }
+        .btn { 
+            padding: 12px 24px; 
+            background: transparent; 
+            border: 1px solid var(--accent); 
+            color: var(--accent); 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            transition: .2s;
+        }
+        .btn:active {
+            background: var(--accent);
+            color: var(--bg);
+        }
+    </style>
+</head>
+<body>
+    <div class="icon">📡</div>
+    <h1>Vous êtes hors ligne</h1>
+    <p>La connexion au serveur CLEAN AGADIR a été perdue ou vous n'avez pas de réseau.</p>
+    <a href="/" class="btn">Réessayer la connexion</a>
+</body>
+</html>
